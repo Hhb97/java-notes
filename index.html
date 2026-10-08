@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java 学习笔记</title>
+<meta name="description" content="Java 工程学习笔记知识库：基础、面向对象、核心 API、并发、JVM、现代特性、框架与设计模式。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c2410c'/%3E%3Ctext x='16' y='22' font-size='17' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+</head>
+<body>
+<header class="topbar">
+  <button id="menuBtn" class="icon-btn menu-btn" aria-label="打开目录">☰</button>
+  <a class="brand" href="#/index"><span class="logo">J</span><span>Java 学习笔记</span></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="搜索笔记…（按 / 聚焦）" autocomplete="off" aria-label="搜索">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button id="themeBtn" class="icon-btn" aria-label="切换主题" title="切换明暗主题">◐</button>
+</header>
+
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="目录">
+    <nav id="nav"></nav>
+  </aside>
+  <div id="scrim" class="scrim"></div>
+
+  <main id="main" class="main">
+    <div id="crumbs" class="crumbs"></div>
+    <article id="content" class="prose"><p>加载中…</p></article>
+    <div id="pager" class="pager"></div>
+    <footer class="footer">Java 学习笔记 · 持续更新</footer>
+  </main>
+
+  <aside id="toc" class="toc" aria-label="本页目录"></aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="assets/nav.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
