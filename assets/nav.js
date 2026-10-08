@@ -51,12 +51,26 @@ window.NAV = [
           { title: '垃圾回收算法与分代', path: 'java/jvm/gc' },
           { title: 'G1 与 ZGC 深入', path: 'java/jvm/collectors' },
           { title: '类加载与双亲委派', path: 'java/jvm/classloader' },
-          { title: '字节码与执行引擎', path: 'java/jvm/bytecode' }
+          { title: '字节码与执行引擎', path: 'java/jvm/bytecode' },
+          { title: '线上调优与故障排查', path: 'java/jvm/tuning' }
         ]
       },
       {
         title: '现代 Java', children: [
-          { title: 'Lambda 与 Stream', path: 'java/modern/lambda' }
+          { title: 'Lambda 与 Stream', path: 'java/modern/lambda' },
+          { title: 'Java 8–21 新特性', path: 'java/modern/features' }
+        ]
+      },
+      {
+        title: '工程化', children: [
+          { title: 'Maven 构建与依赖管理', path: 'java/eng/maven' },
+          { title: '单元测试：JUnit 5 与 Mockito', path: 'java/eng/testing' }
+        ]
+      },
+      {
+        title: '设计模式', children: [
+          { title: '创建型模式', path: 'java/patterns/creational' },
+          { title: '结构型与行为型', path: 'java/patterns/behavioral' }
         ]
       }
     ]
@@ -79,7 +93,8 @@ window.NAV = [
       },
       {
         title: 'Boot 与 Cloud', children: [
-          { title: 'Spring Boot 自动配置与启动', path: 'spring/boot' }
+          { title: 'Spring Boot 自动配置与启动', path: 'spring/boot' },
+          { title: 'Spring Cloud 微服务全景', path: 'spring/cloud' }
         ]
       }
     ]
@@ -105,6 +120,12 @@ window.NAV = [
           { title: '锁机制与死锁分析', path: 'mysql/lock' },
           { title: 'redo / undo / binlog', path: 'mysql/log' }
         ]
+      },
+      {
+        title: '高可用与扩展', children: [
+          { title: '主从复制与高可用', path: 'mysql/replication' },
+          { title: '分库分表实践', path: 'mysql/sharding' }
+        ]
       }
     ]
   },
@@ -126,7 +147,9 @@ window.NAV = [
       },
       {
         title: '实战', children: [
-          { title: '缓存设计与一致性', path: 'redis/cache' }
+          { title: '缓存设计与一致性', path: 'redis/cache' },
+          { title: '分布式锁', path: 'redis/lock' },
+          { title: '高频场景实战', path: 'redis/practice' }
         ]
       }
     ]
@@ -144,7 +167,8 @@ window.NAV = [
       },
       {
         title: '搜索引擎', children: [
-          { title: 'Elasticsearch 原理', path: 'mw/es' }
+          { title: 'Elasticsearch 原理', path: 'mw/es' },
+          { title: 'ES 实战与数据同步', path: 'mw/es-practice' }
         ]
       }
     ]
@@ -180,7 +204,8 @@ window.NAV = [
         title: '运维部署', children: [
           { title: 'Linux 线上排查', path: 'infra/linux' },
           { title: 'Nginx 与负载均衡', path: 'infra/nginx' },
-          { title: 'Docker 容器化', path: 'infra/docker' }
+          { title: 'Docker 容器化', path: 'infra/docker' },
+          { title: 'Kubernetes 核心概念', path: 'infra/k8s' }
         ]
       }
     ]
@@ -188,7 +213,9 @@ window.NAV = [
   {
     id: 'design', title: '系统设计', desc: '高并发方法论、秒杀、面试速查',
     children: [
-      { title: '高并发系统设计方法论', path: 'design/method' }
+      { title: '高并发系统设计方法论', path: 'design/method' },
+      { title: '秒杀系统设计', path: 'design/seckill' },
+      { title: '面试高频速查', path: 'design/interview' }
     ]
   }
 ];
