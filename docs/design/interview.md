@@ -91,6 +91,28 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | 分布式锁 | `SET NX PX` + 唯一值 + Lua 释放；Redisson 看门狗；主从切换丢锁与 fencing | [分布式锁](#/redis/lock) |
 | 限流、排行榜、延迟队列 | 令牌桶 Lua、ZSET、Stream | [高频场景实战](#/redis/practice) |
 
+## PostgreSQL
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| 与 MySQL 的架构差异 | 多进程（需连接池）、堆表 + 二级索引、MVCC 在堆里需 VACUUM、DDL 可事务回滚 | [架构、WAL 与存储结构](#/pg/architecture) |
+| 表膨胀与 VACUUM | 死元组被长事务/复制槽阻止回收；调小 autovacuum scale factor；pg_repack | [MVCC、VACUUM 与锁](#/pg/mvcc) |
+| 事务 ID 回卷 | 32 位 XID，靠 freeze 避免；监控 `age(datfrozenxid)` | [MVCC、VACUUM 与锁](#/pg/mvcc) |
+| 索引类型选择 | B-tree 通用；GIN 用于 JSONB/数组/全文；GiST 几何；BRIN 海量有序 | [索引类型与查询优化](#/pg/index) |
+| 看执行计划 | `EXPLAIN (ANALYZE, BUFFERS)`，预估与实际行数偏差、Rows Removed、溢出磁盘 | [索引类型与查询优化](#/pg/index) |
+| 流复制与高可用 | WAL 流复制；synchronous_commit 级别；Patroni + etcd；复制槽风险 | [复制、高可用与实战](#/pg/ops) |
+
+## 网络编程与物联网
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| Netty 线程模型 | 主从 Reactor；Channel 绑定唯一 EventLoop；耗时业务不阻塞 EventLoop | [Netty 源码：线程模型与 Pipeline](#/infra/netty-core) |
+| 粘包拆包与 ByteBuf | 长度字段解码器；池化堆外内存；引用计数泄漏排查；写背压 | [Netty 实战：编解码、内存与调优](#/infra/netty-practice) |
+| MQTT 的 QoS 与会话 | 0/1/2；QoS 是分段协商；持久会话 + 业务幂等 | [MQTT 协议详解](#/iot/mqtt) |
+| 在线状态怎么做 | 遗嘱 + 保留消息，或 Broker 连接事件；以最新连接为准 | [MQTT 协议详解](#/iot/mqtt) |
+| 百万设备接入 | EMQX 集群、共享订阅 + Kafka、重连风暴保护、内核调优 | [Broker 架构与集群（EMQX）](#/iot/broker) |
+| 设备影子与 OTA | desired/reported/delta；A/B 分区、验签、灰度 | [IoT 平台架构与设备管理](#/iot/platform) |
+
 ## 中间件
 
 | 问题 | 答题要点 | 详见 |
@@ -102,6 +124,8 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | RocketMQ 事务消息 | 半消息 → 本地事务 → 提交/回滚 → 回查 | [RocketMQ 原理与事务消息](#/mw/rocketmq) |
 | ES 为什么快、近实时 | 倒排索引 + FST；refresh 生成 segment（默认 1s） | [Elasticsearch 原理](#/mw/es) |
 | ES 深分页与同步 | search_after + PIT；Canal 订阅 binlog + 幂等 + 对账 | [ES 实战与数据同步](#/mw/es-practice) |
+| Dubbo 一次调用的链路 | 代理 → Filter → Cluster/Directory/Router/LoadBalance → Netty；requestId 配对异步响应；SPI 可插拔 | [Dubbo 架构与调用链路](#/mw/dubbo) |
+| Dubbo 容错与重试陷阱 | 默认 Failover 重试 2 次；写接口 `retries=0` 并保证幂等；超时自内向外递减 | [Dubbo 集群容错与服务治理](#/mw/dubbo-practice) |
 
 ## 分布式
 

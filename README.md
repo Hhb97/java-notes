@@ -9,10 +9,12 @@
 | Java 核心 | 语言基础、面向对象、集合（HashMap / ConcurrentHashMap 源码）、反射与代理、IO/NIO、并发（JMM、synchronized、AQS、线程池）、JVM（内存、GC、G1/ZGC、类加载、JIT、调优）、Maven、测试、设计模式 |
 | Spring 生态 | IoC、AOP、事务、Spring MVC、MyBatis、Spring Boot、Spring Cloud |
 | MySQL | 架构、InnoDB 存储、B+ 树索引、SQL 调优、MVCC、锁、redo/undo/binlog、主从复制、分库分表 |
+| PostgreSQL | 进程模型与 WAL、MVCC 与 VACUUM、锁、索引类型与优化、流复制/Patroni/PITR/分区 |
 | Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战 |
-| 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch |
+| 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch、Dubbo |
+| 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
 | 分布式 | CAP/BASE、Raft、分布式事务、分布式 ID、限流熔断降级 |
-| 网络与运维 | TCP/HTTP、IO 模型与 Netty、Linux 排查、Nginx、Docker、Kubernetes |
+| 网络与运维 | TCP/HTTP、IO 模型与 Netty（源码与实战）、Linux 排查、Nginx、Docker、Kubernetes |
 | 系统设计 | 高并发方法论、秒杀系统、面试速查 |
 
 每篇包含：核心要点、源码/原理、SVG 图解、关键参数、生产踩坑、面试追问。

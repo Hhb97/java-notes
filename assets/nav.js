@@ -130,6 +130,23 @@ window.NAV = [
     ]
   },
   {
+    id: 'pg', title: 'PostgreSQL', desc: '进程模型、MVCC 与 VACUUM、索引、复制与运维',
+    children: [
+      {
+        title: '内核原理', children: [
+          { title: '架构、WAL 与存储结构', path: 'pg/architecture' },
+          { title: 'MVCC、VACUUM 与锁', path: 'pg/mvcc' }
+        ]
+      },
+      {
+        title: '索引与运维', children: [
+          { title: '索引类型与查询优化', path: 'pg/index' },
+          { title: '复制、高可用与实战', path: 'pg/ops' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'redis', title: 'Redis', desc: '数据结构、持久化、集群、缓存与分布式锁',
     children: [
       {
@@ -155,7 +172,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、Elasticsearch',
+    id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、Elasticsearch、Dubbo',
     children: [
       {
         title: '消息队列', children: [
@@ -169,6 +186,29 @@ window.NAV = [
         title: '搜索引擎', children: [
           { title: 'Elasticsearch 原理', path: 'mw/es' },
           { title: 'ES 实战与数据同步', path: 'mw/es-practice' }
+        ]
+      },
+      {
+        title: 'RPC 框架', children: [
+          { title: 'Dubbo 架构与调用链路', path: 'mw/dubbo' },
+          { title: 'Dubbo 集群容错与服务治理', path: 'mw/dubbo-practice' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'iot', title: '物联网', desc: 'MQTT 协议、Broker 集群、Java 接入与 IoT 平台架构',
+    children: [
+      {
+        title: 'MQTT', children: [
+          { title: 'MQTT 协议详解', path: 'iot/mqtt' },
+          { title: 'Broker 架构与集群（EMQX）', path: 'iot/broker' }
+        ]
+      },
+      {
+        title: '开发与平台', children: [
+          { title: 'Java 接入：Paho、Spring 与 Netty', path: 'iot/java' },
+          { title: 'IoT 平台架构与设备管理', path: 'iot/platform' }
         ]
       }
     ]
@@ -197,7 +237,9 @@ window.NAV = [
       {
         title: '网络与 IO', children: [
           { title: 'TCP/IP 与 HTTP(S)', path: 'infra/network' },
-          { title: 'IO 模型与 Netty', path: 'infra/netty' }
+          { title: 'IO 模型与 Netty', path: 'infra/netty' },
+          { title: 'Netty 源码：线程模型与 Pipeline', path: 'infra/netty-core' },
+          { title: 'Netty 实战：编解码、内存与调优', path: 'infra/netty-practice' }
         ]
       },
       {
