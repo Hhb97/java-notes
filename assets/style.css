@@ -382,6 +382,7 @@ svg.dg .b4 { fill: var(--d-4f); stroke: var(--d-4s); }
 svg.dg .b5 { fill: var(--d-5f); stroke: var(--d-5s); }
 svg.dg .bg { fill: var(--d-gf); stroke: var(--d-gs); stroke-dasharray: 5 4; }
 svg.dg .bf { fill: var(--accent); stroke: var(--accent); }
+svg.dg .nf { fill: none; }
 svg.dg text { fill: var(--d-text); font-size: 13px; }
 svg.dg .t  { fill: var(--d-text); font-size: 13px; }
 svg.dg .tb { fill: var(--d-text); font-size: 13px; font-weight: 650; }

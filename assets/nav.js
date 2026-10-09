@@ -248,6 +248,41 @@ window.NAV = [
     ]
   },
   {
+    id: 'aimodel', title: 'AI 模型与数学', desc: '给初学者：线性代数、微积分，到 MLP、CNN、Transformer 与 LLM',
+    children: [
+      {
+        title: '数学基础', children: [
+          { title: '线性代数 1：向量与矩阵', path: 'aimodel/math-la1' },
+          { title: '线性代数 2：特征值、SVD 与 PCA', path: 'aimodel/math-la2' },
+          { title: '微积分 1：导数、偏导与链式法则', path: 'aimodel/math-calc1' },
+          { title: '微积分 2：梯度下降，机器如何“学习”', path: 'aimodel/math-calc2' },
+          { title: '概率与信息论入门：损失函数从哪来', path: 'aimodel/math-prob' }
+        ]
+      },
+      {
+        title: '机器学习入门', children: [
+          { title: '机器学习是什么：回归、分类与过拟合', path: 'aimodel/ml-intro' }
+        ]
+      },
+      {
+        title: '神经网络', children: [
+          { title: 'MLP：神经元、多层感知机与反向传播', path: 'aimodel/mlp' },
+          { title: '训练神经网络：优化器、正则化与常见坑', path: 'aimodel/training' },
+          { title: 'CNN：卷积神经网络如何“看图”', path: 'aimodel/cnn' },
+          { title: 'RNN 与 LSTM：会“记事”的网络', path: 'aimodel/rnn' },
+          { title: '注意力与 Transformer：大模型的骨架', path: 'aimodel/transformer' }
+        ]
+      },
+      {
+        title: '大模型与全景', children: [
+          { title: 'LLM：从预训练到对话助手', path: 'aimodel/llm' },
+          { title: '模型家族地图：Embedding、VAE、GAN、扩散、GNN、强化学习', path: 'aimodel/zoo' },
+          { title: 'AI 模型的“性格画像”：怎么选模型', path: 'aimodel/personality' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP、Spark 与数据湖',
     children: [
       {
