@@ -113,6 +113,33 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | 百万设备接入 | EMQX 集群、共享订阅 + Kafka、重连风暴保护、内核调优 | [Broker 架构与集群（EMQX）](#/iot/broker) |
 | 设备影子与 OTA | desired/reported/delta；A/B 分区、验签、灰度 | [IoT 平台架构与设备管理](#/iot/platform) |
 
+## AI 应用
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| 大模型应用的基本原理与成本构成 | 无状态、每次重传历史；Prefill/Decode；按输入输出 Token 计费；提示词缓存与小模型路由 | [大模型应用基础与 API 调用](#/ai/llm) |
+| RAG 流程与为什么不直接微调 | 离线入库（解析、切分、向量化）+ 在线检索生成；RAG 管知识，微调管风格 | [RAG 原理与完整流水线](#/ai/rag) |
+| RAG 效果差怎么排查 | 先看检索（Recall@K）：切分、混合检索、重排、查询改写；再看提示词与拒答 | [RAG 检索优化、向量库与评估](#/ai/rag-advanced) |
+| HNSW 与向量库选型 | 多层近邻图、内存大；pgvector 起步，亿级用 Milvus；权限在检索阶段过滤 | [RAG 检索优化、向量库与评估](#/ai/rag-advanced) |
+| Agent 与工作流的区别 | 控制流由模型决定 vs 代码写死；能用工作流就不用 Agent | [Agent、工具调用与 MCP](#/ai/agent) |
+| 工具调用与 MCP | 模型只产出调用意图，代码执行并鉴权；MCP 把 M×N 集成变成 M+N | [Agent、工具调用与 MCP](#/ai/agent) |
+| 提示注入怎么防 | 无法根治；最小权限、代码层鉴权、外部内容不可信、关键操作确认、避免致命三要素 | [LLM 应用工程化、安全与评测](#/ai/llmops) |
+| Java 里怎么落地 | Spring AI（ChatClient/Advisor/VectorStore）或 LangChain4j（AiServices）；流式 SSE、幂等工具 | [Java 实战：Spring AI 与 LangChain4j](#/ai/spring-ai) |
+
+## 大数据
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| 事件时间与 Watermark | 事件时间可复现；Watermark 表示进度，多输入取最小；空闲分区要 withIdleness | [Flink 核心：时间、窗口与 Watermark](#/bigdata/flink-core) |
+| 迟到数据怎么处理 | Watermark 延迟 + allowedLateness + 侧输出；Sink 幂等 | [Flink 核心：时间、窗口与 Watermark](#/bigdata/flink-core) |
+| Checkpoint 原理 | Barrier 异步分布式快照；对齐与非对齐；增量 Checkpoint；Savepoint 用于升级 | [Flink 状态、Checkpoint 与 Exactly-Once](#/bigdata/flink-state) |
+| 端到端 Exactly-Once | 可重放 Source + Checkpoint + 幂等/两阶段提交 Sink | [Flink 状态、Checkpoint 与 Exactly-Once](#/bigdata/flink-state) |
+| 反压与数据倾斜 | 找第一个忙的算子；加盐两阶段聚合、Local-Global；外部系统批量/异步 | [Flink SQL、反压与性能调优](#/bigdata/flink-ops) |
+| CDC 与全量增量一致 | 读 binlog；增量快照：Chunk 并行 + 水位修正，无需全局锁 | [CDC 与实时数仓架构](#/bigdata/cdc) |
+| 实时数仓分层与 Lambda/Kappa | ODS/DWD/DWS/ADS；流批一体 + 湖仓取代双链路；对账 | [CDC 与实时数仓架构](#/bigdata/cdc) |
+| ClickHouse 与 Doris | ClickHouse 单表聚合强、批量写入；Doris 主键更新、Join、高并发、MySQL 协议 | [OLAP：ClickHouse 与 Doris](#/bigdata/olap) |
+| Spark 倾斜与数据湖表格式 | AQE/加盐/广播；Iceberg 元数据树与原子提交；Paimon LSM 适合高频更新 | [Spark 与数据湖（Iceberg / Paimon）](#/bigdata/spark-lake) |
+
 ## 中间件
 
 | 问题 | 答题要点 | 详见 |

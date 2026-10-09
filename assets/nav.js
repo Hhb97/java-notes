@@ -214,6 +214,56 @@ window.NAV = [
     ]
   },
   {
+    id: 'ai', title: 'AI 应用', desc: '大模型应用、RAG、Agent 与 Spring AI / LangChain4j',
+    children: [
+      {
+        title: '基础', children: [
+          { title: '大模型应用基础与 API 调用', path: 'ai/llm' }
+        ]
+      },
+      {
+        title: 'RAG', children: [
+          { title: 'RAG 原理与完整流水线', path: 'ai/rag' },
+          { title: 'RAG 检索优化、向量库与评估', path: 'ai/rag-advanced' }
+        ]
+      },
+      {
+        title: 'Agent', children: [
+          { title: 'Agent、工具调用与 MCP', path: 'ai/agent' }
+        ]
+      },
+      {
+        title: '工程落地', children: [
+          { title: 'Java 实战：Spring AI 与 LangChain4j', path: 'ai/spring-ai' },
+          { title: 'LLM 应用工程化、安全与评测', path: 'ai/llmops' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP、Spark 与数据湖',
+    children: [
+      {
+        title: 'Flink', children: [
+          { title: 'Flink 核心：时间、窗口与 Watermark', path: 'bigdata/flink-core' },
+          { title: 'Flink 状态、Checkpoint 与 Exactly-Once', path: 'bigdata/flink-state' },
+          { title: 'Flink SQL、反压与性能调优', path: 'bigdata/flink-ops' }
+        ]
+      },
+      {
+        title: '实时数据架构', children: [
+          { title: 'CDC 与实时数仓架构', path: 'bigdata/cdc' },
+          { title: 'OLAP：ClickHouse 与 Doris', path: 'bigdata/olap' }
+        ]
+      },
+      {
+        title: '离线与湖仓', children: [
+          { title: 'Spark 与数据湖（Iceberg / Paimon）', path: 'bigdata/spark-lake' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'distributed', title: '分布式', desc: 'CAP、共识、分布式事务、ID、限流熔断',
     children: [
       {
