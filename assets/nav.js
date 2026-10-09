@@ -218,7 +218,8 @@ window.NAV = [
     children: [
       {
         title: '基础', children: [
-          { title: '大模型应用基础与 API 调用', path: 'ai/llm' }
+          { title: '大模型应用基础与 API 调用', path: 'ai/llm' },
+          { title: '大模型原理与推理服务（KV Cache、vLLM、量化、微调）', path: 'ai/llm-internals' }
         ]
       },
       {
@@ -229,13 +230,19 @@ window.NAV = [
       },
       {
         title: 'Agent', children: [
-          { title: 'Agent、工具调用与 MCP', path: 'ai/agent' }
+          { title: 'Agent、工具调用与 MCP', path: 'ai/agent' },
+          { title: 'Agent 进阶：上下文工程、记忆与多智能体', path: 'ai/agent-deep' }
         ]
       },
       {
         title: '工程落地', children: [
           { title: 'Java 实战：Spring AI 与 LangChain4j', path: 'ai/spring-ai' },
           { title: 'LLM 应用工程化、安全与评测', path: 'ai/llmops' }
+        ]
+      },
+      {
+        title: '架构案例', children: [
+          { title: '案例：企业智能客服与知识库（RAG + Agent）设计详解', path: 'ai/case-kb' }
         ]
       }
     ]
@@ -247,7 +254,8 @@ window.NAV = [
         title: 'Flink', children: [
           { title: 'Flink 核心：时间、窗口与 Watermark', path: 'bigdata/flink-core' },
           { title: 'Flink 状态、Checkpoint 与 Exactly-Once', path: 'bigdata/flink-state' },
-          { title: 'Flink SQL、反压与性能调优', path: 'bigdata/flink-ops' }
+          { title: 'Flink SQL、反压与性能调优', path: 'bigdata/flink-ops' },
+          { title: 'Flink 内部机制：执行图、网络栈、内存与 Key Group', path: 'bigdata/flink-internals' }
         ]
       },
       {
@@ -259,6 +267,11 @@ window.NAV = [
       {
         title: '离线与湖仓', children: [
           { title: 'Spark 与数据湖（Iceberg / Paimon）', path: 'bigdata/spark-lake' }
+        ]
+      },
+      {
+        title: '架构案例', children: [
+          { title: '案例：电商实时数据平台设计详解（CDC → Flink → 湖仓 → Doris）', path: 'bigdata/case-realtime' }
         ]
       }
     ]

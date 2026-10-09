@@ -124,6 +124,9 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | Agent 与工作流的区别 | 控制流由模型决定 vs 代码写死；能用工作流就不用 Agent | [Agent、工具调用与 MCP](#/ai/agent) |
 | 工具调用与 MCP | 模型只产出调用意图，代码执行并鉴权；MCP 把 M×N 集成变成 M+N | [Agent、工具调用与 MCP](#/ai/agent) |
 | 提示注入怎么防 | 无法根治；最小权限、代码层鉴权、外部内容不可信、关键操作确认、避免致命三要素 | [LLM 应用工程化、安全与评测](#/ai/llmops) |
+| KV Cache 与推理服务优化 | KV 显存 = 2×层×KV头×维×长度×字节；连续批处理、PagedAttention、前缀缓存、量化、投机解码 | [大模型原理与推理服务（KV Cache、vLLM、量化、微调）](#/ai/llm-internals) |
+| Agent 上下文工程与长任务 | 压缩/按需加载/笔记/隔离；状态机+检查点；人在回路；轨迹评测 | [Agent 进阶：上下文工程、记忆与多智能体](#/ai/agent-deep) |
+| 设计一个企业智能客服 | 路由+RAG+受限 Agent；精确数据走工具；写操作两阶段；延迟预算、配额与降级、评测门禁 | [案例：企业智能客服与知识库（RAG + Agent）设计详解](#/ai/case-kb) |
 | Java 里怎么落地 | Spring AI（ChatClient/Advisor/VectorStore）或 LangChain4j（AiServices）；流式 SSE、幂等工具 | [Java 实战：Spring AI 与 LangChain4j](#/ai/spring-ai) |
 
 ## 大数据
@@ -138,6 +141,8 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | CDC 与全量增量一致 | 读 binlog；增量快照：Chunk 并行 + 水位修正，无需全局锁 | [CDC 与实时数仓架构](#/bigdata/cdc) |
 | 实时数仓分层与 Lambda/Kappa | ODS/DWD/DWS/ADS；流批一体 + 湖仓取代双链路；对账 | [CDC 与实时数仓架构](#/bigdata/cdc) |
 | ClickHouse 与 Doris | ClickHouse 单表聚合强、批量写入；Doris 主键更新、Join、高并发、MySQL 协议 | [OLAP：ClickHouse 与 Doris](#/bigdata/olap) |
+| Flink 内部：Mailbox、反压、Key Group | 单线程 Mailbox 串行处理；信用流控产生反压；Key Group 决定状态分片，maxParallelism 不可随意改 | [Flink 内部机制：执行图、网络栈、内存与 Key Group](#/bigdata/flink-internals) |
+| 设计电商实时数据平台 | 按延迟/状态/一致性拆作业；Paimon partial-update 宽表；CUMULATE+Upsert；同口径对账；湖仓回溯 | [案例：电商实时数据平台设计详解（CDC → Flink → 湖仓 → Doris）](#/bigdata/case-realtime) |
 | Spark 倾斜与数据湖表格式 | AQE/加盐/广播；Iceberg 元数据树与原子提交；Paimon LSM 适合高频更新 | [Spark 与数据湖（Iceberg / Paimon）](#/bigdata/spark-lake) |
 
 ## 中间件

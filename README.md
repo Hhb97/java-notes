@@ -13,8 +13,8 @@
 | Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战 |
 | 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch、Dubbo |
 | 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
-| AI 应用 | 大模型应用基础、RAG（流水线、检索优化、评估）、Agent 与 MCP、Spring AI / LangChain4j、LLM 工程化与安全 |
-| 大数据 | Flink（时间窗口、状态与 Exactly-Once、反压调优）、CDC 与实时数仓、ClickHouse / Doris、Spark 与 Iceberg / Paimon |
+| AI 应用 | 大模型应用基础、RAG（流水线、检索优化、评估）、Agent 与 MCP、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、Agent 进阶、**智能客服架构案例** |
+| 大数据 | Flink（时间窗口、状态与 Exactly-Once、反压调优）、CDC 与实时数仓、ClickHouse / Doris、Spark 与 Iceberg / Paimon、Flink 内部机制、**电商实时数据平台架构案例** |
 | 分布式 | CAP/BASE、Raft、分布式事务、分布式 ID、限流熔断降级 |
 | 网络与运维 | TCP/HTTP、IO 模型与 Netty（源码与实战）、Linux 排查、Nginx、Docker、Kubernetes |
 | 系统设计 | 高并发方法论、秒杀系统、面试速查 |
