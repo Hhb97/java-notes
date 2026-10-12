@@ -312,6 +312,22 @@ window.NAV = [
     ]
   },
   {
+    id: 'security', title: '安全与认证', desc: '认证授权、OAuth2/JWT、Web 漏洞防护、加密与密钥管理',
+    children: [
+      {
+        title: '认证与授权', children: [
+          { title: '认证授权：Session、JWT、OAuth2 与 Spring Security', path: 'security/auth' }
+        ]
+      },
+      {
+        title: '应用与数据安全', children: [
+          { title: 'Web 安全：OWASP 常见漏洞与防护', path: 'security/web' },
+          { title: '加密、签名、HTTPS 与密钥管理', path: 'security/crypto' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'distributed', title: '分布式', desc: 'CAP、共识、分布式事务、ID、限流熔断',
     children: [
       {
@@ -330,7 +346,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'infra', title: '网络与运维', desc: 'TCP/HTTP、Netty、Linux、Nginx、Docker、K8s',
+    id: 'infra', title: '网络与运维', desc: 'TCP/HTTP、Netty、可观测性、Linux、Nginx、Docker、K8s',
     children: [
       {
         title: '网络与 IO', children: [
@@ -338,6 +354,12 @@ window.NAV = [
           { title: 'IO 模型与 Netty', path: 'infra/netty' },
           { title: 'Netty 源码：线程模型与 Pipeline', path: 'infra/netty-core' },
           { title: 'Netty 实战：编解码、内存与调优', path: 'infra/netty-practice' }
+        ]
+      },
+      {
+        title: '可观测性', children: [
+          { title: '指标监控：Prometheus、Micrometer 与 Grafana', path: 'infra/obs-metrics' },
+          { title: '链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO', path: 'infra/obs-trace' }
         ]
       },
       {
@@ -351,10 +373,16 @@ window.NAV = [
     ]
   },
   {
-    id: 'design', title: '系统设计', desc: '高并发方法论、秒杀、面试速查',
+    id: 'design', title: '系统设计', desc: '高并发方法论、架构设计案例、面试速查',
     children: [
       { title: '高并发系统设计方法论', path: 'design/method' },
-      { title: '秒杀系统设计', path: 'design/seckill' },
+      {
+        title: '架构案例', children: [
+          { title: '秒杀系统设计', path: 'design/seckill' },
+          { title: '案例：订单、支付与对账系统设计详解', path: 'design/case-payment' },
+          { title: '案例：即时通讯（IM）系统设计详解', path: 'design/case-im' }
+        ]
+      },
       { title: '面试高频速查', path: 'design/interview' }
     ]
   }
