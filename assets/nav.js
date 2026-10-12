@@ -381,6 +381,25 @@ window.NAV = [
     ]
   },
   {
+    id: 'cs', title: '计算机基础', desc: '操作系统（进程、内存、文件与 IO）与算法（数据结构、解题套路、工程算法）',
+    children: [
+      {
+        title: '操作系统', children: [
+          { title: '进程、线程与 CPU 调度', path: 'cs/os-process' },
+          { title: '虚拟内存、分页与内存管理', path: 'cs/os-memory' },
+          { title: '文件系统、页缓存与零拷贝', path: 'cs/os-io' }
+        ]
+      },
+      {
+        title: '算法', children: [
+          { title: '复杂度与核心数据结构', path: 'cs/algo-ds' },
+          { title: '解题套路：双指针、二分、DP、回溯与图', path: 'cs/algo-patterns' },
+          { title: '工程中的算法：布隆、一致性哈希、限流与 Top K', path: 'cs/algo-engineering' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'design', title: '系统设计', desc: '高并发方法论、DDD 与事件驱动、架构设计案例、面试速查',
     children: [
       { title: '高并发系统设计方法论', path: 'design/method' },
