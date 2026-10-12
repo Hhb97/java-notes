@@ -16,7 +16,7 @@
 | 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
 | AI 应用 | 大模型应用基础、RAG（流水线、检索优化、评估）、Agent 与 MCP、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、Agent 进阶、**智能客服架构案例** |
 | **AI 模型与数学**（初学者友好） | 线性代数、微积分、概率；机器学习入门；MLP、CNN、RNN/LSTM、Transformer、LLM；模型家族地图与“性格画像” |
-| 大数据 | Flink（时间窗口、状态与 Exactly-Once、反压调优）、CDC 与实时数仓、ClickHouse / Doris、Spark 与 Iceberg / Paimon、Flink 内部机制、**电商实时数据平台架构案例** |
+| 大数据 | Flink（时间窗口、状态与 Exactly-Once、反压调优）、CDC 与实时数仓、ClickHouse / Doris、**ClickHouse 专题（MergeTree 与稀疏索引、集群与写入、漏斗留存与近似计算）**、Spark 与 Iceberg / Paimon、Flink 内部机制、**电商实时数据平台架构案例** |
 | 计算机基础 | 操作系统（进程线程与调度、虚拟内存、文件系统与页缓存/零拷贝）、算法（复杂度与数据结构、解题套路、布隆/一致性哈希/限流/Top K 等工程算法） |
 | 安全 | 认证授权（Session/JWT/OAuth2/OIDC/SSO、Spring Security）、OWASP 常见漏洞防护、加密签名/HTTPS/密钥管理 |
 | 分布式 | CAP/BASE、Raft、分布式事务、分布式 ID、限流熔断降级 |

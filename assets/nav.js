@@ -307,7 +307,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP、Spark 与数据湖',
+    id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP 与 ClickHouse、Spark 与数据湖',
     children: [
       {
         title: 'Flink', children: [
@@ -321,6 +321,13 @@ window.NAV = [
         title: '实时数据架构', children: [
           { title: 'CDC 与实时数仓架构', path: 'bigdata/cdc' },
           { title: 'OLAP：ClickHouse 与 Doris', path: 'bigdata/olap' }
+        ]
+      },
+      {
+        title: 'ClickHouse', children: [
+          { title: 'ClickHouse 存储与执行：MergeTree、稀疏索引与向量化', path: 'bigdata/ck-engine' },
+          { title: 'ClickHouse 集群、写入与表设计实战', path: 'bigdata/ck-cluster' },
+          { title: 'ClickHouse 行为分析：漏斗、留存与近似计算', path: 'bigdata/ck-analytics' }
         ]
       },
       {

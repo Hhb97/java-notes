@@ -59,6 +59,9 @@ summary: 讲清列式存储与向量化执行为什么适合分析，ClickHouse 
 
 ## ClickHouse
 
+> [!TIP] 深入阅读
+> 本节是概览。存储原理见 [ClickHouse 存储与执行](#/bigdata/ck-engine)，集群/写入/物化视图见 [集群、写入与表设计](#/bigdata/ck-cluster)，漏斗留存等见 [行为分析](#/bigdata/ck-analytics)。
+
 ### 架构要点
 
 - **单进程、无外部依赖**（元数据可用 ClickHouse Keeper 做复制协调），部署简单，单机吞吐极高；
