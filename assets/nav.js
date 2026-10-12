@@ -172,6 +172,23 @@ window.NAV = [
     ]
   },
   {
+    id: 'db', title: 'NoSQL 与 NewSQL', desc: 'MongoDB 文档数据库、TiDB 分布式 SQL 数据库',
+    children: [
+      {
+        title: 'MongoDB', children: [
+          { title: 'MongoDB 数据模型、索引与聚合', path: 'db/mongo-model' },
+          { title: 'MongoDB 复制集、分片与事务', path: 'db/mongo-cluster' }
+        ]
+      },
+      {
+        title: 'TiDB', children: [
+          { title: 'TiDB 架构：TiKV、PD、Raft 与分布式事务', path: 'db/tidb-arch' },
+          { title: 'TiDB 实战：热点、迁移、选型与调优', path: 'db/tidb-practice' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、Elasticsearch、Dubbo、gRPC',
     children: [
       {

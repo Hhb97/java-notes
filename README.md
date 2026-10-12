@@ -11,6 +11,7 @@
 | MySQL | 架构、InnoDB 存储、B+ 树索引、SQL 调优、MVCC、锁、redo/undo/binlog、主从复制、分库分表 |
 | PostgreSQL | 进程模型与 WAL、MVCC 与 VACUUM、锁、索引类型与优化、流复制/Patroni/PITR/分区 |
 | Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战 |
+| NoSQL 与 NewSQL | MongoDB（文档建模、索引与聚合、复制集/分片/事务）、TiDB（TiKV/PD/Raft、Percolator 分布式事务、热点与迁移、选型） |
 | 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch、Dubbo、gRPC 与 Protobuf |
 | 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
 | AI 应用 | 大模型应用基础、RAG（流水线、检索优化、评估）、Agent 与 MCP、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、Agent 进阶、**智能客服架构案例** |
