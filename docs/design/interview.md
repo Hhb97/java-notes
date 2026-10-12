@@ -1,7 +1,7 @@
 ---
 level: 进阶
 tags: [面试, 速查, 高频题, 系统设计, STAR]
-summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高频问题给出一到两句答题要点和详解页面链接，并附系统设计答题框架与项目经历讲述模板。
+summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全、数据库、DDD 与事件驱动、可观测与发布、操作系统/网络/算法、AI 等）：每类高频问题给出一到两句答题要点和详解页面链接，并附系统设计答题框架与项目经历讲述模板。
 ---
 
 # 面试高频速查
@@ -158,6 +158,10 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | ES 深分页与同步 | search_after + PIT；Canal 订阅 binlog + 幂等 + 对账 | [ES 实战与数据同步](#/mw/es-practice) |
 | Dubbo 一次调用的链路 | 代理 → Filter → Cluster/Directory/Router/LoadBalance → Netty；requestId 配对异步响应；SPI 可插拔 | [Dubbo 架构与调用链路](#/mw/dubbo) |
 | Dubbo 容错与重试陷阱 | 默认 Failover 重试 2 次；写接口 `retries=0` 并保证幂等；超时自内向外递减 | [Dubbo 集群容错与服务治理](#/mw/dubbo-practice) |
+| gRPC 相比 REST 的优缺点 | Protobuf 二进制 + HTTP/2 多路复用 + 强类型代码生成 + 四种流；缺点：可读性差、浏览器需 grpc-web、对 L4 LB 不友好 | [gRPC 与 Protobuf](#/mw/grpc) |
+| Protobuf 如何保证兼容 | 字段编号标识数据；只增不改；删除字段用 reserved 且编号永不复用；CI 用 buf breaking 检查 | [gRPC 与 Protobuf](#/mw/grpc) |
+| gRPC 在 K8s 里为什么负载不均 | HTTP/2 单长连接复用，L4 只在建连时分配；用 Headless + 客户端 round_robin 或 L7 代理，服务端设最大连接存活 | [gRPC 与 Protobuf](#/mw/grpc) |
+| gRPC 的 Deadline 与重试 | 每个调用必须设 Deadline 并向下游传播；只对幂等方法与 UNAVAILABLE 重试，带退避与重试预算 | [gRPC 与 Protobuf](#/mw/grpc) |
 
 ## 分布式
 
@@ -179,6 +183,17 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | Nginx 负载均衡与高可用 | upstream 策略；Keepalived + VIP | [Nginx 与负载均衡](#/infra/nginx) |
 | Docker 与 JVM | Namespace/Cgroups；容器感知；OOMKilled 与内存比例 | [Docker 容器化](#/infra/docker) |
 | K8s 探针与优雅停机 | startup/readiness/liveness；preStop + 优雅停机 | [Kubernetes 核心概念](#/infra/k8s) |
+| 监控该看哪些指标 | 黄金信号（延迟/流量/错误/饱和度）；服务用 RED，资源用 USE；加业务指标 | [指标监控](#/infra/obs-metrics) |
+| Prometheus 四种指标类型与分位数 | Counter/Gauge/Histogram/Summary；分位数用 Histogram 桶聚合后 histogram_quantile，不能对各实例 P99 取平均 | [指标监控](#/infra/obs-metrics) |
+| 什么是高基数，怎么避免 | series 数 = 标签取值乘积；别把 userId/URL 当标签；用路由模板，高基数放日志或链路 | [指标监控](#/infra/obs-metrics) |
+| 链路追踪原理与断链 | Trace/Span + traceparent 跨服务传递；线程池、MQ、异步要做上下文传播；头部低比例 + 尾部保错保慢采样 | [链路追踪、日志与告警](#/infra/obs-trace) |
+| SLO 与燃烧率告警 | SLI→SLO→错误预算；长短窗口同时超燃烧率阈值才告警；预算耗尽暂停发布 | [链路追踪、日志与告警](#/infra/obs-trace) |
+| 线上变慢怎么排查 | 指标定范围→看变更与依赖饱和度→链路找慢 span→traceId 查日志；先止血后定位 | [链路追踪、日志与告警](#/infra/obs-trace) |
+| CI/CD 与一次构建处处部署 | 构建一次镜像，用摘要晋级各环境，差异靠配置注入；质量门禁、快速失败、可追溯 | [CI/CD 流水线与 GitOps](#/infra/cicd) |
+| GitOps 是什么 | Git 为唯一事实来源，ArgoCD 拉取并持续对账；回滚即 git revert；集群凭据不出集群 | [CI/CD 流水线与 GitOps](#/infra/cicd) |
+| 灰度、蓝绿、滚动怎么选 | 滚动省资源但回滚慢；蓝绿秒级回滚但双倍资源；金丝雀渐进放量 + 指标对比，适合核心高风险变更 | [发布策略](#/infra/release) |
+| 数据库变更如何可回滚发布 | 扩展-收缩：加列→双写→回填→切读→删旧列，每步兼容新旧版本；大表 DDL 用 gh-ost | [发布策略](#/infra/release) |
+| 特性开关的价值与风险 | 部署与发布解耦、关开关即回滚；风险是僵尸开关与组合爆炸，需负责人与过期时间 | [发布策略](#/infra/release) |
 
 ## 系统设计
 
@@ -186,6 +201,110 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表：每类高
 | --- | --- | --- |
 | 如何设计高并发系统 | 分层拦截、缓存、异步、拆分、限流降级、容量评估、压测 | [高并发系统设计方法论](#/design/method) |
 | 秒杀系统 | 静态化、限流、Redis Lua 预扣、MQ 异步下单、防刷、对账 | [秒杀系统设计](#/design/seckill) |
+| 设计订单、支付与对账系统 | 订单与支付单分离；状态机条件更新；幂等键；回调验签落库秒回；主动查询补偿；本地消息表；复式记账 + T+1 对账 | [订单支付对账案例](#/design/case-payment) |
+| 支付超时结果未知怎么办 | 保持 PAYING 不当失败；回调与主动查询共用幂等逻辑；关单前先查渠道；多付自动退款 | [订单支付对账案例](#/design/case-payment) |
+| 设计即时通讯 IM | 接入层有状态业务层无状态；路由表；先存储后投递；ACK + 会话 seq + 去重；拉取兜底；小群写扩散大群读扩散 | [IM 案例](#/design/case-im) |
+| IM 消息如何不丢不重不乱序 | 服务端 ACK 前已持久化；client_msg_id 幂等；会话内单调 seq，空洞补拉；离线按 last_seq 增量拉 | [IM 案例](#/design/case-im) |
+
+## 安全与认证
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| Session 与 JWT 的区别 | Session 状态在服务端易撤销；JWT 无状态易扩展但难撤销，用短期 Access + 可轮换 Refresh + 黑名单/版本号 | [认证授权](#/security/auth) |
+| OAuth2 授权码 + PKCE 流程 | 重定向授权→回调带一次性 code→code+verifier 换令牌；PKCE 让被截获的 code 无法换令牌 | [认证授权](#/security/auth) |
+| OAuth2 与 OIDC 区别 | OAuth2 管授权（令牌能访问什么），OIDC 加身份层（ID Token 说明用户是谁）；不要拿 ID Token 调 API | [认证授权](#/security/auth) |
+| Spring Security 认证流程 | 过滤器链→AuthenticationManager→Provider→UserDetailsService+PasswordEncoder→SecurityContext；URL 授权 + 方法安全 | [认证授权](#/security/auth) |
+| 微服务统一认证 | 授权服务器签发 JWT + JWKS；网关验令牌并限流；各服务再验并做数据权限；零信任 | [认证授权](#/security/auth) |
+| 水平越权怎么防 | 每次访问校验资源归属，查询带当前用户；DTO 白名单防批量赋值；多租户在数据层强制 | [Web 安全](#/security/web) |
+| SQL 注入与 MyBatis `${}` | 参数化查询；`#{}` 预编译，`${}` 拼接；动态列名走白名单 | [Web 安全](#/security/web) |
+| XSS 与 CSRF 防护 | 输出按上下文编码 + CSP + HttpOnly；CSRF 用 SameSite + Token + Origin 校验，Bearer 头天然免疫 | [Web 安全](#/security/web) |
+| SSRF 怎么防 | 协议与域名白名单；解析后拒绝内网/回环/链路本地；防 DNS 重绑定与重定向；云上用 IMDSv2 | [Web 安全](#/security/web) |
+| Java 反序列化与 Log4Shell | 不反序列化不可信数据、关 autoType、类白名单；依赖是攻击面，要有 SBOM 与快速升级能力 | [Web 安全](#/security/web) |
+| 密码怎么存 | bcrypt/Argon2 带随机盐的慢哈希，成本可调；禁止 MD5/SHA 无盐与可逆加密 | [加密与密钥管理](#/security/crypto) |
+| HTTPS 握手与前向保密 | ECDHE 协商会话密钥 + 证书验身份 + 对称加密传输；临时密钥使私钥泄露也解不开历史流量 | [加密与密钥管理](#/security/crypto) |
+| 信封加密与 KMS | DEK 加密数据，KMS 主密钥加密 DEK；轮换只重加密 DEK；主密钥不出 KMS | [加密与密钥管理](#/security/crypto) |
+| 防篡改防重放的接口签名 | HMAC/非对称签名覆盖方法、路径、参数、时间戳、nonce、body 摘要；Redis 去重 nonce | [加密与密钥管理](#/security/crypto) |
+
+## NoSQL、NewSQL、时序与分析库
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| MongoDB 适合什么场景 | 结构多变、以聚合对象读写、高写入半结构化数据；不适合强事务与大量联表 | [MongoDB 数据模型](#/db/mongo-model) |
+| MongoDB 嵌入还是引用 | 一起读、数量有界、同生命周期则嵌入；独立访问、多对多、无界增长则引用；子集/扩展引用模式 | [MongoDB 数据模型](#/db/mongo-model) |
+| MongoDB 复合索引 ESR 规则 | 等值→排序→范围；最左前缀；覆盖查询；explain 看 IXSCAN 与 docsExamined/nReturned | [MongoDB 数据模型](#/db/mongo-model) |
+| MongoDB `w:1` 为什么可能丢数据 | 仅主确认，主节点故障后未复制的写被回滚；重要数据用 w:majority + j:true + majority 读 | [MongoDB 复制集与分片](#/db/mongo-cluster) |
+| MongoDB 分片键怎么选 | 高基数、写入均匀、查询带分片键；避免单调递增键写热点，用哈希或复合键；低基数产生 jumbo chunk | [MongoDB 复制集与分片](#/db/mongo-cluster) |
+| TiDB 架构与分布式事务 | TiDB 无状态 SQL 层 + TiKV(Raft Region) + PD(元数据/TSO/调度) + TiFlash；Percolator 两阶段提交，primary 提交是原子点 | [TiDB 架构](#/db/tidb-arch) |
+| TiDB 隔离级别与 MySQL RR 差异 | 快照隔离，无间隙锁，写偏斜；依赖 gap lock 的逻辑要改用唯一索引或 FOR UPDATE | [TiDB 架构](#/db/tidb-arch) |
+| TiDB 写入热点与迁移 | 自增主键集中最后 Region，用 AUTO_RANDOM；DM 全量+增量、校验、灰度、反向回流；大事务分批 | [TiDB 实战](#/db/tidb-practice) |
+| 何时选 TiDB | 数据 TB 级、写入需水平扩展、分库分表痛苦、要强一致事务与 HTAP；小规模延迟敏感用单机 MySQL | [TiDB 实战](#/db/tidb-practice) |
+| InfluxDB tag 与 field | tag 带索引低基数用于过滤分组，field 存数值；series 基数是关键，ID/URL 不能当 tag | [InfluxDB 数据模型](#/db/influx-model) |
+| 时序库降采样与保留策略 | 分级 bucket；Task/CQ 聚合并保留 min/max/mean/count；按 shard 整体过期 | [InfluxDB 实战](#/db/influx-practice) |
+| 时序库选型 | 云原生监控用 Prometheus；要 SQL 联查用 TimescaleDB；海量设备用 TDengine/IoTDB；分析用 ClickHouse | [InfluxDB 实战](#/db/influx-practice) |
+| ClickHouse 为什么快 | 列存少读 + 压缩 + 稀疏索引/分区跳过 + 向量化与多核并行 | [ClickHouse 存储与执行](#/bigdata/ck-engine) |
+| MergeTree 稀疏索引与排序键 | 每 8192 行一条索引、mark 定位列文件；排序键前缀有效，低基数在前；PK 不唯一，点查非强项 | [ClickHouse 存储与执行](#/bigdata/ck-engine) |
+| ClickHouse Too many parts | 小批量高频写入或分区过细；批量、async_insert、Kafka 引擎/Flink 攒批、减分区 | [ClickHouse 存储与执行](#/bigdata/ck-engine) |
+| ReplacingMergeTree 去重的坑 | 仅合并时同分区去重；查询要 FINAL 或 argMax；排序键须含去重键 | [ClickHouse 存储与执行](#/bigdata/ck-engine) |
+| ClickHouse 集群与分布式 Join | ReplicatedMergeTree + Keeper + Distributed 表；写本地表；大表 Join 用 colocate/宽表/字典，GLOBAL 广播小表 | [ClickHouse 集群与实战](#/bigdata/ck-cluster) |
+| 漏斗/留存/UV 怎么做 | windowFunnel/retention 按用户一次扫描，分片键用 user_id；UV 用 uniq 系列，周 UV 不能日 UV 相加，用 State/Merge | [ClickHouse 行为分析](#/bigdata/ck-analytics) |
+
+## 领域驱动与事件驱动
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| DDD 战略与战术设计的区别 | 战略：通用语言、子域、限界上下文、上下文映射；战术：实体、值对象、聚合、领域服务、仓储、领域事件 | [DDD 战略设计](#/design/ddd-strategic) |
+| 限界上下文与微服务 | 上下文是边界候选，不必一一对应；先模块化单体再拆；按语言变化、业务能力、团队、一致性划分 | [DDD 战略设计](#/design/ddd-strategic) |
+| 防腐层的作用 | 领域层定义自己的接口，基础设施层翻译外部模型与错误码，隔离遗留/第三方变化 | [DDD 战略设计](#/design/ddd-strategic) |
+| 聚合如何设计 | 以不变量定边界；小聚合、只引用 ID、一个事务改一个聚合、跨聚合用领域事件最终一致；乐观锁 | [DDD 战术设计](#/design/ddd-tactical) |
+| 贫血与充血模型 | 贫血：规则散在 Service 易被绕过；充血：状态转移与校验在聚合内；简单 CRUD 不必强求 | [DDD 战术设计](#/design/ddd-tactical) |
+| 业务变更与事件发布如何一致 | Outbox：同一本地事务写业务表与 outbox，中继/CDC 投递；消费端幂等 | [事件驱动架构](#/design/event-driven) |
+| 事件重复、乱序、丢失怎么办 | eventId 去重表/条件更新；按聚合分区 + 版本号丢旧事件；重试主题 + 死信 | [事件驱动架构](#/design/event-driven) |
+| Saga 协同式与编排式 | 协同靠事件接力无中心；编排由协调者集中控制与补偿；补偿幂等且必须成功，注意空补偿与悬挂 | [事件驱动架构](#/design/event-driven) |
+| CQRS 与事件溯源 | CQRS 读写模型分离（可同库分层起步）；ES 存事件重放得状态，需读模型、快照、事件版本升级；只用于特定聚合 | [CQRS 与事件溯源](#/design/cqrs-es) |
+
+## 计算机基础：操作系统、网络与算法
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| 进程、线程、协程的区别 | 进程资源隔离、线程共享地址空间是调度单位、协程用户态调度；切换开销依次降低 | [进程、线程与 CPU 调度](#/cs/os-process) |
+| 上下文切换的代价与线程数 | 直接 µs 级，间接是缓存/TLB 失效；CPU 密集 N+1，IO 密集按等待比例，压测校准 | [进程、线程与 CPU 调度](#/cs/os-process) |
+| 容器 CPU limit 为何延迟抖动 | CFS 带宽控制耗尽配额被强制暂停，看 throttled 指标；放宽 limit、让 JVM 感知核数 | [进程、线程与 CPU 调度](#/cs/os-process) |
+| 死锁四条件与预防 | 互斥/持有并等待/不可抢占/循环等待；统一加锁顺序、tryLock 超时；jstack 排查 | [进程、线程与 CPU 调度](#/cs/os-process) |
+| 虚拟内存、缺页与 swap | 页表 + TLB 翻译；主要缺页读盘毫秒级；延迟敏感服务关 swap；free 看 available | [虚拟内存与内存管理](#/cs/os-memory) |
+| Java 容器 OOMKilled 但堆没满 | RSS = 堆 + 元空间 + 线程栈 + 直接内存 + 代码缓存 + GC 结构 + glibc arena；NMT 核算 | [虚拟内存与内存管理](#/cs/os-memory) |
+| write 成功就落盘了吗 | 只进页缓存，需 fsync；组提交摊薄成本；Kafka 靠多副本而非 fsync | [文件系统、页缓存与零拷贝](#/cs/os-io) |
+| 零拷贝与 mmap/sendfile | 传统 4 次拷贝，sendfile 在内核内转发；mmap 适合用户态处理，sendfile 适合纯转发 | [文件系统、页缓存与零拷贝](#/cs/os-io) |
+| IP 同网段与跨网段通信 | 同网段 ARP 解析目的 MAC；跨网段发给网关，IP 不变 MAC 逐跳改写；路由最长前缀匹配 | [网络层：IP、路由、NAT 与 MTU](#/cs/net-ip) |
+| NAT 与 conntrack 的坑 | conntrack 表满静默丢包；SNAT 端口耗尽；空闲超时回收；源 IP 用 XFF/Proxy Protocol 传递 | [网络层：IP、路由、NAT 与 MTU](#/cs/net-ip) |
+| 小包正常大包卡死 | PMTU 黑洞：ICMP 需分片被屏蔽；放行 ICMP、MSS clamping、统一 overlay MTU | [网络层：IP、路由、NAT 与 MTU](#/cs/net-ip) |
+| DNS 解析过程与切换为何慢 | 多级缓存按 TTL；JVM 缓存与连接池不重解析；迁移前提前调低 TTL | [DNS 与 CDN](#/cs/net-dns) |
+| K8s DNS 偶发 5 秒与 ndots | ndots:5 放大查询，A/AAAA 并行 UDP 的 conntrack 竞争；FQDN、调 ndots、NodeLocal DNSCache | [DNS 与 CDN](#/cs/net-dns) |
+| 快速重传与超时重传 | 3 个重复 ACK 立即重传；超时按 RTO 指数退避；SACK 只补缺失段；SYN 丢失表现为 1s/3s 慢 | [TCP 深入与 UDP/QUIC](#/cs/net-tcp) |
+| 接口固定 40ms 延迟 | Nagle 与延迟 ACK 相互等待；开 TCP_NODELAY 并一次写完整消息 | [TCP 深入与 UDP/QUIC](#/cs/net-tcp) |
+| keepalive 与连接被静默回收 | 默认 2 小时太长；间隔小于 NAT/LB 空闲超时 + 应用层心跳；连接池 maxLifetime 更小 | [TCP 深入与 UDP/QUIC](#/cs/net-tcp) |
+| Connection reset 怎么排查 | 两端抓包看谁发 RST：无监听、对端已关、空闲回收、SO_LINGER 0、队列溢出、中间设备注入 | [TCP 深入与 UDP/QUIC](#/cs/net-tcp) |
+| QUIC 为何基于 UDP | 用户态可靠传输 + 多流独立无队头阻塞 + 1-RTT 握手 + 连接迁移；弱网收益明显 | [TCP 深入与 UDP/QUIC](#/cs/net-tcp) |
+| Docker 网络与 K8s Service 原理 | netns + veth + bridge，-p 是 iptables DNAT；ClusterIP 是虚拟 IP，kube-proxy 用 iptables/IPVS 做 DNAT | [容器网络与网络排障](#/cs/net-debug) |
+| 请求慢卡在哪一层 | curl -w 分阶段耗时，ss 看队列重传，两端 tcpdump 对比握手/重传/RST，区分网络与应用 | [容器网络与网络排障](#/cs/net-debug) |
+| 复杂度与常见数据结构选型 | 按操作代价选：数组/链表/哈希/堆/红黑树/B+ 树/跳表；LRU = 哈希 + 双向链表 | [复杂度与核心数据结构](#/cs/algo-ds) |
+| 常见解题套路 | 二分（单调性）、双指针/滑窗、前缀和、回溯、DP 四步、BFS 最短步数、拓扑排序 | [解题套路](#/cs/algo-patterns) |
+| 布隆过滤器与缓存穿透 | 位数组 + 多哈希，无假阴性有假阳性，不能删；参数由 n 与误判率估算 | [工程中的算法](#/cs/algo-engineering) |
+| 一致性哈希与虚拟节点 | 增删节点只迁移约 K/N；虚拟节点解决倾斜与故障压力集中 | [工程中的算法](#/cs/algo-engineering) |
+| 限流算法对比 | 固定窗口有临界突刺；滑动窗口平滑；漏桶整形；令牌桶允许突发；分布式用 Redis + Lua | [工程中的算法](#/cs/algo-engineering) |
+| 海量数据 Top K 与去重 | 哈希分片 + 局部堆再合并；UV 用 HyperLogLog；整数集合用位图；频次近似用 Count-Min Sketch | [工程中的算法](#/cs/algo-engineering) |
+
+## AI 模型与数学
+
+| 问题 | 答题要点 | 详见 |
+| --- | --- | --- |
+| 梯度下降与学习率 | 沿负梯度更新；学习率过大震荡发散，过小收敛慢；动量/Adam 改进 | [微积分：导数与梯度](#/aimodel/math-calc2) |
+| 过拟合与欠拟合 | 训练好验证差 = 过拟合：正则、Dropout、早停、更多数据；两者都差 = 欠拟合：加容量 | [机器学习入门](#/aimodel/ml-intro) |
+| 反向传播本质 | 链式法则从输出层向输入层逐层求梯度，复用中间结果 | [MLP 与反向传播](#/aimodel/mlp) |
+| CNN 为什么适合图像 | 局部连接、权值共享、平移不变性；池化降维；参数远少于全连接 | [CNN](#/aimodel/cnn) |
+| RNN/LSTM 的问题与门控 | 长序列梯度消失/爆炸；LSTM 用输入/遗忘/输出门控制信息流；仍难并行 | [RNN 与 LSTM](#/aimodel/rnn) |
+| Transformer 与注意力 | QKV 自注意力并行建模全局依赖；多头；位置编码；复杂度随长度平方增长 | [Transformer](#/aimodel/transformer) |
+| LLM 如何训练与推理 | 预训练(next token)→指令微调→对齐(RLHF/DPO)；推理 Prefill + Decode，KV Cache | [大语言模型](#/aimodel/llm) |
+| 交叉熵、Softmax 与概率 | Softmax 转概率；交叉熵衡量预测与真实分布差异；最大似然视角 | [概率与统计基础](#/aimodel/math-prob) |
 
 ## 系统设计题答题框架
 
