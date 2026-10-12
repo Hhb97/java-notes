@@ -172,7 +172,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'db', title: 'NoSQL 与 NewSQL', desc: 'MongoDB 文档数据库、TiDB 分布式 SQL 数据库',
+    id: 'db', title: 'NoSQL、NewSQL 与时序库', desc: 'MongoDB 文档数据库、TiDB 分布式 SQL 数据库、InfluxDB 时序数据库',
     children: [
       {
         title: 'MongoDB', children: [
@@ -184,6 +184,12 @@ window.NAV = [
         title: 'TiDB', children: [
           { title: 'TiDB 架构：TiKV、PD、Raft 与分布式事务', path: 'db/tidb-arch' },
           { title: 'TiDB 实战：热点、迁移、选型与调优', path: 'db/tidb-practice' }
+        ]
+      },
+      {
+        title: '时序数据库 InfluxDB', children: [
+          { title: 'InfluxDB 数据模型与存储引擎', path: 'db/influx-model' },
+          { title: 'InfluxDB 实战：基数、降采样、Java 写入与选型', path: 'db/influx-practice' }
         ]
       }
     ]
