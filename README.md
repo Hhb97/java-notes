@@ -11,7 +11,7 @@
 | MySQL | 架构、InnoDB 存储、B+ 树索引、SQL 调优、MVCC、锁、redo/undo/binlog、主从复制、分库分表 |
 | PostgreSQL | 进程模型与 WAL、MVCC 与 VACUUM、锁、索引类型与优化、流复制/Patroni/PITR/分区 |
 | Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战 |
-| 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch、Dubbo |
+| 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch、Dubbo、gRPC 与 Protobuf |
 | 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
 | AI 应用 | 大模型应用基础、RAG（流水线、检索优化、评估）、Agent 与 MCP、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、Agent 进阶、**智能客服架构案例** |
 | **AI 模型与数学**（初学者友好） | 线性代数、微积分、概率；机器学习入门；MLP、CNN、RNN/LSTM、Transformer、LLM；模型家族地图与“性格画像” |
@@ -19,7 +19,7 @@
 | 计算机基础 | 操作系统（进程线程与调度、虚拟内存、文件系统与页缓存/零拷贝）、算法（复杂度与数据结构、解题套路、布隆/一致性哈希/限流/Top K 等工程算法） |
 | 安全 | 认证授权（Session/JWT/OAuth2/OIDC/SSO、Spring Security）、OWASP 常见漏洞防护、加密签名/HTTPS/密钥管理 |
 | 分布式 | CAP/BASE、Raft、分布式事务、分布式 ID、限流熔断降级 |
-| 网络与运维 | TCP/HTTP、IO 模型与 Netty（源码与实战）、Linux 排查、**可观测性（Prometheus/Micrometer、OpenTelemetry 链路、日志、SLO）**、Nginx、Docker、Kubernetes |
+| 网络与运维 | TCP/HTTP、IO 模型与 Netty（源码与实战）、Linux 排查、**可观测性（Prometheus/Micrometer、OpenTelemetry 链路、日志、SLO）**、Nginx、Docker、Kubernetes、**CI/CD 与 GitOps、发布策略（灰度/蓝绿/特性开关/数据库变更）** |
 | 系统设计 | 高并发方法论、秒杀系统、**DDD（战略/战术）、事件驱动与 Saga、CQRS 与事件溯源**、**订单支付对账案例、即时通讯（IM）案例**、面试速查 |
 
 每篇包含：核心要点、源码/原理、SVG 图解、关键参数、生产踩坑、面试追问。

@@ -172,7 +172,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、Elasticsearch、Dubbo',
+    id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、Elasticsearch、Dubbo、gRPC',
     children: [
       {
         title: '消息队列', children: [
@@ -191,7 +191,8 @@ window.NAV = [
       {
         title: 'RPC 框架', children: [
           { title: 'Dubbo 架构与调用链路', path: 'mw/dubbo' },
-          { title: 'Dubbo 集群容错与服务治理', path: 'mw/dubbo-practice' }
+          { title: 'Dubbo 集群容错与服务治理', path: 'mw/dubbo-practice' },
+          { title: 'gRPC 与 Protobuf：协议、流式调用与治理', path: 'mw/grpc' }
         ]
       }
     ]
@@ -346,7 +347,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'infra', title: '网络与运维', desc: 'TCP/HTTP、Netty、可观测性、Linux、Nginx、Docker、K8s',
+    id: 'infra', title: '网络与运维', desc: 'TCP/HTTP、Netty、可观测性、Linux、Nginx、Docker、K8s、CI/CD 与发布',
     children: [
       {
         title: '网络与 IO', children: [
@@ -368,6 +369,12 @@ window.NAV = [
           { title: 'Nginx 与负载均衡', path: 'infra/nginx' },
           { title: 'Docker 容器化', path: 'infra/docker' },
           { title: 'Kubernetes 核心概念', path: 'infra/k8s' }
+        ]
+      },
+      {
+        title: '交付与发布', children: [
+          { title: 'CI/CD 流水线与 GitOps', path: 'infra/cicd' },
+          { title: '发布策略：灰度、蓝绿、特性开关与数据库变更', path: 'infra/release' }
         ]
       }
     ]
