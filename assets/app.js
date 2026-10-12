@@ -46,9 +46,58 @@
   };
 
   /* ================= 顶部分类 & 侧边栏 ================= */
-  $('tabs').innerHTML = NAV.map(function (c) {
-    return '<a class="tab" data-cat="' + c.id + '" href="#/' + c.pages[0].path + '">' + esc(c.title) + '</a>';
-  }).join('');
+  var TAB_GROUPS = [
+    { title: 'Java 与框架', ids: ['java', 'spring', 'cs'] },
+    { title: '数据存储', ids: ['mysql', 'pg', 'redis', 'db', 'bigdata'] },
+    { title: '中间件与物联网', ids: ['mw', 'iot'] },
+    { title: '分布式与架构', ids: ['distributed', 'design'] },
+    { title: '运维与安全', ids: ['infra', 'security'] },
+    { title: 'AI', ids: ['ai', 'aimodel'] }
+  ];
+  (function buildTabs() {
+    var byId = {}, used = {};
+    NAV.forEach(function (c) { byId[c.id] = c; });
+    var groups = TAB_GROUPS.map(function (g) {
+      return { title: g.title, cats: g.ids.filter(function (id) { return byId[id]; }).map(function (id) { used[id] = 1; return byId[id]; }) };
+    }).filter(function (g) { return g.cats.length; });
+    var rest = NAV.filter(function (c) { return !used[c.id]; });
+    if (rest.length) groups.push({ title: '更多', cats: rest });
+    $('tabs').innerHTML = groups.map(function (g, i) {
+      return '<button type="button" class="tab" data-group="' + i + '" aria-haspopup="true">' + esc(g.title) + '<svg class="tab-caret" viewBox="0 0 10 6" width="9" height="6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+    }).join('');
+    var menus = document.createElement('div');
+    menus.id = 'tabMenus';
+    menus.innerHTML = groups.map(function (g, i) {
+      return '<div class="tab-menu" data-group="' + i + '" hidden>' + g.cats.map(function (c) {
+        return '<a data-cat="' + c.id + '" href="#/' + c.pages[0].path + '"><b>' + esc(c.title) + '</b><small>' + esc(c.desc) + ' · ' + c.pages.length + ' 篇</small></a>';
+      }).join('') + '</div>';
+    }).join('');
+    document.querySelector('.topbar').appendChild(menus);
+    var openIdx = -1, timer = null;
+    function close() { openIdx = -1; menus.querySelectorAll('.tab-menu').forEach(function (m) { m.hidden = true; }); document.querySelectorAll('.tab.open').forEach(function (t) { t.classList.remove('open'); }); }
+    function open(i) {
+      clearTimeout(timer);
+      if (openIdx === i) return;
+      close(); openIdx = i;
+      var tab = document.querySelector('.tab[data-group="' + i + '"]'), m = menus.querySelector('.tab-menu[data-group="' + i + '"]');
+      var tr = tab.getBoundingClientRect(), bw = document.querySelector('.topbar').getBoundingClientRect().width;
+      m.hidden = false; tab.classList.add('open');
+      m.style.left = Math.max(8, Math.min(tr.left, bw - m.offsetWidth - 8)) + 'px';
+    }
+    function later() { clearTimeout(timer); timer = setTimeout(close, 160); }
+    document.querySelectorAll('.tab').forEach(function (t) {
+      var i = +t.dataset.group;
+      t.addEventListener('mouseenter', function () { open(i); });
+      t.addEventListener('mouseleave', later);
+      t.addEventListener('click', function (e) { e.stopPropagation(); open(i); });
+    });
+    menus.addEventListener('mouseenter', function () { clearTimeout(timer); });
+    menus.addEventListener('mouseleave', later);
+    menus.addEventListener('click', close);
+    document.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    window.__tabGroups = groups;
+  })();
 
   function renderNavItems(items, depth) {
     return items.map(function (n) {
@@ -90,7 +139,12 @@
   });
 
   function markActive(path, cat) {
-    document.querySelectorAll('.tab').forEach(function (t) { t.classList.toggle('active', !!cat && t.dataset.cat === cat.id); });
+    var gs = window.__tabGroups || [];
+    document.querySelectorAll('.tab').forEach(function (t) {
+      var g = gs[+t.dataset.group];
+      t.classList.toggle('active', !!cat && !!g && g.cats.indexOf(cat) >= 0);
+    });
+    document.querySelectorAll('#tabMenus a').forEach(function (a) { a.classList.toggle('on', !!cat && a.dataset.cat === cat.id); });
     var prev = navEl.querySelector('.nav-link.active');
     if (prev) prev.classList.remove('active');
     var a = navEl.querySelector('.nav-link[data-path="' + path + '"]');
@@ -101,8 +155,6 @@
     }
     var box = $('sidebar'), r = a.getBoundingClientRect(), br = box.getBoundingClientRect();
     if (r.top < br.top + 60 || r.bottom > br.bottom - 40) a.scrollIntoView({ block: 'center' });
-    var tab = document.querySelector('.tab.active');
-    if (tab) tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   }
 
   /* ================= Markdown ================= */

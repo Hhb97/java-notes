@@ -1,65 +1,95 @@
 <div class="hero">
 <div class="eyebrow">Senior Java Backend Notes</div>
 <h1>Java 后端工程师知识库</h1>
-<p>面向 3～5 年以上 Java 后端工程师的深度笔记：从 JVM 与并发原理，到 Spring、MySQL、Redis、消息队列，再到分布式与系统设计。每篇包含源码级原理、SVG 图解、生产踩坑和面试追问。</p>
+<p>面向 3～5 年以上 Java 后端工程师的深度笔记：从 JVM 与并发原理，到 Spring、MySQL/PG/MongoDB/TiDB、Redis、消息队列与 gRPC，再到分布式、DDD 与事件驱动、安全、可观测、CI/CD 与系统设计，另含 AI 应用、大数据与计算机基础。每篇包含源码级原理、SVG 图解、生产踩坑和面试追问。</p>
 </div>
 
 <div id="home-stats"></div>
 
 ## 技术全景
 
-一个典型 Java 后端系统从接入到存储的分层，以及贯穿其中的分布式能力。图中方块可点击跳转。
+一个典型 Java 后端系统从接入、服务、架构设计、中间件、存储，到数据与 AI、基础设施的分层，以及贯穿其中的分布式、可观测、交付与安全能力。图中方块可点击跳转。
 
 <figure class="fig">
-<svg viewBox="0 0 760 392" class="dg" role="img" aria-label="Java 后端技术栈分层全景">
-<rect class="b" x="20" y="20" width="92" height="60" rx="10"/>
-<text class="tb" x="66" y="50" text-anchor="middle" dominant-baseline="middle">接入层</text>
-<rect class="bg" x="124" y="20" width="502" height="60" rx="10"/>
-<a href="#/infra/network"><rect class="b1" x="136" y="32" width="64" height="36" rx="7"/><text class="t" x="168" y="50" text-anchor="middle" dominant-baseline="middle">CDN</text></a>
-<a href="#/infra/nginx"><rect class="b1" x="208" y="32" width="110" height="36" rx="7"/><text class="t" x="263" y="50" text-anchor="middle" dominant-baseline="middle">Nginx / LVS</text></a>
-<a href="#/spring/cloud"><rect class="b1" x="326" y="32" width="180" height="36" rx="7"/><text class="t" x="416" y="50" text-anchor="middle" dominant-baseline="middle">Spring Cloud Gateway</text></a>
-<rect class="b" x="20" y="92" width="92" height="60" rx="10"/>
-<text class="tb" x="66" y="122" text-anchor="middle" dominant-baseline="middle">服务层</text>
-<rect class="bg" x="124" y="92" width="502" height="60" rx="10"/>
-<a href="#/spring/boot"><rect class="b2" x="136" y="104" width="108" height="36" rx="7"/><text class="t" x="190" y="122" text-anchor="middle" dominant-baseline="middle">Spring Boot</text></a>
-<a href="#/spring/mvc"><rect class="b2" x="252" y="104" width="96" height="36" rx="7"/><text class="t" x="300" y="122" text-anchor="middle" dominant-baseline="middle">Spring MVC</text></a>
-<a href="#/spring/cloud"><rect class="b2" x="356" y="104" width="88" height="36" rx="7"/><text class="t" x="400" y="122" text-anchor="middle" dominant-baseline="middle">OpenFeign</text></a>
-<a href="#/distributed/governance"><rect class="b2" x="452" y="104" width="80" height="36" rx="7"/><text class="t" x="492" y="122" text-anchor="middle" dominant-baseline="middle">Sentinel</text></a>
-<a href="#/spring/cloud"><rect class="b2" x="540" y="104" width="72" height="36" rx="7"/><text class="t" x="576" y="122" text-anchor="middle" dominant-baseline="middle">Nacos</text></a>
-<rect class="b" x="20" y="164" width="92" height="60" rx="10"/>
-<text class="tb" x="66" y="194" text-anchor="middle" dominant-baseline="middle">中间件</text>
-<rect class="bg" x="124" y="164" width="502" height="60" rx="10"/>
-<a href="#/redis/overview"><rect class="b3" x="136" y="176" width="72" height="36" rx="7"/><text class="t" x="172" y="194" text-anchor="middle" dominant-baseline="middle">Redis</text></a>
-<a href="#/mw/kafka"><rect class="b3" x="216" y="176" width="72" height="36" rx="7"/><text class="t" x="252" y="194" text-anchor="middle" dominant-baseline="middle">Kafka</text></a>
-<a href="#/mw/rocketmq"><rect class="b3" x="296" y="176" width="96" height="36" rx="7"/><text class="t" x="344" y="194" text-anchor="middle" dominant-baseline="middle">RocketMQ</text></a>
-<a href="#/mw/es"><rect class="b3" x="400" y="176" width="124" height="36" rx="7"/><text class="t" x="462" y="194" text-anchor="middle" dominant-baseline="middle">Elasticsearch</text></a>
-<a href="#/spring/mybatis"><rect class="b3" x="532" y="176" width="80" height="36" rx="7"/><text class="t" x="572" y="194" text-anchor="middle" dominant-baseline="middle">MyBatis</text></a>
-<rect class="b" x="20" y="236" width="92" height="60" rx="10"/>
-<text class="tb" x="66" y="266" text-anchor="middle" dominant-baseline="middle">存储层</text>
-<rect class="bg" x="124" y="236" width="502" height="60" rx="10"/>
-<a href="#/mysql/architecture"><rect class="b5" x="136" y="248" width="130" height="36" rx="7"/><text class="t" x="201" y="266" text-anchor="middle" dominant-baseline="middle">MySQL · InnoDB</text></a>
-<a href="#/mysql/replication"><rect class="b5" x="274" y="248" width="88" height="36" rx="7"/><text class="t" x="318" y="266" text-anchor="middle" dominant-baseline="middle">主从复制</text></a>
-<a href="#/mysql/sharding"><rect class="b5" x="370" y="248" width="136" height="36" rx="7"/><text class="t" x="438" y="266" text-anchor="middle" dominant-baseline="middle">ShardingSphere</text></a>
-<rect class="b" x="20" y="308" width="92" height="60" rx="10"/>
-<text class="tb" x="66" y="338" text-anchor="middle" dominant-baseline="middle">基础层</text>
-<rect class="bg" x="124" y="308" width="502" height="60" rx="10"/>
-<a href="#/java/jvm/memory"><rect class="b" x="136" y="320" width="56" height="36" rx="7"/><text class="t" x="164" y="338" text-anchor="middle" dominant-baseline="middle">JVM</text></a>
-<a href="#/java/concurrency/thread"><rect class="b" x="200" y="320" width="84" height="36" rx="7"/><text class="t" x="242" y="338" text-anchor="middle" dominant-baseline="middle">并发编程</text></a>
-<a href="#/infra/netty"><rect class="b" x="292" y="320" width="66" height="36" rx="7"/><text class="t" x="325" y="338" text-anchor="middle" dominant-baseline="middle">Netty</text></a>
-<a href="#/infra/linux"><rect class="b" x="366" y="320" width="66" height="36" rx="7"/><text class="t" x="399" y="338" text-anchor="middle" dominant-baseline="middle">Linux</text></a>
-<a href="#/infra/docker"><rect class="b" x="440" y="320" width="74" height="36" rx="7"/><text class="t" x="477" y="338" text-anchor="middle" dominant-baseline="middle">Docker</text></a>
-<a href="#/infra/k8s"><rect class="b" x="522" y="320" width="90" height="36" rx="7"/><text class="t" x="567" y="338" text-anchor="middle" dominant-baseline="middle">Kubernetes</text></a>
-<rect class="b4" x="640" y="20" width="100" height="348" rx="10"/>
-<text class="th" x="690" y="52" text-anchor="middle" dominant-baseline="middle">分布式</text>
-<line class="ld" x1="656" y1="74" x2="724" y2="74"/>
-<a href="#/distributed/theory"><text class="t" x="690" y="104" text-anchor="middle" dominant-baseline="middle">CAP / BASE</text></a>
-<a href="#/distributed/consensus"><text class="t" x="690" y="140" text-anchor="middle" dominant-baseline="middle">Raft 共识</text></a>
-<a href="#/distributed/transaction"><text class="t" x="690" y="176" text-anchor="middle" dominant-baseline="middle">分布式事务</text></a>
-<a href="#/distributed/id"><text class="t" x="690" y="212" text-anchor="middle" dominant-baseline="middle">分布式 ID</text></a>
-<a href="#/redis/lock"><text class="t" x="690" y="248" text-anchor="middle" dominant-baseline="middle">分布式锁</text></a>
-<a href="#/distributed/governance"><text class="t" x="690" y="284" text-anchor="middle" dominant-baseline="middle">限流熔断</text></a>
-<a href="#/design/method"><text class="t" x="690" y="320" text-anchor="middle" dominant-baseline="middle">可观测性</text></a>
-<text class="ts" x="380" y="386" text-anchor="middle">请求自上而下穿过各层；右侧能力横跨所有层</text>
+<svg viewBox="0 0 760 778" class="dg" role="img" aria-label="Java 后端技术栈分层全景">
+<rect class="b" x="20" y="20" width="92" height="100" rx="10"/>
+<text class="tb" x="66" y="70" text-anchor="middle" dominant-baseline="middle">接入层</text>
+<rect class="bg" x="124" y="20" width="502" height="100" rx="10"/>
+<a href="#/infra/network"><rect class="b1" x="136" y="32" width="44" height="36" rx="7"/><text class="t" x="158" y="50" text-anchor="middle" dominant-baseline="middle">CDN</text></a>
+<a href="#/infra/nginx"><rect class="b1" x="188" y="32" width="105" height="36" rx="7"/><text class="t" x="240" y="50" text-anchor="middle" dominant-baseline="middle">Nginx / LVS</text></a>
+<a href="#/spring/cloud"><rect class="b1" x="301" y="32" width="75" height="36" rx="7"/><text class="t" x="338" y="50" text-anchor="middle" dominant-baseline="middle">Gateway</text></a>
+<a href="#/security/auth"><rect class="b1" x="384" y="32" width="119" height="36" rx="7"/><text class="t" x="443" y="50" text-anchor="middle" dominant-baseline="middle">OAuth2 · JWT</text></a>
+<a href="#/security/crypto"><rect class="b1" x="136" y="76" width="111" height="36" rx="7"/><text class="t" x="191" y="94" text-anchor="middle" dominant-baseline="middle">HTTPS · TLS</text></a>
+<rect class="b" x="20" y="132" width="92" height="100" rx="10"/>
+<text class="tb" x="66" y="182" text-anchor="middle" dominant-baseline="middle">服务层</text>
+<rect class="bg" x="124" y="132" width="502" height="100" rx="10"/>
+<a href="#/spring/boot"><rect class="b2" x="136" y="144" width="105" height="36" rx="7"/><text class="t" x="188" y="162" text-anchor="middle" dominant-baseline="middle">Spring Boot</text></a>
+<a href="#/spring/mvc"><rect class="b2" x="249" y="144" width="98" height="36" rx="7"/><text class="t" x="298" y="162" text-anchor="middle" dominant-baseline="middle">Spring MVC</text></a>
+<a href="#/spring/cloud"><rect class="b2" x="355" y="144" width="90" height="36" rx="7"/><text class="t" x="400" y="162" text-anchor="middle" dominant-baseline="middle">OpenFeign</text></a>
+<a href="#/mw/grpc"><rect class="b2" x="453" y="144" width="52" height="36" rx="7"/><text class="t" x="479" y="162" text-anchor="middle" dominant-baseline="middle">gRPC</text></a>
+<a href="#/mw/dubbo"><rect class="b2" x="513" y="144" width="60" height="36" rx="7"/><text class="t" x="543" y="162" text-anchor="middle" dominant-baseline="middle">Dubbo</text></a>
+<a href="#/distributed/governance"><rect class="b2" x="136" y="188" width="82" height="36" rx="7"/><text class="t" x="177" y="206" text-anchor="middle" dominant-baseline="middle">Sentinel</text></a>
+<a href="#/spring/cloud"><rect class="b2" x="226" y="188" width="60" height="36" rx="7"/><text class="t" x="256" y="206" text-anchor="middle" dominant-baseline="middle">Nacos</text></a>
+<rect class="b" x="20" y="244" width="92" height="100" rx="10"/>
+<text class="tb" x="66" y="294" text-anchor="middle" dominant-baseline="middle">架构层</text>
+<rect class="bg" x="124" y="244" width="502" height="100" rx="10"/>
+<a href="#/design/ddd-strategic"><rect class="b4" x="136" y="256" width="119" height="36" rx="7"/><text class="t" x="195" y="274" text-anchor="middle" dominant-baseline="middle">DDD 限界上下文</text></a>
+<a href="#/design/ddd-tactical"><rect class="b4" x="263" y="256" width="131" height="36" rx="7"/><text class="t" x="328" y="274" text-anchor="middle" dominant-baseline="middle">聚合 · 领域事件</text></a>
+<a href="#/design/event-driven"><rect class="b4" x="402" y="256" width="135" height="36" rx="7"/><text class="t" x="469" y="274" text-anchor="middle" dominant-baseline="middle">事件驱动 · Saga</text></a>
+<a href="#/design/cqrs-es"><rect class="b4" x="545" y="256" width="52" height="36" rx="7"/><text class="t" x="571" y="274" text-anchor="middle" dominant-baseline="middle">CQRS</text></a>
+<a href="#/design/case-payment"><rect class="b4" x="136" y="300" width="127" height="36" rx="7"/><text class="t" x="199" y="318" text-anchor="middle" dominant-baseline="middle">支付 · IM 案例</text></a>
+<rect class="b" x="20" y="356" width="92" height="100" rx="10"/>
+<text class="tb" x="66" y="406" text-anchor="middle" dominant-baseline="middle">中间件</text>
+<rect class="bg" x="124" y="356" width="502" height="100" rx="10"/>
+<a href="#/redis/overview"><rect class="b3" x="136" y="368" width="60" height="36" rx="7"/><text class="t" x="166" y="386" text-anchor="middle" dominant-baseline="middle">Redis</text></a>
+<a href="#/mw/kafka"><rect class="b3" x="204" y="368" width="60" height="36" rx="7"/><text class="t" x="234" y="386" text-anchor="middle" dominant-baseline="middle">Kafka</text></a>
+<a href="#/mw/rocketmq"><rect class="b3" x="272" y="368" width="82" height="36" rx="7"/><text class="t" x="313" y="386" text-anchor="middle" dominant-baseline="middle">RocketMQ</text></a>
+<a href="#/mw/es"><rect class="b3" x="362" y="368" width="120" height="36" rx="7"/><text class="t" x="422" y="386" text-anchor="middle" dominant-baseline="middle">Elasticsearch</text></a>
+<a href="#/iot/mqtt"><rect class="b3" x="490" y="368" width="52" height="36" rx="7"/><text class="t" x="516" y="386" text-anchor="middle" dominant-baseline="middle">MQTT</text></a>
+<a href="#/spring/mybatis"><rect class="b3" x="136" y="412" width="75" height="36" rx="7"/><text class="t" x="173" y="430" text-anchor="middle" dominant-baseline="middle">MyBatis</text></a>
+<rect class="b" x="20" y="468" width="92" height="100" rx="10"/>
+<text class="tb" x="66" y="518" text-anchor="middle" dominant-baseline="middle">存储层</text>
+<rect class="bg" x="124" y="468" width="502" height="100" rx="10"/>
+<a href="#/mysql/architecture"><rect class="b5" x="136" y="480" width="134" height="36" rx="7"/><text class="t" x="203" y="498" text-anchor="middle" dominant-baseline="middle">MySQL · InnoDB</text></a>
+<a href="#/mysql/replication"><rect class="b5" x="278" y="480" width="76" height="36" rx="7"/><text class="t" x="316" y="498" text-anchor="middle" dominant-baseline="middle">主从复制</text></a>
+<a href="#/mysql/sharding"><rect class="b5" x="362" y="480" width="128" height="36" rx="7"/><text class="t" x="426" y="498" text-anchor="middle" dominant-baseline="middle">ShardingSphere</text></a>
+<a href="#/pg/architecture"><rect class="b5" x="498" y="480" width="98" height="36" rx="7"/><text class="t" x="547" y="498" text-anchor="middle" dominant-baseline="middle">PostgreSQL</text></a>
+<a href="#/db/mongo-model"><rect class="b5" x="136" y="524" width="75" height="36" rx="7"/><text class="t" x="173" y="542" text-anchor="middle" dominant-baseline="middle">MongoDB</text></a>
+<a href="#/db/tidb-arch"><rect class="b5" x="219" y="524" width="52" height="36" rx="7"/><text class="t" x="245" y="542" text-anchor="middle" dominant-baseline="middle">TiDB</text></a>
+<a href="#/db/influx-model"><rect class="b5" x="279" y="524" width="82" height="36" rx="7"/><text class="t" x="320" y="542" text-anchor="middle" dominant-baseline="middle">InfluxDB</text></a>
+<rect class="b" x="20" y="580" width="92" height="56" rx="10"/>
+<text class="tb" x="66" y="608" text-anchor="middle" dominant-baseline="middle">数据与 AI</text>
+<rect class="bg" x="124" y="580" width="502" height="56" rx="10"/>
+<a href="#/bigdata/flink-core"><rect class="b1" x="136" y="592" width="60" height="36" rx="7"/><text class="t" x="166" y="610" text-anchor="middle" dominant-baseline="middle">Flink</text></a>
+<a href="#/bigdata/olap"><rect class="b1" x="204" y="592" width="52" height="36" rx="7"/><text class="t" x="230" y="610" text-anchor="middle" dominant-baseline="middle">OLAP</text></a>
+<a href="#/ai/rag"><rect class="b1" x="264" y="592" width="44" height="36" rx="7"/><text class="t" x="286" y="610" text-anchor="middle" dominant-baseline="middle">RAG</text></a>
+<a href="#/ai/agent"><rect class="b1" x="316" y="592" width="60" height="36" rx="7"/><text class="t" x="346" y="610" text-anchor="middle" dominant-baseline="middle">Agent</text></a>
+<a href="#/ai/spring-ai"><rect class="b1" x="384" y="592" width="90" height="36" rx="7"/><text class="t" x="429" y="610" text-anchor="middle" dominant-baseline="middle">Spring AI</text></a>
+<a href="#/aimodel/llm"><rect class="b1" x="482" y="592" width="79" height="36" rx="7"/><text class="t" x="521" y="610" text-anchor="middle" dominant-baseline="middle">LLM 原理</text></a>
+<rect class="b" x="20" y="648" width="92" height="100" rx="10"/>
+<text class="tb" x="66" y="698" text-anchor="middle" dominant-baseline="middle">基础层</text>
+<rect class="bg" x="124" y="648" width="502" height="100" rx="10"/>
+<a href="#/java/jvm/memory"><rect class="b" x="136" y="660" width="44" height="36" rx="7"/><text class="t" x="158" y="678" text-anchor="middle" dominant-baseline="middle">JVM</text></a>
+<a href="#/java/concurrency/thread"><rect class="b" x="188" y="660" width="76" height="36" rx="7"/><text class="t" x="226" y="678" text-anchor="middle" dominant-baseline="middle">并发编程</text></a>
+<a href="#/cs/os-process"><rect class="b" x="272" y="660" width="76" height="36" rx="7"/><text class="t" x="310" y="678" text-anchor="middle" dominant-baseline="middle">操作系统</text></a>
+<a href="#/cs/algo-ds"><rect class="b" x="356" y="660" width="49" height="36" rx="7"/><text class="t" x="380" y="678" text-anchor="middle" dominant-baseline="middle">算法</text></a>
+<a href="#/infra/netty"><rect class="b" x="413" y="660" width="60" height="36" rx="7"/><text class="t" x="443" y="678" text-anchor="middle" dominant-baseline="middle">Netty</text></a>
+<a href="#/infra/linux"><rect class="b" x="481" y="660" width="60" height="36" rx="7"/><text class="t" x="511" y="678" text-anchor="middle" dominant-baseline="middle">Linux</text></a>
+<a href="#/infra/docker"><rect class="b" x="136" y="704" width="67" height="36" rx="7"/><text class="t" x="169" y="722" text-anchor="middle" dominant-baseline="middle">Docker</text></a>
+<a href="#/infra/k8s"><rect class="b" x="211" y="704" width="98" height="36" rx="7"/><text class="t" x="260" y="722" text-anchor="middle" dominant-baseline="middle">Kubernetes</text></a>
+<rect class="b4" x="640" y="20" width="100" height="728" rx="10"/>
+<text class="th" x="690" y="48" text-anchor="middle" dominant-baseline="middle">横切能力</text>
+<line class="ld" x1="656" y1="66" x2="724" y2="66"/>
+<a href="#/distributed/theory"><text class="t" x="690" y="111" text-anchor="middle" dominant-baseline="middle">CAP / BASE</text></a>
+<a href="#/distributed/consensus"><text class="t" x="690" y="185" text-anchor="middle" dominant-baseline="middle">Raft 共识</text></a>
+<a href="#/distributed/transaction"><text class="t" x="690" y="259" text-anchor="middle" dominant-baseline="middle">分布式事务</text></a>
+<a href="#/distributed/id"><text class="t" x="690" y="333" text-anchor="middle" dominant-baseline="middle">分布式 ID</text></a>
+<a href="#/redis/lock"><text class="t" x="690" y="408" text-anchor="middle" dominant-baseline="middle">分布式锁</text></a>
+<a href="#/distributed/governance"><text class="t" x="690" y="482" text-anchor="middle" dominant-baseline="middle">限流熔断</text></a>
+<a href="#/infra/obs-metrics"><text class="t" x="690" y="556" text-anchor="middle" dominant-baseline="middle">可观测性</text></a>
+<a href="#/infra/cicd"><text class="t" x="690" y="630" text-anchor="middle" dominant-baseline="middle">CI/CD 发布</text></a>
+<a href="#/security/web"><text class="t" x="690" y="704" text-anchor="middle" dominant-baseline="middle">Web 安全</text></a>
+<text class="ts" x="380" y="768" text-anchor="middle">请求自上而下穿过各层；右侧能力横跨所有层</text>
 </svg>
 <figcaption>图 1：Java 后端技术栈分层全景</figcaption>
 </figure>
