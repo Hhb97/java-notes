@@ -241,6 +241,14 @@ window.NAV = [
         ]
       },
       {
+        title: '领域驱动与事件驱动', children: [
+          { title: 'DDD 战略设计：限界上下文与上下文映射', path: 'design/ddd-strategic' },
+          { title: 'DDD 战术设计：聚合、实体与领域事件（Java 落地）', path: 'design/ddd-tactical' },
+          { title: '事件驱动架构：事件设计、Outbox 与 Saga', path: 'design/event-driven' },
+          { title: 'CQRS 与事件溯源', path: 'design/cqrs-es' }
+        ]
+      },
+      {
         title: '架构案例', children: [
           { title: '案例：企业智能客服与知识库（RAG + Agent）设计详解', path: 'ai/case-kb' }
         ]
@@ -373,7 +381,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'design', title: '系统设计', desc: '高并发方法论、架构设计案例、面试速查',
+    id: 'design', title: '系统设计', desc: '高并发方法论、DDD 与事件驱动、架构设计案例、面试速查',
     children: [
       { title: '高并发系统设计方法论', path: 'design/method' },
       {

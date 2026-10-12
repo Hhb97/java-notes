@@ -19,7 +19,7 @@
 | 安全 | 认证授权（Session/JWT/OAuth2/OIDC/SSO、Spring Security）、OWASP 常见漏洞防护、加密签名/HTTPS/密钥管理 |
 | 分布式 | CAP/BASE、Raft、分布式事务、分布式 ID、限流熔断降级 |
 | 网络与运维 | TCP/HTTP、IO 模型与 Netty（源码与实战）、Linux 排查、**可观测性（Prometheus/Micrometer、OpenTelemetry 链路、日志、SLO）**、Nginx、Docker、Kubernetes |
-| 系统设计 | 高并发方法论、秒杀系统、**订单支付对账案例、即时通讯（IM）案例**、面试速查 |
+| 系统设计 | 高并发方法论、秒杀系统、**DDD（战略/战术）、事件驱动与 Saga、CQRS 与事件溯源**、**订单支付对账案例、即时通讯（IM）案例**、面试速查 |
 
 每篇包含：核心要点、源码/原理、SVG 图解、关键参数、生产踩坑、面试追问。
 
