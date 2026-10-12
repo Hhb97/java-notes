@@ -57,6 +57,7 @@
 <a href="#/db/mongo-model"><rect class="b5" x="136" y="524" width="75" height="36" rx="7"/><text class="t" x="173" y="542" text-anchor="middle" dominant-baseline="middle">MongoDB</text></a>
 <a href="#/db/tidb-arch"><rect class="b5" x="219" y="524" width="52" height="36" rx="7"/><text class="t" x="245" y="542" text-anchor="middle" dominant-baseline="middle">TiDB</text></a>
 <a href="#/db/influx-model"><rect class="b5" x="279" y="524" width="82" height="36" rx="7"/><text class="t" x="320" y="542" text-anchor="middle" dominant-baseline="middle">InfluxDB</text></a>
+<a href="#/bigdata/ck-engine"><rect class="b5" x="369" y="524" width="98" height="36" rx="7"/><text class="t" x="418" y="542" text-anchor="middle" dominant-baseline="middle">ClickHouse</text></a>
 <rect class="b" x="20" y="580" width="92" height="56" rx="10"/>
 <text class="tb" x="66" y="608" text-anchor="middle" dominant-baseline="middle">数据与 AI</text>
 <rect class="bg" x="124" y="580" width="502" height="56" rx="10"/>

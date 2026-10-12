@@ -172,7 +172,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'db', title: 'NoSQL、NewSQL 与时序库', desc: 'MongoDB 文档数据库、TiDB 分布式 SQL 数据库、InfluxDB 时序数据库',
+    id: 'db', title: 'NoSQL、NewSQL、时序与分析库', desc: 'MongoDB 文档库、TiDB 分布式 SQL、InfluxDB 时序库、ClickHouse 列式分析库',
     children: [
       {
         title: 'MongoDB', children: [
@@ -190,6 +190,13 @@ window.NAV = [
         title: '时序数据库 InfluxDB', children: [
           { title: 'InfluxDB 数据模型与存储引擎', path: 'db/influx-model' },
           { title: 'InfluxDB 实战：基数、降采样、Java 写入与选型', path: 'db/influx-practice' }
+        ]
+      },
+      {
+        title: 'ClickHouse', children: [
+          { title: 'ClickHouse 存储与执行：MergeTree、稀疏索引与向量化', path: 'bigdata/ck-engine' },
+          { title: 'ClickHouse 集群、写入与表设计实战', path: 'bigdata/ck-cluster' },
+          { title: 'ClickHouse 行为分析：漏斗、留存与近似计算', path: 'bigdata/ck-analytics' }
         ]
       }
     ]
@@ -307,7 +314,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP 与 ClickHouse、Spark 与数据湖',
+    id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP（ClickHouse 专题见数据库分类）、Spark 与数据湖',
     children: [
       {
         title: 'Flink', children: [
@@ -321,13 +328,6 @@ window.NAV = [
         title: '实时数据架构', children: [
           { title: 'CDC 与实时数仓架构', path: 'bigdata/cdc' },
           { title: 'OLAP：ClickHouse 与 Doris', path: 'bigdata/olap' }
-        ]
-      },
-      {
-        title: 'ClickHouse', children: [
-          { title: 'ClickHouse 存储与执行：MergeTree、稀疏索引与向量化', path: 'bigdata/ck-engine' },
-          { title: 'ClickHouse 集群、写入与表设计实战', path: 'bigdata/ck-cluster' },
-          { title: 'ClickHouse 行为分析：漏斗、留存与近似计算', path: 'bigdata/ck-analytics' }
         ]
       },
       {
@@ -410,13 +410,21 @@ window.NAV = [
     ]
   },
   {
-    id: 'cs', title: '计算机基础', desc: '操作系统（进程、内存、文件与 IO）与算法（数据结构、解题套路、工程算法）',
+    id: 'cs', title: '计算机基础', desc: '操作系统（进程、内存、文件与 IO）、计算机网络（IP、DNS、TCP、容器网络）与算法',
     children: [
       {
         title: '操作系统', children: [
           { title: '进程、线程与 CPU 调度', path: 'cs/os-process' },
           { title: '虚拟内存、分页与内存管理', path: 'cs/os-memory' },
           { title: '文件系统、页缓存与零拷贝', path: 'cs/os-io' }
+        ]
+      },
+      {
+        title: '计算机网络', children: [
+          { title: '网络层：以太网、IP、路由、NAT 与 MTU', path: 'cs/net-ip' },
+          { title: 'DNS 与 CDN：解析流程、缓存与线上坑', path: 'cs/net-dns' },
+          { title: 'TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优', path: 'cs/net-tcp' },
+          { title: '容器网络与网络排障：CNI、iptables/IPVS、tcpdump', path: 'cs/net-debug' }
         ]
       },
       {
