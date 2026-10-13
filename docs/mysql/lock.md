@@ -354,6 +354,7 @@ FROM sys.innodb_lock_waits;
 - [事务隔离与 MVCC](#/mysql/transaction)：事务隔离与 MVCC
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 快照隔离与无间隙锁的差异
 - [进程、线程与 CPU 调度](#/cs/os-process)：死锁条件与预防
+- [案例：高并发写入与热点治理](#/design/case-highwrite)：热点行与持锁时间、分段库存
 
 ## 面试追问
 

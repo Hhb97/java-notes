@@ -108,7 +108,7 @@
 | 框架原理 | 读懂框架源码，定位框架层问题 | [IoC](#/spring/ioc)、[AOP](#/spring/aop)、[事务](#/spring/tx)、[MyBatis](#/spring/mybatis)、[自动配置](#/spring/boot) |
 | 数据层 | 设计索引与表结构，解决一致性与性能 | [B+ 树索引](#/mysql/index)、[MVCC](#/mysql/transaction)、[锁](#/mysql/lock)、[缓存一致性](#/redis/cache) |
 | 分布式 | 拆分服务并保证可用与一致 | [消息队列](#/mw/mq)、[分布式事务](#/distributed/transaction)、[限流熔断](#/distributed/governance) |
-| 架构设计 | 独立设计高并发系统 | [设计方法论](#/design/method)、[秒杀系统](#/design/seckill)、[短链接](#/design/case-shorturl)、[Feed 流](#/design/case-feed)、[搜索](#/design/case-search)、[任务调度](#/design/case-scheduler)、[API 网关](#/design/case-gateway)、[推荐系统](#/design/case-recsys)、[对象存储](#/design/case-objectstore)、[消息推送](#/design/case-push)、[面试速查](#/design/interview) |
+| 架构设计 | 独立设计高并发系统 | [设计方法论](#/design/method)、[秒杀系统](#/design/seckill)、[短链接](#/design/case-shorturl)、[Feed 流](#/design/case-feed)、[搜索](#/design/case-search)、[任务调度](#/design/case-scheduler)、[API 网关](#/design/case-gateway)、[推荐系统](#/design/case-recsys)、[对象存储](#/design/case-objectstore)、[消息推送](#/design/case-push)、[高并发写](#/design/case-highwrite)、[直播](#/design/case-live)、[面试速查](#/design/interview) |
 | 领域建模与事件驱动 | 划分边界、保证跨服务最终一致 | [DDD 战略设计](#/design/ddd-strategic)、[聚合与领域事件](#/design/ddd-tactical)、[Outbox 与 Saga](#/design/event-driven)、[CQRS 与事件溯源](#/design/cqrs-es) |
 | 安全与可观测 | 认证授权、漏洞防护，线上能看见、能定位 | [认证授权](#/security/auth)、[Web 安全](#/security/web)、[指标监控](#/infra/obs-metrics)、[链路追踪与 SLO](#/infra/obs-trace) |
 | 交付与发布 | 安全、可回滚地把变更送上线 | [CI/CD 与 GitOps](#/infra/cicd)、[发布策略](#/infra/release)、[gRPC](#/mw/grpc) |

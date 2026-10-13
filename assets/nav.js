@@ -460,7 +460,9 @@ window.NAV = [
           { title: '案例：API 网关设计详解', path: 'design/case-gateway' },
           { title: '案例：推荐系统设计详解', path: 'design/case-recsys' },
           { title: '案例：分布式文件/对象存储设计详解', path: 'design/case-objectstore' },
-          { title: '案例：实时消息推送系统设计详解', path: 'design/case-push' }
+          { title: '案例：实时消息推送系统设计详解', path: 'design/case-push' },
+          { title: '案例：高并发写入与热点治理（计数、库存、红包）', path: 'design/case-highwrite' },
+          { title: '案例：直播系统设计详解', path: 'design/case-live' }
         ]
       },
       {

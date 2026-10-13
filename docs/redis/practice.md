@@ -222,6 +222,10 @@ Spring Session + Redis：Session 序列化为 Hash 存储，`spring:session:sess
 | 连接池 | Lettuce 默认单连接多路复用，阻塞命令用独立连接；Jedis 池大小 ≈ 并发线程数；设置合理的命令超时（通常 1~3s） |
 | 观测 | `SLOWLOG`、`INFO commandstats`、`--bigkeys`、内存与命中率、连接数、`latency doctor` |
 
+## 相关阅读
+
+- [案例：高并发写入与热点治理](#/design/case-highwrite)：分段计数、Lua 红包、预扣库存
+
 ## 面试追问
 
 > [!QUESTION] 固定窗口、滑动窗口、令牌桶分别有什么问题？

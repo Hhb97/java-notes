@@ -307,6 +307,8 @@ summary: 高并发系统设计的手段地图、从 DAU 推算机器数的容量
 - [案例：推荐系统设计详解](#/design/case-recsys)
 - [案例：分布式文件/对象存储设计详解](#/design/case-objectstore)
 - [案例：实时消息推送系统设计详解](#/design/case-push)
+- [案例：高并发写入与热点治理（计数、库存、红包）](#/design/case-highwrite)
+- [案例：直播系统设计详解](#/design/case-live)
 
 ## 面试追问
 
