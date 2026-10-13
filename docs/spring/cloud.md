@@ -254,6 +254,7 @@ spring:
 - [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：微服务统一认证
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动与 Saga
 - [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：全链路追踪
+- [案例：API 网关设计详解](#/design/case-gateway)：网关的数据面/控制面、过滤器链与限流灰度
 
 ## 面试追问
 

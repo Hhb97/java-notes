@@ -528,6 +528,7 @@ http {
 - [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：WebSocket、长连接与 TCP 调优
 - [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：DNS 与 CDN
 - [加密、签名、HTTPS 与密钥管理](#/security/crypto)：TLS 终止与证书
+- [案例：API 网关设计详解](#/design/case-gateway)：网关选型与高性能设计
 
 ## 面试追问
 

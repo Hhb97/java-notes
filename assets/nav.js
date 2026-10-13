@@ -456,7 +456,9 @@ window.NAV = [
           { title: '案例：短链接服务设计详解', path: 'design/case-shorturl' },
           { title: '案例：Feed 流与排行榜设计详解', path: 'design/case-feed' },
           { title: '案例：搜索系统设计详解', path: 'design/case-search' },
-          { title: '案例：分布式任务调度平台设计详解', path: 'design/case-scheduler' }
+          { title: '案例：分布式任务调度平台设计详解', path: 'design/case-scheduler' },
+          { title: '案例：API 网关设计详解', path: 'design/case-gateway' },
+          { title: '案例：推荐系统设计详解', path: 'design/case-recsys' }
         ]
       },
       {
