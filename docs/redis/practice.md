@@ -225,6 +225,8 @@ Spring Session + Redis：Session 序列化为 Hash 存储，`spring:session:sess
 ## 相关阅读
 
 - [案例：高并发写入与热点治理](#/design/case-highwrite)：分段计数、Lua 红包、预扣库存
+- [Redis 使用规范与平台化治理](#/redis/governance)：使用规范与统一封装
+- [Redis 内存优化与容量治理](#/redis/memory)：Bitmap/HLL 等省内存结构
 
 ## 面试追问
 

@@ -370,6 +370,7 @@ tail -F app.log | grep --line-buffered -E 'ERROR|Exception'
 - [虚拟内存、分页与内存管理](#/cs/os-memory)：内存与 OOM
 - [容器网络与网络排障：CNI、iptables/IPVS、tcpdump](#/cs/net-debug)：网络排障：tcpdump 与 ss
 - [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：把排查经验沉淀为监控
+- [Redis 故障排查与安全加固](#/redis/troubleshooting)：Redis 延迟问题的系统层排查
 
 ## 面试追问
 

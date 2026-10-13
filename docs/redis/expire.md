@@ -267,6 +267,8 @@ redis-cli MEMORY DOCTOR                       # 给出诊断建议
 
 - [虚拟内存、分页与内存管理](#/cs/os-memory)：页面置换与 LRU/LFU 的同源思想
 - [复杂度与核心数据结构](#/cs/algo-ds)：手写 LRU
+- [Redis 内存优化与容量治理](#/redis/memory)：内存画像、碎片与容量模型
+- [Redis 大 key 与热 key 治理](#/redis/bigkey)：大 key 删除与过期
 
 ## 面试追问
 

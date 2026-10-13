@@ -108,6 +108,7 @@
 | 理解运行时 | 能解释「为什么」，能排查线上问题 | [JMM](#/java/concurrency/jmm)、[AQS](#/java/concurrency/aqs)、[线程池](#/java/concurrency/pool)、[GC](#/java/jvm/gc)、[线上排查](#/java/jvm/tuning) |
 | 框架原理 | 读懂框架源码，定位框架层问题 | [IoC](#/spring/ioc)、[AOP](#/spring/aop)、[事务](#/spring/tx)、[MyBatis](#/spring/mybatis)、[自动配置](#/spring/boot) |
 | 数据层 | 设计索引与表结构，解决一致性与性能 | [B+ 树索引](#/mysql/index)、[MVCC](#/mysql/transaction)、[锁](#/mysql/lock)、[缓存一致性](#/redis/cache) |
+| Redis 运维治理 | 集群运维、大热 key、内存与排障规范 | [Cluster 运维](#/redis/cluster-ops)、[大 key 与热 key](#/redis/bigkey)、[内存优化](#/redis/memory)、[故障排查与安全](#/redis/troubleshooting)、[使用规范](#/redis/governance) |
 | 分布式 | 拆分服务并保证可用与一致 | [消息队列](#/mw/mq)、[分布式事务](#/distributed/transaction)、[限流熔断](#/distributed/governance) |
 | 微服务治理 | 调用、网关、容错、配置灰度、安全与可观测 | [OpenFeign](#/spring/cloud-feign)、[Gateway](#/spring/cloud-gateway)、[熔断限流](#/spring/cloud-resilience)、[配置与灰度](#/spring/cloud-config-gray)、[微服务安全](#/spring/cloud-security)、[可观测](#/spring/cloud-observability)、[演进与升级](#/spring/cloud-evolution) |
 | 中间件深入 | 选对消息队列，管好注册配置与协调 | [RabbitMQ](#/mw/rabbitmq)、[Kafka 运维](#/mw/kafka-ops)、[Kafka 生态](#/mw/kafka-ecosystem)、[Pulsar](#/mw/pulsar)、[MQ 治理](#/mw/mq-governance)、[Nacos](#/mw/registry)、[ZooKeeper 与 etcd](#/mw/coordination)、[ES 运维](#/mw/es-ops) |

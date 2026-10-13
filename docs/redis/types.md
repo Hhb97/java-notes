@@ -361,6 +361,7 @@ B+ 树的优势是**多路、矮胖、减少磁盘 IO 次数**，Redis 是纯内
 
 - [复杂度与核心数据结构](#/cs/algo-ds)：跳表、哈希表与渐进式 rehash
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：HyperLogLog、Bitmap 的原理
+- [Redis 内存优化与容量治理](#/redis/memory)：编码阈值与内存优化
 
 ## 面试追问
 

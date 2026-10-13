@@ -243,6 +243,7 @@ ALTER TABLE seckill_order ADD UNIQUE KEY uk_user_sku (user_id, sku_id);
 - [压测与容量规划](#/design/eng-loadtest)：秒杀前的压测与容量模型
 - [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：降级、过载保护与演练
 - [案例：高并发写入与热点治理](#/design/case-highwrite)：计数、库存、红包的通用热点写方法
+- [Redis 大 key 与热 key 治理](#/redis/bigkey)：热 key 治理手段
 
 ## 面试追问
 

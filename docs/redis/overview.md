@@ -358,6 +358,8 @@ redis-cli FCALL deduct 1 stock:sku:1001 2
 
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：IO 多路复用与 fork 写时复制的内核基础
 - [虚拟内存、分页与内存管理](#/cs/os-memory)：内存碎片、swap 与 THP
+- [Redis 故障排查与安全加固](#/redis/troubleshooting)：延迟突刺的排查路径
+- [Redis 大 key 与热 key 治理](#/redis/bigkey)：大 key 与慢命令的治理
 
 ## 面试追问
 

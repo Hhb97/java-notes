@@ -238,6 +238,7 @@ Martin Kleppmann 的批评：
 - [Raft 与共识算法](#/distributed/consensus)：共识与 fencing 的理论基础
 - [分布式事务](#/distributed/transaction)：分布式事务中的锁与幂等
 - [分布式协调：ZooKeeper 与 etcd](#/mw/coordination)：基于协调服务的锁与 fencing
+- [Redis 使用规范与平台化治理](#/redis/governance)：客户端与使用规范
 
 ## 面试追问
 

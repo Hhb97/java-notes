@@ -349,6 +349,8 @@ LettuceClientConfiguration config = LettuceClientConfiguration.builder()
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：一致性哈希与哈希槽
 - [Raft 与共识算法](#/distributed/consensus)：共识与选主
 - [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集与分片
+- [Redis Cluster 生产运维：规划、扩缩容与故障处理](#/redis/cluster-ops)：规划、扩缩容、升级与故障处理
+- [Redis 大 key 与热 key 治理](#/redis/bigkey)：迁移前的大 key 治理
 
 ## 面试追问
 

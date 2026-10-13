@@ -97,6 +97,11 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | 缓存一致性与三大问题 | Cache Aside：先更新库再删缓存；穿透/击穿/雪崩及对策 | [缓存设计与一致性](#/redis/cache) |
 | 分布式锁 | `SET NX PX` + 唯一值 + Lua 释放；Redisson 看门狗；主从切换丢锁与 fencing | [分布式锁](#/redis/lock) |
 | 限流、排行榜、延迟队列 | 令牌桶 Lua、ZSET、Stream | [高频场景实战](#/redis/practice) |
+| Redis Cluster 怎么扩容、怎么升级、故障转移的条件 | 加空节点→按槽 MIGRATE 迁移（大 key 阻塞）；先升副本+手动 failover；需多数主投票；full-coverage 取舍 | [Redis Cluster 生产运维：规划、扩缩容与故障处理](#/redis/cluster-ops) |
+| 大 key、热 key 怎么发现与治理 | 副本限速 SCAN+MEMORY USAGE/离线 RDB；拆分分桶、UNLINK；热 key 本地缓存+打散+读写分离；扩分片对热 key 无效 | [Redis 大 key 与热 key 治理](#/redis/bigkey) |
+| Redis 内存怎么优化 | 内存画像；补 TTL；小 key 合并 Hash（紧凑编码）；精简+二进制序列化+压缩；碎片率与 COW 余量 | [Redis 内存优化与容量治理](#/redis/memory) |
+| Redis 变慢/超时怎么排查、怎么加固 | SLOWLOG/LATENCY/fork/AOF fsync/swap；backlog 与输出缓冲；ACL+内网+TLS+禁危险命令 | [Redis 故障排查与安全加固](#/redis/troubleshooting) |
+| 多团队共用 Redis 怎么治理 | 用法边界；key/TTL/命令规范；统一 SDK（超时/连接池/重试/降级）；缓存与存储分集群；Key 画像巡检 | [Redis 使用规范与平台化治理](#/redis/governance) |
 
 ## PostgreSQL
 

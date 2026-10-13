@@ -319,6 +319,7 @@ public class StockService {
 - [Spring Cloud Gateway 深入](#/spring/cloud-gateway)：网关限流与熔断
 - [配置管理与全链路灰度](#/spring/cloud-config-gray)：规则的配置中心管理
 - [稳定性工程：混沌实验与容灾演练](#/design/eng-chaos)：故障注入与演练
+- [Redis 使用规范与平台化治理](#/redis/governance)：Redis 客户端的超时、重试与降级配置
 
 ## 面试追问
 

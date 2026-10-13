@@ -158,7 +158,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'redis', title: 'Redis', desc: '数据结构、持久化、集群、缓存与分布式锁',
+    id: 'redis', title: 'Redis', desc: '数据结构、持久化、集群、缓存、分布式锁与运维治理',
     children: [
       {
         title: '核心原理', children: [
@@ -178,6 +178,15 @@ window.NAV = [
           { title: '缓存设计与一致性', path: 'redis/cache' },
           { title: '分布式锁', path: 'redis/lock' },
           { title: '高频场景实战', path: 'redis/practice' }
+        ]
+      },
+      {
+        title: '运维与治理', children: [
+          { title: 'Redis Cluster 生产运维：规划、扩缩容与故障处理', path: 'redis/cluster-ops' },
+          { title: 'Redis 大 key 与热 key 治理', path: 'redis/bigkey' },
+          { title: 'Redis 内存优化与容量治理', path: 'redis/memory' },
+          { title: 'Redis 故障排查与安全加固', path: 'redis/troubleshooting' },
+          { title: 'Redis 使用规范与平台化治理', path: 'redis/governance' }
         ]
       }
     ]

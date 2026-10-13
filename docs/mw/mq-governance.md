@@ -307,6 +307,7 @@ SLO 要**与业务等级绑定**，并**公开**给使用方；对不符合规�
 - [RabbitMQ 原理与可靠性](#/mw/rabbitmq)、[Pulsar 架构与存算分离](#/mw/pulsar)：多引擎的特点与选型
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件信封与可靠发布
 - [事故复盘与改进](#/design/eng-postmortem)：从事故中沉淀治理规则
+- [Redis 使用规范与平台化治理](#/redis/governance)：另一类共享基础设施的使用治理
 
 ## 面试追问
 

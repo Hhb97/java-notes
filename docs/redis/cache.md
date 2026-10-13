@@ -384,6 +384,8 @@ Product p = local.get(key, k -> loadFromRedisOrDb(k));
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：布隆过滤器防穿透、限流算法
 - [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：CDN 与多级缓存
 - [MongoDB 数据模型、索引与聚合](#/db/mongo-model)：文档数据库作为二级存储的取舍
+- [Redis 大 key 与热 key 治理](#/redis/bigkey)：大 key 与热 key 的完整治理
+- [Redis 使用规范与平台化治理](#/redis/governance)：缓存使用规范与统一封装
 
 ## 面试追问
 

@@ -256,6 +256,11 @@ dir /data/redis
 - **容器环境**：容器内存限制（cgroup）不感知 COW 的共享页，持久化期间更容易被 OOM；`overcommit_memory` 和 THP 是宿主机级参数，需要在节点上配置。
 - **持久化相关的监控项**：`rdb_last_bgsave_status`、`rdb_changes_since_last_save`、`aof_last_write_status`、`aof_delayed_fsync`、`latest_fork_usec`、`mem_fragmentation_ratio`。
 
+## 相关阅读
+
+- [Redis 故障排查与安全加固](#/redis/troubleshooting)：持久化失败与延迟排查
+- [Redis Cluster 生产运维：规划、扩缩容与故障处理](#/redis/cluster-ops)：备份、恢复与升级
+
 ## 面试追问
 
 > [!QUESTION] BGSAVE 期间父进程还在写，子进程生成的 RDB 是哪个时刻的数据？

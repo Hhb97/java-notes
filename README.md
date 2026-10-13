@@ -10,7 +10,7 @@
 | Spring 生态 | IoC、AOP、事务、Spring MVC、MyBatis、Spring Boot、Spring Cloud 与微服务治理（OpenFeign、Gateway、熔断限流、配置与全链路灰度、微服务安全、可观测、Boot 3 与虚拟线程演进） |
 | MySQL | 架构、InnoDB 存储、B+ 树索引、SQL 调优、MVCC、锁、redo/undo/binlog、主从复制、分库分表 |
 | PostgreSQL | 进程模型与 WAL、MVCC 与 VACUUM、锁、索引类型与优化、流复制/Patroni/PITR/分区 |
-| Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战 |
+| Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战，以及运维治理（Cluster 运维、大 key 与热 key、内存优化、故障排查与安全、使用规范与平台化） |
 | NoSQL、NewSQL、时序与分析库 | MongoDB（文档建模、索引与聚合、复制集/分片/事务）、TiDB（TiKV/PD/Raft、Percolator 分布式事务、热点与迁移、选型）、InfluxDB（数据模型与 TSM 引擎、基数治理、降采样、Java 写入、时序库选型）、ClickHouse（MergeTree 与稀疏索引、集群与写入、漏斗留存与近似计算） |
 | 中间件 | 消息队列通用问题与平台化治理、Kafka（原理、可靠性、运维、Connect/Streams）、RocketMQ、RabbitMQ、Pulsar、Elasticsearch（原理、实战、运维）、Dubbo、gRPC 与 Protobuf、Nacos 注册与配置中心、ZooKeeper 与 etcd |
 | 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
