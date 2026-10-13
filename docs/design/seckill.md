@@ -242,8 +242,6 @@ ALTER TABLE seckill_order ADD UNIQUE KEY uk_user_sku (user_id, sku_id);
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：限流算法
 - [压测与容量规划](#/design/eng-loadtest)：秒杀前的压测与容量模型
 - [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：降级、过载保护与演练
-- [压测与容量规划](#/design/eng-loadtest)：秒杀前的压测与容量模型
-- [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：降级、过载保护与演练
 
 ## 面试追问
 
