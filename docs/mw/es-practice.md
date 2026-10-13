@@ -232,6 +232,7 @@ POST /_aliases
 - [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：日志平台：ELK 与 Loki 的取舍
 - [CDC 与实时数仓架构](#/bigdata/cdc)：CDC 同步到 ES
 - [虚拟内存、分页与内存管理](#/cs/os-memory)：堆与页缓存的内存分配
+- [ES 集群运维：生命周期、故障排查与日志场景](#/mw/es-ops)：集群运维与日志场景
 
 ## 面试追问
 

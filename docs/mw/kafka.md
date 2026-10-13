@@ -379,6 +379,8 @@ Compaction 由后台 Log Cleaner 线程执行，把日志分为已清理的 head
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：零拷贝与页缓存
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动架构
 - [ClickHouse 集群、写入与表设计实战](#/bigdata/ck-cluster)：Kafka 引擎与 ClickHouse 写入
+- [Kafka 生产运维：容量规划、Rebalance 治理与故障排查](#/mw/kafka-ops)：分区规划、Lag 与迁移
+- [Kafka 生态：Connect、Streams 与 Schema Registry](#/mw/kafka-ecosystem)：数据集成、流处理与契约
 
 ## 面试追问
 

@@ -328,6 +328,10 @@ INSERT INTO paimon_orders SELECT * FROM orders_src;
 | 主从切换后位点失效 | 未使用 GTID → 开启 GTID，或切换后重新定位 |
 | 无主键表同步困难 | 需指定分片列或增加主键；无主键意味着下游更新/删除无法定位 |
 
+## 相关阅读
+
+- [Kafka 生态：Connect、Streams 与 Schema Registry](#/mw/kafka-ecosystem)：Connect 与 CDC 连接器的运维
+
 ## 面试追问
 
 > [!QUESTION] CDC 有哪几种实现方式？为什么基于日志的最好？

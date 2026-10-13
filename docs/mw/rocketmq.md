@@ -353,6 +353,9 @@ consumer.registerMessageListener((MessageListenerOrderly) (msgs, ctx) -> {
 
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事务消息与 Outbox 的对比
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：CommitLog 顺序写与 mmap
+- [RabbitMQ 原理与可靠性（AMQP、仲裁队列与死信）](#/mw/rabbitmq)：另一类业务消息队列的对照
+- [Pulsar 架构与存算分离](#/mw/pulsar)：存算分离架构的对照
+- [消息队列平台化与治理](#/mw/mq-governance)：平台化治理实践
 
 ## 面试追问
 

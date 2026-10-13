@@ -366,6 +366,10 @@ try { log.info("create order, amount={}", amount); } finally { MDC.remove("order
 | Collector 单点/无限流 | 加 memory_limiter、批处理、多副本；应用侧发送失败不要阻塞业务 |
 | 时钟不同步 | span 时间错乱；所有节点启用 NTP（见 [Linux 排查](#/infra/linux)） |
 
+## 相关阅读
+
+- [ES 集群运维：生命周期、故障排查与日志场景](#/mw/es-ops)：日志存储的冷热分层与成本
+
 ## 面试追问
 
 > [!QUESTION] 链路追踪的原理是什么？traceId 如何跨服务传递？

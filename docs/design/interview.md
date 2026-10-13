@@ -170,6 +170,14 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | Protobuf 如何保证兼容 | 字段编号标识数据；只增不改；删除字段用 reserved 且编号永不复用；CI 用 buf breaking 检查 | [gRPC 与 Protobuf](#/mw/grpc) |
 | gRPC 在 K8s 里为什么负载不均 | HTTP/2 单长连接复用，L4 只在建连时分配；用 Headless + 客户端 round_robin 或 L7 代理，服务端设最大连接存活 | [gRPC 与 Protobuf](#/mw/grpc) |
 | gRPC 的 Deadline 与重试 | 每个调用必须设 Deadline 并向下游传播；只对幂等方法与 UNAVAILABLE 重试，带退避与重试预算 | [gRPC 与 Protobuf](#/mw/grpc) |
+| RabbitMQ 怎么路由、怎么保证不丢 | Exchange/Binding/Queue；四种交换机；发布确认+持久化+仲裁队列+手动 ack+死信重试 | [RabbitMQ 原理与可靠性（AMQP、仲裁队列与死信）](#/mw/rabbitmq) |
+| Kafka 分区数怎么定、Rebalance 与积压怎么治 | 吞吐/并行度/增长取最大；分区只增不减；协作式+静态成员；Lag 看时间维度 | [Kafka 生产运维：容量规划、Rebalance 治理与故障排查](#/mw/kafka-ops) |
+| Kafka Connect、Streams 与 Schema Registry | Connector/Task/Worker；流表对偶与变更日志；兼容性规则与升级顺序 | [Kafka 生态：Connect、Streams 与 Schema Registry](#/mw/kafka-ecosystem) |
+| Pulsar 与 Kafka 的区别 | 存算分离（Broker+BookKeeper）；订阅模式；多租户；分层存储；跨地域复制 | [Pulsar 架构与存算分离](#/mw/pulsar) |
+| 注册中心与配置中心怎么设计 | 偏 AP + 本地缓存；剔除窗口与优雅下线；保护阈值；配置灰度、回滚与审计 | [Nacos 与服务注册发现、配置中心](#/mw/registry) |
+| ZooKeeper 与 etcd、分布式锁的正确性 | znode+Watch / MVCC+Lease；顺序临时节点避免羊群；fencing token 防僵尸持有者 | [分布式协调：ZooKeeper 与 etcd](#/mw/coordination) |
+| ES 集群变红怎么排查、日志场景怎么降本 | health→未分配分片→allocation explain；数据流+ILM+冷热分层 | [ES 集群运维：生命周期、故障排查与日志场景](#/mw/es-ops) |
+| 多团队共用消息队列怎么治理 | 台账与负责人、模板与审批、配额隔离、统一 SDK、轨迹与重放、积压告警 | [消息队列平台化与治理](#/mw/mq-governance) |
 
 ## 分布式
 

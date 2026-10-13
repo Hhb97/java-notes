@@ -333,6 +333,9 @@ public void onOrderPaid(OrderPaidEvent e) {
 
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动与 Outbox
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：时间轮与延迟任务
+- [RabbitMQ 原理与可靠性（AMQP、仲裁队列与死信）](#/mw/rabbitmq)：路由模型与三段链路可靠性
+- [Pulsar 架构与存算分离](#/mw/pulsar)：存算分离与多租户的另一种设计
+- [消息队列平台化与治理](#/mw/mq-governance)：多团队共用时的规范、配额与观测
 
 ## 面试追问
 

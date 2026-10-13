@@ -384,6 +384,7 @@ while (running) {
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：Outbox、幂等消费与死信
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：页缓存、顺序写与刷盘
 - [消息队列核心问题](#/mw/mq)：消息队列通用问题
+- [Kafka 生产运维：容量规划、Rebalance 治理与故障排查](#/mw/kafka-ops)：运维与故障排查
 
 ## 面试追问
 

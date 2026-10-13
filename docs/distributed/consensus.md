@@ -350,6 +350,7 @@ etcd 是 Kubernetes 的元数据存储，核心是 **Raft + MVCC + Lease + Watch
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiKV 中的 Raft 多副本
 - [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集选举
 - [分布式锁](#/redis/lock)：分布式锁与 fencing
+- [分布式协调：ZooKeeper 与 etcd](#/mw/coordination)：Raft/ZAB 的工程应用
 
 ## 面试追问
 

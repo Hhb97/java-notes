@@ -202,20 +202,26 @@ window.NAV = [
     ]
   },
   {
-    id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、Elasticsearch、Dubbo、gRPC',
+    id: 'mw', title: '中间件', desc: 'Kafka、RocketMQ、RabbitMQ、Pulsar、ES、Dubbo、gRPC、注册配置中心与 ZooKeeper/etcd',
     children: [
       {
         title: '消息队列', children: [
           { title: '消息队列核心问题', path: 'mw/mq' },
           { title: 'Kafka 架构与存储', path: 'mw/kafka' },
           { title: 'Kafka 副本与可靠性', path: 'mw/kafka-reliability' },
-          { title: 'RocketMQ 原理与事务消息', path: 'mw/rocketmq' }
+          { title: 'Kafka 生产运维：容量规划、Rebalance 治理与故障排查', path: 'mw/kafka-ops' },
+          { title: 'Kafka 生态：Connect、Streams 与 Schema Registry', path: 'mw/kafka-ecosystem' },
+          { title: 'RocketMQ 原理与事务消息', path: 'mw/rocketmq' },
+          { title: 'RabbitMQ 原理与可靠性（AMQP、仲裁队列与死信）', path: 'mw/rabbitmq' },
+          { title: 'Pulsar 架构与存算分离', path: 'mw/pulsar' },
+          { title: '消息队列平台化与治理', path: 'mw/mq-governance' }
         ]
       },
       {
         title: '搜索引擎', children: [
           { title: 'Elasticsearch 原理', path: 'mw/es' },
-          { title: 'ES 实战与数据同步', path: 'mw/es-practice' }
+          { title: 'ES 实战与数据同步', path: 'mw/es-practice' },
+          { title: 'ES 集群运维：生命周期、故障排查与日志场景', path: 'mw/es-ops' }
         ]
       },
       {
@@ -223,6 +229,12 @@ window.NAV = [
           { title: 'Dubbo 架构与调用链路', path: 'mw/dubbo' },
           { title: 'Dubbo 集群容错与服务治理', path: 'mw/dubbo-practice' },
           { title: 'gRPC 与 Protobuf：协议、流式调用与治理', path: 'mw/grpc' }
+        ]
+      },
+      {
+        title: '注册、配置与协调', children: [
+          { title: 'Nacos 与服务注册发现、配置中心', path: 'mw/registry' },
+          { title: '分布式协调：ZooKeeper 与 etcd', path: 'mw/coordination' }
         ]
       }
     ]

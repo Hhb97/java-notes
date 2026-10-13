@@ -296,6 +296,8 @@ Triple 的意义：用标准 HTTP/2 取代私有二进制协议，**可以被 En
 
 - [gRPC 与 Protobuf：协议、流式调用与治理](#/mw/grpc)：gRPC 与 Triple 协议对比
 - [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：链路追踪集成
+- [Nacos 与服务注册发现、配置中心](#/mw/registry)：注册中心与配置中心
+- [分布式协调：ZooKeeper 与 etcd](#/mw/coordination)：ZooKeeper 注册中心的底层
 
 ## 面试追问
 
