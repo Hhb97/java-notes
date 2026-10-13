@@ -458,7 +458,9 @@ window.NAV = [
           { title: '案例：搜索系统设计详解', path: 'design/case-search' },
           { title: '案例：分布式任务调度平台设计详解', path: 'design/case-scheduler' },
           { title: '案例：API 网关设计详解', path: 'design/case-gateway' },
-          { title: '案例：推荐系统设计详解', path: 'design/case-recsys' }
+          { title: '案例：推荐系统设计详解', path: 'design/case-recsys' },
+          { title: '案例：分布式文件/对象存储设计详解', path: 'design/case-objectstore' },
+          { title: '案例：实时消息推送系统设计详解', path: 'design/case-push' }
         ]
       },
       {

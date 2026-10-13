@@ -305,6 +305,8 @@ summary: 高并发系统设计的手段地图、从 DAU 推算机器数的容量
 - [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：验证降级与限流预案
 - [案例：API 网关设计详解](#/design/case-gateway)
 - [案例：推荐系统设计详解](#/design/case-recsys)
+- [案例：分布式文件/对象存储设计详解](#/design/case-objectstore)
+- [案例：实时消息推送系统设计详解](#/design/case-push)
 
 ## 面试追问
 

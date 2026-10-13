@@ -247,6 +247,7 @@ sysctl -w net.netfilter.nf_conntrack_max=2000000     # 若启用 conntrack，需
 
 - [Java 接入：Paho、Spring 与 Netty](#/iot/java)：Java 接入实践
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：连接数、文件描述符与内核调优
+- [案例：实时消息推送系统](#/design/case-push)：长连接、广播扇出与离线通道
 
 ## 面试追问
 

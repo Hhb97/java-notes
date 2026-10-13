@@ -258,6 +258,10 @@ try (FileChannel ch = FileChannel.open(path, READ, WRITE)) {
 | 新节点启动后性能低、缓存冷 | 页缓存冷启动；预热（`vmtouch`、预读关键文件） |
 | 内存看似被吃光 | 页缓存正常占用，看 `available`；`echo 1 > /proc/sys/vm/drop_caches` 仅测试用，勿在生产随意执行 |
 
+## 相关阅读
+
+- [案例：分布式对象存储](#/design/case-objectstore)：顺序追加、小文件合并与校验和在存储系统中的应用
+
 ## 面试追问
 
 > [!QUESTION] write() 返回成功，数据就安全落盘了吗？
