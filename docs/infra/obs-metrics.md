@@ -328,6 +328,10 @@ groups:
 | 告警太多，被忽略 | 精简、分级、抑制 |
 | 容器 CPU 限流不监控 | 延迟毛刺的隐形原因 |
 
+## 相关阅读
+
+- [微服务可观测：Micrometer、链路追踪与排障](#/spring/cloud-observability)：Spring Cloud 中的指标与探针
+
 ## 面试追问
 
 > [!QUESTION] 监控系统应该监控哪些指标？RED 和 USE 方法是什么？

@@ -294,6 +294,8 @@ Java 进程诊断见 [线上调优与故障排查](#/java/jvm/tuning)，镜像�
 - [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：滚动、金丝雀与优雅停机
 - [CI/CD 流水线与 GitOps](#/infra/cicd)：GitOps 与 Helm
 - [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：CoreDNS 与 ndots
+- [微服务可观测：Micrometer、链路追踪与排障](#/spring/cloud-observability)：探针与优雅停机在 Spring Boot 中的配置
+- [微服务体系的演进：Boot 3、虚拟线程与云原生下的取舍](#/spring/cloud-evolution)：治理能力在 SDK、网格与平台间的取舍
 
 ## 面试追问
 

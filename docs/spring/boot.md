@@ -398,6 +398,7 @@ spring:
 - [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：Actuator + Micrometer 指标
 - [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：Spring Security 6 认证授权
 - [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：优雅停机、探针与发布
+- [微服务体系的演进：Boot 3、虚拟线程与云原生下的取舍](#/spring/cloud-evolution)：Boot 3 的关键变化与升级路线
 
 ## 面试追问
 

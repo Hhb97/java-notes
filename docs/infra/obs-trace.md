@@ -369,6 +369,7 @@ try { log.info("create order, amount={}", amount); } finally { MDC.remove("order
 ## 相关阅读
 
 - [ES 集群运维：生命周期、故障排查与日志场景](#/mw/es-ops)：日志存储的冷热分层与成本
+- [微服务可观测：Micrometer、链路追踪与排障](#/spring/cloud-observability)：Spring Cloud 中的 Micrometer 集成
 
 ## 面试追问
 

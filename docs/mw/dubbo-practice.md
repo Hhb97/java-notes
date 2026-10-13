@@ -247,6 +247,7 @@ Dubbo 将超时、权重、路由、标签等做成**动态配置**（配置中�
 ## 相关阅读
 
 - [Nacos 与服务注册发现、配置中心](#/mw/registry)：注册发现与配置治理
+- [熔断限流实战：Sentinel 与 Resilience4j](#/spring/cloud-resilience)：Sentinel 在 Dubbo 与 Spring Cloud 中的使用
 
 ## 面试追问
 

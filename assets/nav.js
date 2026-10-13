@@ -76,7 +76,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'spring', title: 'Spring 生态', desc: '容器、AOP、事务、MVC、MyBatis、Boot、Cloud',
+    id: 'spring', title: 'Spring 生态', desc: '容器、AOP、事务、MVC、MyBatis、Boot、Cloud 与微服务治理',
     children: [
       {
         title: '核心容器', children: [
@@ -95,6 +95,17 @@ window.NAV = [
         title: 'Boot 与 Cloud', children: [
           { title: 'Spring Boot 自动配置与启动', path: 'spring/boot' },
           { title: 'Spring Cloud 微服务全景', path: 'spring/cloud' }
+        ]
+      },
+      {
+        title: '微服务治理', children: [
+          { title: 'OpenFeign 深入：调用链、超时重试与上下文透传', path: 'spring/cloud-feign' },
+          { title: 'Spring Cloud Gateway 深入：过滤器链、动态路由与响应式陷阱', path: 'spring/cloud-gateway' },
+          { title: '熔断限流实战：Sentinel 与 Resilience4j', path: 'spring/cloud-resilience' },
+          { title: '配置管理与全链路灰度', path: 'spring/cloud-config-gray' },
+          { title: '微服务安全：网关鉴权、服务间认证与令牌传递', path: 'spring/cloud-security' },
+          { title: '微服务可观测：Micrometer、链路追踪与排障', path: 'spring/cloud-observability' },
+          { title: '微服务体系的演进：Boot 3、虚拟线程与云原生下的取舍', path: 'spring/cloud-evolution' }
         ]
       }
     ]

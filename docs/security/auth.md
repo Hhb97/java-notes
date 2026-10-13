@@ -442,6 +442,10 @@ public class JwtFilter extends OncePerRequestFilter {
 | 开放重定向 | `redirect_uri` 必须**精确匹配白名单** |
 | 日志打印令牌/密码 | 日志脱敏，见 [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace) |
 
+## 相关阅读
+
+- [微服务安全：网关鉴权、服务间认证与令牌传递](#/spring/cloud-security)：微服务中的令牌传递与服务间认证
+
 ## 面试追问
 
 > [!QUESTION] Session 和 JWT 有什么区别？各自适用什么场景？JWT 如何实现登出？

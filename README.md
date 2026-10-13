@@ -7,7 +7,7 @@
 | 分类 | 覆盖 |
 | --- | --- |
 | Java 核心 | 语言基础、面向对象、集合（HashMap / ConcurrentHashMap 源码）、反射与代理、IO/NIO、并发（JMM、synchronized、AQS、线程池）、JVM（内存、GC、G1/ZGC、类加载、JIT、调优）、Maven、测试、设计模式 |
-| Spring 生态 | IoC、AOP、事务、Spring MVC、MyBatis、Spring Boot、Spring Cloud |
+| Spring 生态 | IoC、AOP、事务、Spring MVC、MyBatis、Spring Boot、Spring Cloud 与微服务治理（OpenFeign、Gateway、熔断限流、配置与全链路灰度、微服务安全、可观测、Boot 3 与虚拟线程演进） |
 | MySQL | 架构、InnoDB 存储、B+ 树索引、SQL 调优、MVCC、锁、redo/undo/binlog、主从复制、分库分表 |
 | PostgreSQL | 进程模型与 WAL、MVCC 与 VACUUM、锁、索引类型与优化、流复制/Patroni/PITR/分区 |
 | Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战 |

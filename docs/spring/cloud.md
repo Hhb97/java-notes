@@ -255,6 +255,13 @@ spring:
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动与 Saga
 - [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：全链路追踪
 - [案例：API 网关设计详解](#/design/case-gateway)：网关的数据面/控制面、过滤器链与限流灰度
+- [OpenFeign 深入：调用链、超时重试与上下文透传](#/spring/cloud-feign)：调用链、超时重试与上下文透传
+- [Spring Cloud Gateway 深入：过滤器链、动态路由与响应式陷阱](#/spring/cloud-gateway)：过滤器链、动态路由、响应式陷阱
+- [熔断限流实战：Sentinel 与 Resilience4j](#/spring/cloud-resilience)：规则、持久化与参数设计
+- [配置管理与全链路灰度](#/spring/cloud-config-gray)：配置治理与灰度
+- [微服务安全：网关鉴权、服务间认证与令牌传递](#/spring/cloud-security)：网关与服务的认证授权分工
+- [微服务可观测：Micrometer、链路追踪与排障](#/spring/cloud-observability)：Micrometer 与链路追踪
+- [微服务体系的演进：Boot 3、虚拟线程与云原生下的取舍](#/spring/cloud-evolution)：Boot 3 升级与治理取舍
 
 ## 面试追问
 

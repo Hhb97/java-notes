@@ -109,6 +109,7 @@
 | 框架原理 | 读懂框架源码，定位框架层问题 | [IoC](#/spring/ioc)、[AOP](#/spring/aop)、[事务](#/spring/tx)、[MyBatis](#/spring/mybatis)、[自动配置](#/spring/boot) |
 | 数据层 | 设计索引与表结构，解决一致性与性能 | [B+ 树索引](#/mysql/index)、[MVCC](#/mysql/transaction)、[锁](#/mysql/lock)、[缓存一致性](#/redis/cache) |
 | 分布式 | 拆分服务并保证可用与一致 | [消息队列](#/mw/mq)、[分布式事务](#/distributed/transaction)、[限流熔断](#/distributed/governance) |
+| 微服务治理 | 调用、网关、容错、配置灰度、安全与可观测 | [OpenFeign](#/spring/cloud-feign)、[Gateway](#/spring/cloud-gateway)、[熔断限流](#/spring/cloud-resilience)、[配置与灰度](#/spring/cloud-config-gray)、[微服务安全](#/spring/cloud-security)、[可观测](#/spring/cloud-observability)、[演进与升级](#/spring/cloud-evolution) |
 | 中间件深入 | 选对消息队列，管好注册配置与协调 | [RabbitMQ](#/mw/rabbitmq)、[Kafka 运维](#/mw/kafka-ops)、[Kafka 生态](#/mw/kafka-ecosystem)、[Pulsar](#/mw/pulsar)、[MQ 治理](#/mw/mq-governance)、[Nacos](#/mw/registry)、[ZooKeeper 与 etcd](#/mw/coordination)、[ES 运维](#/mw/es-ops) |
 | 架构设计 | 独立设计高并发系统 | [设计方法论](#/design/method)、[秒杀系统](#/design/seckill)、[短链接](#/design/case-shorturl)、[Feed 流](#/design/case-feed)、[搜索](#/design/case-search)、[任务调度](#/design/case-scheduler)、[API 网关](#/design/case-gateway)、[推荐系统](#/design/case-recsys)、[对象存储](#/design/case-objectstore)、[消息推送](#/design/case-push)、[高并发写](#/design/case-highwrite)、[直播](#/design/case-live)、[面试速查](#/design/interview) |
 | 领域建模与事件驱动 | 划分边界、保证跨服务最终一致 | [DDD 战略设计](#/design/ddd-strategic)、[聚合与领域事件](#/design/ddd-tactical)、[Outbox 与 Saga](#/design/event-driven)、[CQRS 与事件溯源](#/design/cqrs-es) |

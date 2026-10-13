@@ -366,6 +366,11 @@ routes:
 | **客户端真实 IP 丢失** | 信任链上的 `X-Forwarded-For` 处理；Proxy Protocol；仅信任已知 LB |
 | **网关变成全链路瓶颈却无容量规划** | 压测、水位、N+2、自动扩缩容 |
 
+## 相关阅读
+
+- [Spring Cloud Gateway 深入：过滤器链、动态路由与响应式陷阱](#/spring/cloud-gateway)：Spring Cloud Gateway 的实现细节与陷阱
+- [微服务安全：网关鉴权、服务间认证与令牌传递](#/spring/cloud-security)：网关鉴权与内部信任
+
 ## 面试追问
 
 > [!QUESTION] API 网关的作用？应该承担哪些职责，不该承担哪些？

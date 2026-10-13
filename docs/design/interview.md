@@ -60,6 +60,13 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | MyBatis 缓存与 `#{}`/`${}` | 一级缓存（会话）、二级缓存（Mapper）；`#{}` 预编译防注入，`${}` 拼接 | [MyBatis 原理与实践](#/spring/mybatis) |
 | Spring Boot 自动配置 | `AutoConfiguration.imports` + `@Conditional`；用户 Bean 优先 | [Spring Boot 自动配置与启动](#/spring/boot) |
 | 微服务核心组件 | 网关、注册配置中心、Feign、熔断限流、链路追踪、分布式事务 | [Spring Cloud 微服务全景](#/spring/cloud) |
+| OpenFeign 超时重试怎么配才不雪崩 | 显式超时且自内向外递减；写接口不自动重试用幂等键；重试一层；熔断+舱壁；透传 deadline | [OpenFeign 深入：调用链、超时重试与上下文透传](#/spring/cloud-feign) |
+| Spring Cloud Gateway 的坑 | WebFlux 事件循环不能阻塞；读 body 需缓存重包装；DataBuffer 释放；动态路由先校验再灰度 | [Spring Cloud Gateway 深入：过滤器链、动态路由与响应式陷阱](#/spring/cloud-gateway) |
+| Sentinel 与 Resilience4j 怎么选、规则怎么管 | Sentinel 规则丰富+控制台+热点/系统保护；R4j 轻量模块化；规则持久化到 Nacos；业务异常不计熔断 | [熔断限流实战：Sentinel 与 Resilience4j](#/spring/cloud-resilience) |
+| 配置中心动态刷新与全链路灰度 | RefreshScope 重建与边界；染色→标签透传→选路→回退；数据/缓存/消息兼容；回滚优先 | [配置管理与全链路灰度](#/spring/cloud-config-gray) |
+| 微服务认证授权怎么分工 | 网关认证+粗授权，服务做资源级授权；JWT 校验完整；令牌交换；mTLS 服务身份；防 IDOR | [微服务安全：网关鉴权、服务间认证与令牌传递](#/spring/cloud-security) |
+| 微服务如何做可观测、trace 为什么断 | Observation 一次埋点；traceparent 传播；线程池/消息/手建客户端是断点；标签基数；liveness/readiness 分离 | [微服务可观测：Micrometer、链路追踪与排障](#/spring/cloud-observability) |
+| Boot 3 升级与虚拟线程 | JDK17+、jakarta、Security 6；分步灰度升级；虚拟线程瓶颈转移到连接池与下游，注意 pinning | [微服务体系的演进：Boot 3、虚拟线程与云原生下的取舍](#/spring/cloud-evolution) |
 | 怎么写好单元测试 | 金字塔；切片测试；mock 外部协作者；Testcontainers | [单元测试：JUnit 5 与 Mockito](#/java/eng/testing) |
 
 ## MySQL

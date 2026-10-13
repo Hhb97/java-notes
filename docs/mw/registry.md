@@ -281,6 +281,8 @@ spring:
 - [限流、熔断与降级](#/distributed/governance)：注册中心延迟窗口内的兜底
 - [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：配置灰度与优雅上下线
 - [Kubernetes 核心概念](#/infra/k8s)：Service、探针与服务发现
+- [配置管理与全链路灰度](#/spring/cloud-config-gray)：配置治理与全链路灰度
+- [OpenFeign 深入：调用链、超时重试与上下文透传](#/spring/cloud-feign)：客户端负载均衡与调用
 
 ## 面试追问
 

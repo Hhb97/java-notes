@@ -507,6 +507,7 @@ public <T> T callWithRetry(Supplier<T> call, int maxAttempts) {
 - [gRPC 与 Protobuf：协议、流式调用与治理](#/mw/grpc)：Deadline 与重试预算
 - [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：灰度、降级与回滚
 - [Nacos 与服务注册发现、配置中心](#/mw/registry)：注册中心的剔除窗口与保护阈值
+- [熔断限流实战：Sentinel 与 Resilience4j](#/spring/cloud-resilience)：框架中的落地与规则持久化
 
 ## 面试追问
 
