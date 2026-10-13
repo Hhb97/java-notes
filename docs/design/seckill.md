@@ -240,6 +240,10 @@ ALTER TABLE seckill_order ADD UNIQUE KEY uk_user_sku (user_id, sku_id);
 - [案例：订单、支付与对账系统设计详解](#/design/case-payment)：下单之后的支付与对账
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：异步下单与幂等消费
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：限流算法
+- [压测与容量规划](#/design/eng-loadtest)：秒杀前的压测与容量模型
+- [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：降级、过载保护与演练
+- [压测与容量规划](#/design/eng-loadtest)：秒杀前的压测与容量模型
+- [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：降级、过载保护与演练
 
 ## 面试追问
 

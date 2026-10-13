@@ -299,6 +299,10 @@ summary: 高并发系统设计的手段地图、从 DAU 推算机器数的容量
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：用事件解耦与削峰
 - [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：容量评估与监控
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：限流、布隆与一致性哈希
+- [案例：短链接服务设计详解](#/design/case-shorturl)：读多写少与多级缓存的完整案例
+- [案例：Feed 流与排行榜设计详解](#/design/case-feed)：写放大与推拉混合
+- [压测与容量规划](#/design/eng-loadtest)：把容量评估做成可验证的流程
+- [稳定性工程：故障演练与混沌实验](#/design/eng-chaos)：验证降级与限流预案
 
 ## 面试追问
 

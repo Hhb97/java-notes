@@ -437,7 +437,7 @@ window.NAV = [
     ]
   },
   {
-    id: 'design', title: '系统设计', desc: '高并发方法论、DDD 与事件驱动、架构设计案例、面试速查',
+    id: 'design', title: '系统设计', desc: '高并发方法论、DDD 与事件驱动、架构案例、工程能力（压测/稳定性/复盘/方案写作）、面试速查',
     children: [
       { title: '高并发系统设计方法论', path: 'design/method' },
       {
@@ -452,7 +452,19 @@ window.NAV = [
         title: '架构案例', children: [
           { title: '秒杀系统设计', path: 'design/seckill' },
           { title: '案例：订单、支付与对账系统设计详解', path: 'design/case-payment' },
-          { title: '案例：即时通讯（IM）系统设计详解', path: 'design/case-im' }
+          { title: '案例：即时通讯（IM）系统设计详解', path: 'design/case-im' },
+          { title: '案例：短链接服务设计详解', path: 'design/case-shorturl' },
+          { title: '案例：Feed 流与排行榜设计详解', path: 'design/case-feed' },
+          { title: '案例：搜索系统设计详解', path: 'design/case-search' },
+          { title: '案例：分布式任务调度平台设计详解', path: 'design/case-scheduler' }
+        ]
+      },
+      {
+        title: '工程能力', children: [
+          { title: '压测与容量规划', path: 'design/eng-loadtest' },
+          { title: '稳定性工程：故障演练与混沌实验', path: 'design/eng-chaos' },
+          { title: '事故响应与复盘', path: 'design/eng-postmortem' },
+          { title: '技术方案与 ADR 写作', path: 'design/eng-adr' }
         ]
       },
       { title: '面试高频速查', path: 'design/interview' }
