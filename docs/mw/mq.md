@@ -338,6 +338,7 @@ public void onOrderPaid(OrderPaidEvent e) {
 - [消息队列平台化与治理](#/mw/mq-governance)：多团队共用时的规范、配额与观测
 - [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：消息消费幂等
 - [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：可靠事件管道与对账
+- [QoS、会话与 Broker 语义：状态机、离线队列与共享订阅](#/iot/mqtt-qos-session)：MQTT 的 QoS 与会话语义对照
 
 ## 面试追问
 

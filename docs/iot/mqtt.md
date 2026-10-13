@@ -318,6 +318,11 @@ $share/ingest/devices/+/telemetry
 - [Java 接入：Paho、Spring 与 Netty](#/iot/java)：Java 客户端接入
 - [Broker 架构与集群（EMQX）](#/iot/broker)：Broker 与集群
 - [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：TCP 保活、RST 与 QUIC
+- [MQTT 报文详解：从字节看协议](#/iot/mqtt-wire)：逐字节的报文结构与抓包还原
+- [QoS、会话与 Broker 语义：状态机、离线队列与共享订阅](#/iot/mqtt-qos-session)：QoS 状态机、会话、遗嘱与共享订阅的实现语义
+- [MQTT 5.0 深入：属性、原因码与新机制](#/iot/mqtt-v5)：5.0 属性、原因码与新机制
+- [弱网、可靠性、安全与排障：MQTT 工程实践](#/iot/mqtt-practice)：弱网、指令可靠性、安全与排障
+- [MQTT 协议生态与选型：MQTT-SN、CoAP、Sparkplug B 与 QUIC](#/iot/mqtt-ecosystem)：MQTT-SN、CoAP、Sparkplug B、QUIC 与选型
 
 ## 面试追问
 

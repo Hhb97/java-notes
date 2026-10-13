@@ -13,7 +13,7 @@
 | Redis | 线程模型、数据结构编码、过期淘汰、持久化、哨兵与 Cluster、缓存一致性、分布式锁、场景实战，以及运维治理（Cluster 运维、大 key 与热 key、内存优化、故障排查与安全、使用规范与平台化） |
 | NoSQL、NewSQL、时序与分析库 | MongoDB（文档建模、索引与聚合、复制集/分片/事务）、TiDB（TiKV/PD/Raft、Percolator 分布式事务、热点与迁移、选型）、InfluxDB（数据模型与 TSM 引擎、基数治理、降采样、Java 写入、时序库选型）、ClickHouse（MergeTree 与稀疏索引、集群与写入、漏斗留存与近似计算） |
 | 中间件 | 消息队列通用问题与平台化治理、Kafka（原理、可靠性、运维、Connect/Streams）、RocketMQ、RabbitMQ、Pulsar、Elasticsearch（原理、实战、运维）、Dubbo、gRPC 与 Protobuf、Nacos 注册与配置中心、ZooKeeper 与 etcd |
-| 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
+| 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据）；MQTT 深入（报文字节级、QoS 与会话语义、5.0、弱网与安全排障、协议生态选型） |
 | AI 应用 | 全景与学习路线、大模型应用基础、提示词工程与结构化输出、RAG（流水线、文档解析与多模态、检索优化、评估）、Agent 与 MCP（协议深入、工作流编排、上下文工程）、微调实战、评测体系、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、**智能客服 / Text-to-SQL / 代码助手架构案例** |
 | **AI 模型与数学**（初学者友好） | 线性代数、微积分、概率；机器学习入门；MLP、CNN、RNN/LSTM、Transformer、LLM；模型家族地图与“性格画像” |
 | 大数据 | Flink（时间窗口、状态与 Exactly-Once、反压调优）、CDC 与实时数仓、ClickHouse / Doris、Spark 与 Iceberg / Paimon、Flink 内部机制、**电商实时数据平台架构案例** |

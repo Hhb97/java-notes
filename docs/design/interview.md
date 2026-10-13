@@ -124,6 +124,11 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | 在线状态怎么做 | 遗嘱 + 保留消息，或 Broker 连接事件；以最新连接为准 | [MQTT 协议详解](#/iot/mqtt) |
 | 百万设备接入 | EMQX 集群、共享订阅 + Kafka、重连风暴保护、内核调优 | [Broker 架构与集群（EMQX）](#/iot/broker) |
 | 设备影子与 OTA | desired/reported/delta；A/B 分区、验签、灰度 | [IoT 平台架构与设备管理](#/iot/platform) |
+| MQTT 报文结构与剩余长度编码 | 固定报头类型+标志；剩余长度 1~4 字节变长；PUBREL/SUBSCRIBE 标志必须 0010；Packet ID 唯一与复用 | [MQTT 报文详解：从字节看协议](#/iot/mqtt-wire) |
+| QoS1/2 状态机与重传规则 | QoS1 发送方存报文至 PUBACK；QoS2 接收方记 ID 到 PUBREL；仅重连后重发；逐跳 QoS=min | [QoS、会话与 Broker 语义：状态机、离线队列与共享订阅](#/iot/mqtt-qos-session) |
+| MQTT 5.0 新特性 | 属性/原因码；会话与消息过期；Will Delay；Receive Maximum；Topic Alias；请求响应；共享订阅；增强认证 | [MQTT 5.0 深入：属性、原因码与新机制](#/iot/mqtt-v5) |
+| 设备在线却收不到指令、保活怎么设 | NAT 老化/半开连接；Keep Alive<NAT 超时；PINGRESP 超时检测；重连退避+抖动；应用层指令闭环 | [弱网、可靠性、安全与排障：MQTT 工程实践](#/iot/mqtt-practice) |
+| MQTT 与 CoAP/MQTT-SN/Sparkplug 的区别与选型 | TCP 发布订阅 vs UDP REST；MQTT-SN 网关+主题 ID；Sparkplug 出生/死亡证书；QUIC 连接迁移 | [MQTT 协议生态与选型：MQTT-SN、CoAP、Sparkplug B 与 QUIC](#/iot/mqtt-ecosystem) |
 
 ## AI 应用
 

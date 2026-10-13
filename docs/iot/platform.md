@@ -344,6 +344,9 @@ Java 侧读 Modbus 可用 **j2mod / Eclipse Milo（OPC UA）/ Apache PLC4X**；�
 - [InfluxDB 数据模型与存储引擎](#/db/influx-model)：InfluxDB 数据模型
 - [ClickHouse 行为分析：漏斗、留存与近似计算](#/bigdata/ck-analytics)：用 ClickHouse 做设备数据分析
 - [加密、签名、HTTPS 与密钥管理](#/security/crypto)：设备认证与 mTLS
+- [弱网、可靠性、安全与排障：MQTT 工程实践](#/iot/mqtt-practice)：指令可靠性与上行补传
+- [MQTT 协议生态与选型：MQTT-SN、CoAP、Sparkplug B 与 QUIC](#/iot/mqtt-ecosystem)：边缘网关与协议选型
+- [QoS、会话与 Broker 语义：状态机、离线队列与共享订阅](#/iot/mqtt-qos-session)：在线状态与遗嘱语义
 
 ## 面试追问
 

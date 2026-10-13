@@ -329,6 +329,9 @@ class MqttIT {
 - [Broker 架构与集群（EMQX）](#/iot/broker)：Broker 集群
 - [InfluxDB 实战：基数、降采样、Java 写入与选型](#/db/influx-practice)：遥测数据写入时序库
 - [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：长连接保活与重连
+- [MQTT 报文详解：从字节看协议](#/iot/mqtt-wire)：解码器实现与报文校验清单
+- [弱网、可靠性、安全与排障：MQTT 工程实践](#/iot/mqtt-practice)：回调线程、重连与指令可靠性
+- [MQTT 5.0 深入：属性、原因码与新机制](#/iot/mqtt-v5)：Paho MQTT v5 客户端相关特性
 
 ## 面试追问
 

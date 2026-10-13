@@ -248,6 +248,9 @@ sysctl -w net.netfilter.nf_conntrack_max=2000000     # 若启用 conntrack，需
 - [Java 接入：Paho、Spring 与 Netty](#/iot/java)：Java 接入实践
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：连接数、文件描述符与内核调优
 - [案例：实时消息推送系统](#/design/case-push)：长连接、广播扇出与离线通道
+- [QoS、会话与 Broker 语义：状态机、离线队列与共享订阅](#/iot/mqtt-qos-session)：会话、离线队列、共享订阅的协议语义
+- [MQTT 5.0 深入：属性、原因码与新机制](#/iot/mqtt-v5)：5.0 特性对 Broker 的要求
+- [弱网、可靠性、安全与排障：MQTT 工程实践](#/iot/mqtt-practice)：重连风暴、ACL 与排障
 
 ## 面试追问
 

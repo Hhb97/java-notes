@@ -121,6 +121,7 @@
 | 工程能力 | 容量、稳定性、复盘与方案写作 | [压测与容量规划](#/design/eng-loadtest)、[稳定性工程](#/design/eng-chaos)、[事故复盘](#/design/eng-postmortem)、[技术方案与 ADR](#/design/eng-adr) |
 | 多种数据库 | 按场景选型 MongoDB、TiDB、时序与分析库 | [MongoDB](#/db/mongo-model)、[TiDB](#/db/tidb-arch)、[InfluxDB](#/db/influx-model)、[ClickHouse](#/bigdata/ck-engine) |
 | 计算机基础 | 把线上现象还原到操作系统与网络层 | [进程与调度](#/cs/os-process)、[虚拟内存](#/cs/os-memory)、[网络层](#/cs/net-ip)、[TCP 深入](#/cs/net-tcp)、[网络排障](#/cs/net-debug) |
+| 物联网与 MQTT | 协议、Broker、平台与可靠性 | [MQTT 协议](#/iot/mqtt)、[报文详解](#/iot/mqtt-wire)、[QoS 与会话](#/iot/mqtt-qos-session)、[MQTT 5.0](#/iot/mqtt-v5)、[弱网与安全](#/iot/mqtt-practice)、[协议生态](#/iot/mqtt-ecosystem)、[IoT 平台](#/iot/platform) |
 | AI 应用落地 | 从提示词到 RAG、Agent，再到评测与微调 | [全景与路线](#/ai/overview)、[提示词](#/ai/prompt-eng)、[文档解析](#/ai/rag-parsing)、[MCP](#/ai/mcp-deep)、[工作流与 Agent](#/ai/agent-workflow)、[评测](#/ai/eval)、[微调](#/ai/finetune)、[Text-to-SQL](#/ai/case-text2sql)、[代码助手](#/ai/case-codeagent) |
 
 ## 阅读约定

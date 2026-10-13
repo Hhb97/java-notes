@@ -260,11 +260,16 @@ window.NAV = [
     ]
   },
   {
-    id: 'iot', title: '物联网', desc: 'MQTT 协议、Broker 集群、Java 接入与 IoT 平台架构',
+    id: 'iot', title: '物联网', desc: 'MQTT 协议深入（报文/QoS/5.0/弱网安全/生态）、Broker 集群、Java 接入与 IoT 平台架构',
     children: [
       {
         title: 'MQTT', children: [
           { title: 'MQTT 协议详解', path: 'iot/mqtt' },
+          { title: 'MQTT 报文详解：从字节看协议', path: 'iot/mqtt-wire' },
+          { title: 'QoS、会话与 Broker 语义：状态机、离线队列与共享订阅', path: 'iot/mqtt-qos-session' },
+          { title: 'MQTT 5.0 深入：属性、原因码与新机制', path: 'iot/mqtt-v5' },
+          { title: '弱网、可靠性、安全与排障：MQTT 工程实践', path: 'iot/mqtt-practice' },
+          { title: 'MQTT 协议生态与选型：MQTT-SN、CoAP、Sparkplug B 与 QUIC', path: 'iot/mqtt-ecosystem' },
           { title: 'Broker 架构与集群（EMQX）', path: 'iot/broker' }
         ]
       },
