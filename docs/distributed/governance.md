@@ -508,6 +508,8 @@ public <T> T callWithRetry(Supplier<T> call, int maxAttempts) {
 - [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：灰度、降级与回滚
 - [Nacos 与服务注册发现、配置中心](#/mw/registry)：注册中心的剔除窗口与保护阈值
 - [熔断限流实战：Sentinel 与 Resilience4j](#/spring/cloud-resilience)：框架中的落地与规则持久化
+- [故障模型、故障检测与脑裂](#/distributed/fault)：重试风暴与亚稳态
+- [高可用架构设计：可用性计算、故障域与容灾](#/design/arch-availability)：体系化的高可用设计
 
 ## 面试追问
 

@@ -334,6 +334,8 @@ StockApi api = HttpServiceProxyFactory.builderFor(RestClientAdapter.create(rc)).
 - [微服务安全：网关鉴权、服务间认证与令牌传递](#/spring/cloud-security)：跨服务的身份传递
 - [限流、熔断与降级](#/distributed/governance)：治理原理与算法
 - [Dubbo 集群容错与服务治理](#/mw/dubbo-practice)：RPC 框架中的同类问题
+- [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：幂等与重试
+- [API 设计与演进：REST、兼容性与开放平台](#/design/arch-api)：API 兼容性
 
 ## 面试追问
 

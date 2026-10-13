@@ -110,9 +110,11 @@
 | 数据层 | 设计索引与表结构，解决一致性与性能 | [B+ 树索引](#/mysql/index)、[MVCC](#/mysql/transaction)、[锁](#/mysql/lock)、[缓存一致性](#/redis/cache) |
 | Redis 运维治理 | 集群运维、大热 key、内存与排障规范 | [Cluster 运维](#/redis/cluster-ops)、[大 key 与热 key](#/redis/bigkey)、[内存优化](#/redis/memory)、[故障排查与安全](#/redis/troubleshooting)、[使用规范](#/redis/governance) |
 | 分布式 | 拆分服务并保证可用与一致 | [消息队列](#/mw/mq)、[分布式事务](#/distributed/transaction)、[限流熔断](#/distributed/governance) |
+| 分布式深入 | 时钟、共识、复制分片、故障与一致性实战 | [分布式时钟](#/distributed/clock)、[Paxos 族](#/distributed/paxos)、[复制](#/distributed/replication)、[分片](#/distributed/partitioning)、[故障与脑裂](#/distributed/fault)、[幂等](#/distributed/idempotent)、[一致性实战](#/distributed/consistency-practice) |
 | 微服务治理 | 调用、网关、容错、配置灰度、安全与可观测 | [OpenFeign](#/spring/cloud-feign)、[Gateway](#/spring/cloud-gateway)、[熔断限流](#/spring/cloud-resilience)、[配置与灰度](#/spring/cloud-config-gray)、[微服务安全](#/spring/cloud-security)、[可观测](#/spring/cloud-observability)、[演进与升级](#/spring/cloud-evolution) |
 | 中间件深入 | 选对消息队列，管好注册配置与协调 | [RabbitMQ](#/mw/rabbitmq)、[Kafka 运维](#/mw/kafka-ops)、[Kafka 生态](#/mw/kafka-ecosystem)、[Pulsar](#/mw/pulsar)、[MQ 治理](#/mw/mq-governance)、[Nacos](#/mw/registry)、[ZooKeeper 与 etcd](#/mw/coordination)、[ES 运维](#/mw/es-ops) |
 | 架构设计 | 独立设计高并发系统 | [设计方法论](#/design/method)、[秒杀系统](#/design/seckill)、[短链接](#/design/case-shorturl)、[Feed 流](#/design/case-feed)、[搜索](#/design/case-search)、[任务调度](#/design/case-scheduler)、[API 网关](#/design/case-gateway)、[推荐系统](#/design/case-recsys)、[对象存储](#/design/case-objectstore)、[消息推送](#/design/case-push)、[高并发写](#/design/case-highwrite)、[直播](#/design/case-live)、[面试速查](#/design/interview) |
+| 架构专题 | 高可用、多活、整洁架构、多租户与 API | [高可用](#/design/arch-availability)、[异地多活](#/design/arch-multi-active)、[整洁架构](#/design/arch-clean)、[多租户](#/design/arch-multitenant)、[API 设计](#/design/arch-api)、[LBS](#/design/case-lbs)、[协作文档](#/design/case-collab) |
 | 领域建模与事件驱动 | 划分边界、保证跨服务最终一致 | [DDD 战略设计](#/design/ddd-strategic)、[聚合与领域事件](#/design/ddd-tactical)、[Outbox 与 Saga](#/design/event-driven)、[CQRS 与事件溯源](#/design/cqrs-es) |
 | 安全与可观测 | 认证授权、漏洞防护，线上能看见、能定位 | [认证授权](#/security/auth)、[Web 安全](#/security/web)、[指标监控](#/infra/obs-metrics)、[链路追踪与 SLO](#/infra/obs-trace) |
 | 交付与发布 | 安全、可回滚地把变更送上线 | [CI/CD 与 GitOps](#/infra/cicd)、[发布策略](#/infra/release)、[gRPC](#/mw/grpc) |

@@ -361,6 +361,8 @@ public void createOrder(OrderDTO dto) {
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：Saga 与 Outbox 的工程化
 - [案例：订单、支付与对账系统设计详解](#/design/case-payment)：支付场景的最终一致
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：Percolator 分布式事务
+- [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：补偿与确认的幂等要求
+- [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：双写、对账与修复
 
 ## 面试追问
 

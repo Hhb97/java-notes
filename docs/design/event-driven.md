@@ -359,6 +359,8 @@ public void handle(OrderPaid e) {
 
 - [消息队列平台化与治理](#/mw/mq-governance)：统一事件信封、死信与消息轨迹
 - [RabbitMQ 原理与可靠性（AMQP、仲裁队列与死信）](#/mw/rabbitmq)：一种消息代理的可靠投递实践
+- [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：双写问题与对账
+- [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：消费幂等
 
 ## 面试追问
 

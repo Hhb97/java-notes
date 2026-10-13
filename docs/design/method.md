@@ -309,6 +309,11 @@ summary: 高并发系统设计的手段地图、从 DAU 推算机器数的容量
 - [案例：实时消息推送系统设计详解](#/design/case-push)
 - [案例：高并发写入与热点治理（计数、库存、红包）](#/design/case-highwrite)
 - [案例：直播系统设计详解](#/design/case-live)
+- [高可用架构设计：可用性计算、故障域与容灾](#/design/arch-availability)：可用性计算与容灾
+- [异地多活与单元化架构](#/design/arch-multi-active)：异地多活
+- [分层、六边形与整洁架构：应用内部的边界](#/design/arch-clean)：应用内部架构
+- [多租户 SaaS 架构：隔离、治理与运营](#/design/arch-multitenant)：多租户
+- [API 设计与演进：REST、兼容性与开放平台](#/design/arch-api)：API 设计
 
 ## 面试追问
 

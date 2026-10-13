@@ -521,6 +521,11 @@ CREATE TABLE t_ledger_entry (
 | 一个库 vs 分库分表 | 分片 + 分片基因 | 跨分片查询需异构索引 |
 | 自动处理 vs 人工 | 低风险自动、高风险人工复核 | 人力成本 |
 
+## 相关阅读
+
+- [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：支付幂等与超时未知处理
+- [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：对账与修复
+
 ## 面试追问
 
 > [!QUESTION] 为什么订单和支付单要分开？

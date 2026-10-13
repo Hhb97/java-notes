@@ -200,6 +200,13 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | 分布式事务方案 | 2PC/TCC/Saga/本地消息表/事务消息/Seata AT，各有取舍 | [分布式事务](#/distributed/transaction) |
 | 分布式 ID | 雪花、号段；时钟回拨处理；workerId 分配 | [分布式 ID 生成](#/distributed/id) |
 | 限流熔断降级 | 令牌桶/滑动窗口；熔断三态；超时与重试预算 | [限流、熔断与降级](#/distributed/governance) |
+| 分布式时钟、HLC 与 TrueTime | 物理时钟漂移/回拨；单调时钟度量间隔；Lamport/向量时钟/HLC；TSO vs TrueTime commit-wait | [分布式时钟：物理时间、逻辑时钟与 HLC](#/distributed/clock) |
+| Paxos 如何保证安全、与 Raft 的区别 | 两阶段+多数派相交+采用最大编号已接受值；Multi-Paxos 稳定领导者与日志槽；Raft 连续日志与选主约束 | [Paxos 与共识算法族：原理、变体与对比](#/distributed/paxos) |
+| 主从/多主/无主复制与复制延迟 | 同步/半同步/异步；读自己的写、单调读；多主冲突（LWW/版本向量/CRDT）；Quorum 不等于强一致 | [复制与一致性：主从、多主与无主](#/distributed/replication) |
+| 分片策略与一致性哈希 | 范围/哈希/槽位/一致性哈希+虚拟节点；不要 mod N；再平衡；热点加盐；二级索引 | [分片、一致性哈希与再平衡](#/distributed/partitioning) |
+| 故障检测、脑裂与 fencing | 无法区分慢与死；SWIM/Phi Accrual；租约+fencing token；多数派/STONITH；重试风暴与亚稳态 | [故障模型、故障检测与脑裂](#/distributed/fault) |
+| 幂等怎么设计 | 发起方稳定幂等键；唯一约束/去重表同事务；状态机条件更新；处理中并发；超时未知三态+对账 | [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent) |
+| 多处写入如何保证数据一致 | 单一写入源+派生数据；Outbox/CDC；对账分类与修复原则；迁移双写+影子读 | [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice) |
 
 ## 网络与运维
 
@@ -265,6 +272,13 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | 抢红包怎么设计 | 发时预拆分（二倍均值）存 Redis List 并落库；Lua 原子判重+弹出份额；抢到与入账解耦（流水先行批量汇总）；过期退回、对账 | [高并发写入与热点治理](#/design/case-highwrite) |
 | 热点账户/热点库存怎么提升吞吐 | 账户：流水先行批量汇总、子账户拆分；库存：条件更新→分段库存→Redis 预扣异步落库→排队合并/单线程 | [高并发写入与热点治理](#/design/case-highwrite) |
 | 设计直播系统 | 媒体面（推流→转码→CDN→播放）与互动面解耦；RTMP 推流+FLV/HLS 观看+WebRTC 连麦；GOP 缓存秒开；多 CDN 调度 | [直播系统案例](#/design/case-live) |
+| 高可用架构怎么设计 | 可用性串并联计算；SLO/错误预算；跨故障域冗余+N+1容量；RTO/RPO；变更是最大风险 | [高可用架构设计：可用性计算、故障域与容灾](#/design/arch-availability) |
+| 异地多活怎么做 | 单元化：分区键路由+单元封闭；分区/全局/强一致三类数据；切换隔离先于接管；回切 | [异地多活与单元化架构](#/design/arch-multi-active) |
+| 六边形/整洁架构与模块化单体 | 依赖倒置、端口与适配器；ArchUnit 守护；先模块化再拆服务；绞杀者+防腐层 | [分层、六边形与整洁架构：应用内部的边界](#/design/arch-clean) |
+| 多租户 SaaS 怎么设计 | 共享表/Schema/独立库分层混合；租户上下文全链路+RLS；噪声邻居治理；计量计费与生命周期 | [多租户 SaaS 架构：隔离、治理与运营](#/design/arch-multitenant) |
+| API 设计与版本兼容 | REST 语义与幂等；游标分页；统一错误模型；只增不改；弃用流程；签名与 Webhook | [API 设计与演进：REST、兼容性与开放平台](#/design/arch-api) |
+| 设计附近的人/打车派单 | 网格空间索引+邻格；只存最新位置；ETA 精排+批量匹配；原子占用防重复派单；热点分片 | [案例：LBS 附近的人与打车派单设计详解](#/design/case-lbs) |
+| 设计在线协作文档 | OT 中心服务器 vs CRDT 唯一 ID；房间路由串行化；日志+快照；Awareness 与文档分离；离线合并 | [案例：在线协作文档（OT 与 CRDT）设计详解](#/design/case-collab) |
 | 直播协议怎么选与首屏秒开 | RTMP 1~3s、FLV 低延迟主流、HLS 兼容高延迟、LL-HLS 折中、WebRTC <1s 成本高；边缘缓存最近 GOP，从关键帧起播，ABR 抗卡顿 | [直播系统案例](#/design/case-live) |
 | 百万人房间弹幕怎么做 | 限频审核前置；降采样+合并+100ms 批量打包；房间连接分片按节点广播；优先级；不保证每人全收 | [直播系统案例](#/design/case-live) |
 | 礼物打赏与直播成本 | 礼物强一致：幂等订单先扣款后异步派生；带宽最大成本：H.265、多 CDN、按需转码、P2P | [直播系统案例](#/design/case-live) |

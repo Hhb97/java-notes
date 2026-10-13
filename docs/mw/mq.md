@@ -336,6 +336,8 @@ public void onOrderPaid(OrderPaidEvent e) {
 - [RabbitMQ 原理与可靠性（AMQP、仲裁队列与死信）](#/mw/rabbitmq)：路由模型与三段链路可靠性
 - [Pulsar 架构与存算分离](#/mw/pulsar)：存算分离与多租户的另一种设计
 - [消息队列平台化与治理](#/mw/mq-governance)：多团队共用时的规范、配额与观测
+- [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：消息消费幂等
+- [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：可靠事件管道与对账
 
 ## 面试追问
 

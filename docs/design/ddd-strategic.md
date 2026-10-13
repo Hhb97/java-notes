@@ -244,6 +244,7 @@ infrastructure 基础设施  仓储实现（MyBatis/JPA）、MQ、外部适配�
 ## 相关阅读
 
 - [微服务体系的演进：Boot 3、虚拟线程与云原生下的取舍](#/spring/cloud-evolution)：微服务反模式与治理成熟度
+- [分层、六边形与整洁架构：应用内部的边界](#/design/arch-clean)：模块边界、防腐层与绞杀者演进
 
 ## 面试追问
 

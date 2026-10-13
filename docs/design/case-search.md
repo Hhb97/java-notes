@@ -333,6 +333,10 @@ POST products/_search
 | 深分页支持 vs 成本 | 限制深度 + search_after | 不支持随意跳页 |
 | 自建 ES vs 云搜索服务 | 视团队运维能力 | 自建灵活但运维重 |
 
+## 相关阅读
+
+- [案例：LBS 附近的人与打车派单设计详解](#/design/case-lbs)：LBS 的空间索引与位置搜索
+
 ## 面试追问
 
 > [!QUESTION] 搜索系统的整体链路是什么？ES 在其中承担什么？

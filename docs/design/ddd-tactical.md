@@ -335,6 +335,10 @@ public record OrderPaid(String eventId, OrderId orderId, PaymentId paymentId, Mo
 | 领域层依赖框架（Spring、MyBatis 注解） | 难以测试与演进；依赖倒置，适配放基础设施 |
 | 把领域事件当命令用 | 事件是“已发生的事实”，不是“请你去做”；命令有明确接收者 |
 
+## 相关阅读
+
+- [分层、六边形与整洁架构：应用内部的边界](#/design/arch-clean)：六边形与整洁架构的落地
+
 ## 面试追问
 
 > [!QUESTION] 实体和值对象的区别？为什么推荐多用值对象？

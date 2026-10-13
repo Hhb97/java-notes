@@ -284,6 +284,8 @@ MongoDB ObjectId：12 字节 = 4 字节秒级时间戳 + 5 字节随机值 + 3 �
 
 - [TiDB 实战：热点、迁移、选型与调优](#/db/tidb-practice)：AUTO_RANDOM 与写热点
 - [案例：即时通讯（IM）系统设计详解](#/design/case-im)：会话内序号 seq 的分配
+- [分布式时钟：物理时间、逻辑时钟与 HLC](#/distributed/clock)：时钟回拨与逻辑时钟
+- [分片、一致性哈希与再平衡](#/distributed/partitioning)：分片键与基因法
 
 ## 面试追问
 

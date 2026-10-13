@@ -318,6 +318,8 @@ try {
 - [Redis 分布式锁](#/redis/lock)：效率型锁与安全型锁的取舍
 - [Nacos 与服务注册发现、配置中心](#/mw/registry)：微服务场景的注册与配置
 - [案例：分布式任务调度系统设计详解](#/design/case-scheduler)：选主与任务分片的实际应用
+- [Paxos 与共识算法族：原理、变体与对比](#/distributed/paxos)：共识算法族
+- [故障模型、故障检测与脑裂](#/distributed/fault)：租约与 fencing
 
 ## 面试追问
 

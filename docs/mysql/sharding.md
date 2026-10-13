@@ -218,6 +218,8 @@ rules:
 - [TiDB 实战：热点、迁移、选型与调优](#/db/tidb-practice)：TiDB：免分片的替代方案与选型
 - [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 分片键与热点
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：一致性哈希与虚拟节点
+- [分片、一致性哈希与再平衡](#/distributed/partitioning)：分片策略、再平衡与热点
+- [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：迁移期双写与校验
 
 ## 面试追问
 

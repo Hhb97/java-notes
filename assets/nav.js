@@ -404,17 +404,24 @@ window.NAV = [
     ]
   },
   {
-    id: 'distributed', title: '分布式', desc: 'CAP、共识、分布式事务、ID、限流熔断',
+    id: 'distributed', title: '分布式', desc: 'CAP、时钟、共识、复制与分片、故障、事务、幂等、一致性实战、ID、限流熔断',
     children: [
       {
         title: '理论', children: [
           { title: 'CAP、BASE 与一致性模型', path: 'distributed/theory' },
-          { title: 'Raft 与共识算法', path: 'distributed/consensus' }
+          { title: '分布式时钟：物理时间、逻辑时钟与 HLC', path: 'distributed/clock' },
+          { title: 'Raft 与共识算法', path: 'distributed/consensus' },
+          { title: 'Paxos 与共识算法族：原理、变体与对比', path: 'distributed/paxos' },
+          { title: '复制与一致性：主从、多主与无主', path: 'distributed/replication' },
+          { title: '分片、一致性哈希与再平衡', path: 'distributed/partitioning' },
+          { title: '故障模型、故障检测与脑裂', path: 'distributed/fault' }
         ]
       },
       {
         title: '实践', children: [
           { title: '分布式事务', path: 'distributed/transaction' },
+          { title: '幂等设计与重试：幂等键、去重表与超时未知', path: 'distributed/idempotent' },
+          { title: '数据一致性实战：双写、对账与修复', path: 'distributed/consistency-practice' },
           { title: '分布式 ID 生成', path: 'distributed/id' },
           { title: '限流、熔断与降级', path: 'distributed/governance' }
         ]
@@ -482,9 +489,18 @@ window.NAV = [
     ]
   },
   {
-    id: 'design', title: '系统设计', desc: '高并发方法论、DDD 与事件驱动、架构案例、工程能力（压测/稳定性/复盘/方案写作）、面试速查',
+    id: 'design', title: '系统设计', desc: '高并发方法论、架构专题（高可用/多活/整洁架构/多租户/API）、DDD 与事件驱动、架构案例、工程能力、面试速查',
     children: [
       { title: '高并发系统设计方法论', path: 'design/method' },
+      {
+        title: '架构专题', children: [
+          { title: '高可用架构设计：可用性计算、故障域与容灾', path: 'design/arch-availability' },
+          { title: '异地多活与单元化架构', path: 'design/arch-multi-active' },
+          { title: '分层、六边形与整洁架构：应用内部的边界', path: 'design/arch-clean' },
+          { title: '多租户 SaaS 架构：隔离、治理与运营', path: 'design/arch-multitenant' },
+          { title: 'API 设计与演进：REST、兼容性与开放平台', path: 'design/arch-api' }
+        ]
+      },
       {
         title: '领域驱动与事件驱动', children: [
           { title: 'DDD 战略设计：限界上下文与上下文映射', path: 'design/ddd-strategic' },
@@ -507,7 +523,9 @@ window.NAV = [
           { title: '案例：分布式文件/对象存储设计详解', path: 'design/case-objectstore' },
           { title: '案例：实时消息推送系统设计详解', path: 'design/case-push' },
           { title: '案例：高并发写入与热点治理（计数、库存、红包）', path: 'design/case-highwrite' },
-          { title: '案例：直播系统设计详解', path: 'design/case-live' }
+          { title: '案例：直播系统设计详解', path: 'design/case-live' },
+          { title: '案例：LBS 附近的人与打车派单设计详解', path: 'design/case-lbs' },
+          { title: '案例：在线协作文档（OT 与 CRDT）设计详解', path: 'design/case-collab' }
         ]
       },
       {

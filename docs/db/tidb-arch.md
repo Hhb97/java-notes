@@ -284,6 +284,8 @@ TiDB 的事务模型源自 Google **Percolator**：在**不支持跨行事务的
 ## 相关阅读
 
 - [案例：分布式对象存储：元数据层](#/design/case-objectstore)：强一致分片 KV 作为元数据存储
+- [分布式时钟：物理时间、逻辑时钟与 HLC](#/distributed/clock)：TSO 与 HLC 的对比
+- [Paxos 与共识算法族：原理、变体与对比](#/distributed/paxos)：Multi-Raft 与共识算法族
 
 ## 面试追问
 

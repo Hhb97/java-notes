@@ -351,6 +351,8 @@ etcd 是 Kubernetes 的元数据存储，核心是 **Raft + MVCC + Lease + Watch
 - [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集选举
 - [分布式锁](#/redis/lock)：分布式锁与 fencing
 - [分布式协调：ZooKeeper 与 etcd](#/mw/coordination)：Raft/ZAB 的工程应用
+- [Paxos 与共识算法族：原理、变体与对比](#/distributed/paxos)：Paxos 详解与算法对比
+- [故障模型、故障检测与脑裂](#/distributed/fault)：故障检测、租约与 fencing
 
 ## 面试追问
 

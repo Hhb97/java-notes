@@ -290,6 +290,10 @@ public void onMessage(PaymentEvent evt) {
 
 - [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 一致性旋钮
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：NewSQL 如何在 CAP 中取舍
+- [分布式时钟：物理时间、逻辑时钟与 HLC](#/distributed/clock)：物理时钟、HLC 与全局时间戳
+- [复制与一致性：主从、多主与无主](#/distributed/replication)：复制模型与冲突解决
+- [幂等设计与重试：幂等键、去重表与超时未知](#/distributed/idempotent)：幂等设计的完整方案
+- [故障模型、故障检测与脑裂](#/distributed/fault)：故障模型与脑裂
 
 ## 面试追问
 

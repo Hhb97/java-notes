@@ -370,6 +370,8 @@ routes:
 
 - [Spring Cloud Gateway 深入：过滤器链、动态路由与响应式陷阱](#/spring/cloud-gateway)：Spring Cloud Gateway 的实现细节与陷阱
 - [微服务安全：网关鉴权、服务间认证与令牌传递](#/spring/cloud-security)：网关鉴权与内部信任
+- [API 设计与演进：REST、兼容性与开放平台](#/design/arch-api)：API 设计与开放平台签名
+- [多租户 SaaS 架构：隔离、治理与运营](#/design/arch-multitenant)：租户识别与配额
 
 ## 面试追问
 

@@ -465,6 +465,10 @@ HTTP/2 自带**流量控制窗口**；流式场景下发送方要用 `isReady()`
 | 浏览器直接调用失败 | grpc-web + Envoy，或提供 REST 网关 |
 | Protobuf 对象当作可变领域模型到处传 | 在边界转换成领域对象，避免耦合传输模型（防腐层思想，见 [DDD](#/design/ddd-strategic)） |
 
+## 相关阅读
+
+- [API 设计与演进：REST、兼容性与开放平台](#/design/arch-api)：API 风格选型与兼容性
+
 ## 面试追问
 
 > [!QUESTION] gRPC 相比 REST 有什么优势？有什么缺点？
