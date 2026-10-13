@@ -14,7 +14,7 @@
 | NoSQL、NewSQL、时序与分析库 | MongoDB（文档建模、索引与聚合、复制集/分片/事务）、TiDB（TiKV/PD/Raft、Percolator 分布式事务、热点与迁移、选型）、InfluxDB（数据模型与 TSM 引擎、基数治理、降采样、Java 写入、时序库选型）、ClickHouse（MergeTree 与稀疏索引、集群与写入、漏斗留存与近似计算） |
 | 中间件 | 消息队列通用问题、Kafka、RocketMQ、Elasticsearch、Dubbo、gRPC 与 Protobuf |
 | 物联网 | MQTT 协议、EMQX 集群、Java 接入、IoT 平台架构（设备影子、OTA、时序数据） |
-| AI 应用 | 大模型应用基础、RAG（流水线、检索优化、评估）、Agent 与 MCP、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、Agent 进阶、**智能客服架构案例** |
+| AI 应用 | 全景与学习路线、大模型应用基础、提示词工程与结构化输出、RAG（流水线、文档解析与多模态、检索优化、评估）、Agent 与 MCP（协议深入、工作流编排、上下文工程）、微调实战、评测体系、Spring AI / LangChain4j、LLM 工程化与安全、推理服务原理、**智能客服 / Text-to-SQL / 代码助手架构案例** |
 | **AI 模型与数学**（初学者友好） | 线性代数、微积分、概率；机器学习入门；MLP、CNN、RNN/LSTM、Transformer、LLM；模型家族地图与“性格画像” |
 | 大数据 | Flink（时间窗口、状态与 Exactly-Once、反压调优）、CDC 与实时数仓、ClickHouse / Doris、Spark 与 Iceberg / Paimon、Flink 内部机制、**电商实时数据平台架构案例** |
 | 计算机基础 | 操作系统（进程线程与调度、虚拟内存、文件系统与页缓存/零拷贝）、**计算机网络（IP/路由/NAT/MTU、DNS 与 CDN、TCP 深入与 QUIC、容器网络与排障）**、算法（复杂度与数据结构、解题套路、布隆/一致性哈希/限流/Top K 等工程算法） |

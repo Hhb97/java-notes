@@ -335,6 +335,11 @@ KV Cache（GQA，每 Token 约 0.125MB，FP16）
 
 部署在 Kubernetes 时需要 GPU 调度、模型加载（冷启动慢，需预热与镜像/模型缓存）、弹性伸缩（按排队长度或 KV 使用率），参考 [Kubernetes 核心概念](#/infra/k8s)。
 
+## 相关阅读
+
+- [微调实战：数据、LoRA/QLoRA、偏好对齐与评估](#/ai/finetune)：数据工程、超参与上线
+- [AI 应用全景与学习路线（工程师视角）](#/ai/overview)：从提示词到微调的升级阶梯
+
 ## 面试追问
 
 > [!QUESTION] 什么是 KV Cache？它为什么占显存？

@@ -324,6 +324,9 @@ Agent 的失败往往发生在中间步骤。评测维度：
 - [Agent、工具调用与 MCP](#/ai/agent)：Agent 基础
 - [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：长任务的状态机、Saga 与检查点
 - [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：Agent 轨迹与可观测
+- [工作流与 Agent 选型：编排模式与状态图](#/ai/agent-workflow)：五种编排模式与状态图运行时
+- [MCP 深入：协议、服务端开发与安全](#/ai/mcp-deep)：工具设计与安全治理
+- [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval)：评测集与回归门禁
 
 ## 面试追问
 

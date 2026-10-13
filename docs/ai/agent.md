@@ -330,6 +330,12 @@ throw new AgentLimitException("超过最大步数");
 
 框架层的实现见 [Java 实战：Spring AI 与 LangChain4j](#/ai/spring-ai)。
 
+## 相关阅读
+
+- [MCP 深入：协议、服务端开发与安全](#/ai/mcp-deep)：协议原语、传输、鉴权与治理
+- [工作流与 Agent 选型：编排模式与状态图](#/ai/agent-workflow)：何时用工作流、何时用 Agent
+- [Agent 进阶：上下文工程、记忆与多智能体](#/ai/agent-deep)：状态机、记忆与评测
+
 ## 面试追问
 
 > [!QUESTION] 什么是 Agent？与工作流有什么区别？

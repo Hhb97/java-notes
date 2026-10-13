@@ -381,6 +381,11 @@ class KbQaService {
 | 记忆越来越长导致变慢 | 摘要压缩、滑动窗口；按会话设置过期 |
 | 结构化输出偶尔解析失败 | 使用厂商结构化输出能力；失败重试并回传错误；定义清晰的 record/枚举 |
 
+## 相关阅读
+
+- [MCP 深入：协议、服务端开发与安全](#/ai/mcp-deep)：MCP Server/Client 的设计与安全
+- [提示词工程进阶与结构化输出](#/ai/prompt-eng)：结构化输出与校验重试
+
 ## 面试追问
 
 > [!QUESTION] Spring AI 的核心抽象有哪些？Advisor 是做什么的？

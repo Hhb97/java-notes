@@ -128,6 +128,14 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | Agent 上下文工程与长任务 | 压缩/按需加载/笔记/隔离；状态机+检查点；人在回路；轨迹评测 | [Agent 进阶：上下文工程、记忆与多智能体](#/ai/agent-deep) |
 | 设计一个企业智能客服 | 路由+RAG+受限 Agent；精确数据走工具；写操作两阶段；延迟预算、配额与降级、评测门禁 | [案例：企业智能客服与知识库（RAG + Agent）设计详解](#/ai/case-kb) |
 | Java 里怎么落地 | Spring AI（ChatClient/Advisor/VectorStore）或 LangChain4j（AiServices）；流式 SSE、幂等工具 | [Java 实战：Spring AI 与 LangChain4j](#/ai/spring-ai) |
+| 提示词怎么写、结构化输出怎么保证 | 目标/约束/格式/示例分层；Schema 约束输出+业务校验+带错误重试+兜底；提示词版本化并过评测 | [提示词工程进阶与结构化输出](#/ai/prompt-eng) |
+| 文档解析对 RAG 的影响、表格与图片怎么处理 | 解析决定上限；版面分析/OCR 分级；表格带表头或入结构化库；图片转文字或多模态嵌入；ACL 入元数据 | [文档解析与多模态 RAG（PDF、表格、OCR、图片）](#/ai/rag-parsing) |
+| MCP 的原语、传输与安全 | Tools/Resources/Prompts；stdio 与 Streamable HTTP；工具投毒、令牌透传、混淆代理；网关治理 | [MCP 深入：协议、服务端开发与安全](#/ai/mcp-deep) |
+| 工作流与 Agent 怎么选、有哪些编排模式 | 提示链/路由/并行/编排者-执行者/评估-优化；状态图+检查点+中断；能工作流就不用 Agent | [工作流与 Agent 选型：编排模式与状态图](#/ai/agent-workflow) |
+| 什么时候微调、LoRA 怎么用 | RAG 管知识、微调管风格与稳定性；数据质量优先；LoRA/QLoRA；防遗忘；评测对比基线 | [微调实战：数据、LoRA/QLoRA、偏好对齐与评估](#/ai/finetune) |
+| 怎么评测 LLM 应用 | 评测集分层+盲测；检索/生成/端到端指标；LLM 评审偏差与校准；CI 回归门禁；线上回流 | [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval) |
+| 设计 Text-to-SQL 数据分析助手 | 语义层定口径；Schema 检索；AST 校验与权限改写；只读沙箱；执行准确率评测；澄清歧义 | [案例：Text-to-SQL 数据分析助手设计详解](#/ai/case-text2sql) |
+| 设计代码助手与自动 Code Review | 仓库符号索引+上下文装配；确定性工具先行；噪声控制；沙箱内验证闭环；PR 人审；采纳率指标 | [案例：代码助手与自动 Code Review 设计详解](#/ai/case-codeagent) |
 
 ## 大数据
 

@@ -65,8 +65,9 @@
 <a href="#/bigdata/olap"><rect class="b1" x="204" y="592" width="52" height="36" rx="7"/><text class="t" x="230" y="610" text-anchor="middle" dominant-baseline="middle">OLAP</text></a>
 <a href="#/ai/rag"><rect class="b1" x="264" y="592" width="44" height="36" rx="7"/><text class="t" x="286" y="610" text-anchor="middle" dominant-baseline="middle">RAG</text></a>
 <a href="#/ai/agent"><rect class="b1" x="316" y="592" width="60" height="36" rx="7"/><text class="t" x="346" y="610" text-anchor="middle" dominant-baseline="middle">Agent</text></a>
-<a href="#/ai/spring-ai"><rect class="b1" x="384" y="592" width="90" height="36" rx="7"/><text class="t" x="429" y="610" text-anchor="middle" dominant-baseline="middle">Spring AI</text></a>
-<a href="#/aimodel/llm"><rect class="b1" x="482" y="592" width="79" height="36" rx="7"/><text class="t" x="521" y="610" text-anchor="middle" dominant-baseline="middle">LLM 原理</text></a>
+<a href="#/ai/mcp-deep"><rect class="b1" x="384" y="592" width="44" height="36" rx="7"/><text class="t" x="406" y="610" text-anchor="middle" dominant-baseline="middle">MCP</text></a>
+<a href="#/ai/spring-ai"><rect class="b1" x="436" y="592" width="90" height="36" rx="7"/><text class="t" x="481" y="610" text-anchor="middle" dominant-baseline="middle">Spring AI</text></a>
+<a href="#/aimodel/llm"><rect class="b1" x="534" y="592" width="44" height="36" rx="7"/><text class="t" x="556" y="610" text-anchor="middle" dominant-baseline="middle">LLM</text></a>
 <rect class="b" x="20" y="648" width="92" height="100" rx="10"/>
 <text class="tb" x="66" y="698" text-anchor="middle" dominant-baseline="middle">基础层</text>
 <rect class="bg" x="124" y="648" width="502" height="100" rx="10"/>
@@ -115,6 +116,7 @@
 | 工程能力 | 容量、稳定性、复盘与方案写作 | [压测与容量规划](#/design/eng-loadtest)、[稳定性工程](#/design/eng-chaos)、[事故复盘](#/design/eng-postmortem)、[技术方案与 ADR](#/design/eng-adr) |
 | 多种数据库 | 按场景选型 MongoDB、TiDB、时序与分析库 | [MongoDB](#/db/mongo-model)、[TiDB](#/db/tidb-arch)、[InfluxDB](#/db/influx-model)、[ClickHouse](#/bigdata/ck-engine) |
 | 计算机基础 | 把线上现象还原到操作系统与网络层 | [进程与调度](#/cs/os-process)、[虚拟内存](#/cs/os-memory)、[网络层](#/cs/net-ip)、[TCP 深入](#/cs/net-tcp)、[网络排障](#/cs/net-debug) |
+| AI 应用落地 | 从提示词到 RAG、Agent，再到评测与微调 | [全景与路线](#/ai/overview)、[提示词](#/ai/prompt-eng)、[文档解析](#/ai/rag-parsing)、[MCP](#/ai/mcp-deep)、[工作流与 Agent](#/ai/agent-workflow)、[评测](#/ai/eval)、[微调](#/ai/finetune)、[Text-to-SQL](#/ai/case-text2sql)、[代码助手](#/ai/case-codeagent) |
 
 ## 阅读约定
 

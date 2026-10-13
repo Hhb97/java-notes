@@ -4,7 +4,7 @@ rows=[
  ("架构层","b4",[("DDD 限界上下文","design/ddd-strategic"),("聚合 · 领域事件","design/ddd-tactical"),("事件驱动 · Saga","design/event-driven"),("CQRS","design/cqrs-es"),("支付 · IM 案例","design/case-payment")]),
  ("中间件","b3",[("Redis","redis/overview"),("Kafka","mw/kafka"),("RocketMQ","mw/rocketmq"),("Elasticsearch","mw/es"),("MQTT","iot/mqtt"),("MyBatis","spring/mybatis")]),
  ("存储层","b5",[("MySQL · InnoDB","mysql/architecture"),("主从复制","mysql/replication"),("ShardingSphere","mysql/sharding"),("PostgreSQL","pg/architecture"),("MongoDB","db/mongo-model"),("TiDB","db/tidb-arch"),("InfluxDB","db/influx-model"),("ClickHouse","bigdata/ck-engine")]),
- ("数据与 AI","b1",[("Flink","bigdata/flink-core"),("OLAP","bigdata/olap"),("RAG","ai/rag"),("Agent","ai/agent"),("Spring AI","ai/spring-ai"),("LLM 原理","aimodel/llm")]),
+ ("数据与 AI","b1",[("Flink","bigdata/flink-core"),("OLAP","bigdata/olap"),("RAG","ai/rag"),("Agent","ai/agent"),("MCP","ai/mcp-deep"),("Spring AI","ai/spring-ai"),("LLM","aimodel/llm")]),
  ("基础层","b",[("JVM","java/jvm/memory"),("并发编程","java/concurrency/thread"),("操作系统","cs/os-process"),("算法","cs/algo-ds"),("Netty","infra/netty"),("Linux","infra/linux"),("Docker","infra/docker"),("Kubernetes","infra/k8s")]),
 ]
 right=[("CAP / BASE","distributed/theory"),("Raft 共识","distributed/consensus"),("分布式事务","distributed/transaction"),("分布式 ID","distributed/id"),("分布式锁","redis/lock"),("限流熔断","distributed/governance"),("可观测性","infra/obs-metrics"),("CI/CD 发布","infra/cicd"),("Web 安全","security/web")]

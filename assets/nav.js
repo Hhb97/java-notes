@@ -245,24 +245,35 @@ window.NAV = [
     ]
   },
   {
-    id: 'ai', title: 'AI 应用', desc: '大模型应用、RAG、Agent 与 Spring AI / LangChain4j',
+    id: 'ai', title: 'AI 应用', desc: '大模型应用、提示词、RAG、Agent、MCP、微调、评测与 Spring AI / LangChain4j',
     children: [
       {
         title: '基础', children: [
+          { title: 'AI 应用全景与学习路线（工程师视角）', path: 'ai/overview' },
           { title: '大模型应用基础与 API 调用', path: 'ai/llm' },
+          { title: '提示词工程进阶与结构化输出', path: 'ai/prompt-eng' },
           { title: '大模型原理与推理服务（KV Cache、vLLM、量化、微调）', path: 'ai/llm-internals' }
         ]
       },
       {
         title: 'RAG', children: [
           { title: 'RAG 原理与完整流水线', path: 'ai/rag' },
+          { title: '文档解析与多模态 RAG（PDF、表格、OCR、图片）', path: 'ai/rag-parsing' },
           { title: 'RAG 检索优化、向量库与评估', path: 'ai/rag-advanced' }
         ]
       },
       {
-        title: 'Agent', children: [
+        title: 'Agent 与工具', children: [
           { title: 'Agent、工具调用与 MCP', path: 'ai/agent' },
+          { title: 'MCP 深入：协议、服务端开发与安全', path: 'ai/mcp-deep' },
+          { title: '工作流与 Agent 选型：编排模式与状态图', path: 'ai/agent-workflow' },
           { title: 'Agent 进阶：上下文工程、记忆与多智能体', path: 'ai/agent-deep' }
+        ]
+      },
+      {
+        title: '模型定制与评测', children: [
+          { title: '微调实战：数据、LoRA/QLoRA、偏好对齐与评估', path: 'ai/finetune' },
+          { title: '评测体系实战：数据集、LLM 评审与回归门禁', path: 'ai/eval' }
         ]
       },
       {
@@ -273,7 +284,9 @@ window.NAV = [
       },
       {
         title: '架构案例', children: [
-          { title: '案例：企业智能客服与知识库（RAG + Agent）设计详解', path: 'ai/case-kb' }
+          { title: '案例：企业智能客服与知识库（RAG + Agent）设计详解', path: 'ai/case-kb' },
+          { title: '案例：Text-to-SQL 数据分析助手设计详解', path: 'ai/case-text2sql' },
+          { title: '案例：代码助手与自动 Code Review 设计详解', path: 'ai/case-codeagent' }
         ]
       }
     ]

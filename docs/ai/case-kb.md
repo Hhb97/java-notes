@@ -565,6 +565,10 @@ TTL 24h；摘要在超出窗口 70% 或每 6 轮触发，由小模型生成（�
 - [案例：即时通讯（IM）系统设计详解](#/design/case-im)：另一个系统设计案例：IM
 - [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：权限与数据隔离
 - [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：LLM 应用的可观测
+- [文档解析与多模态 RAG（PDF、表格、OCR、图片）](#/ai/rag-parsing)：知识入库中的解析与切分
+- [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval)：评测集与回归门禁
+- [案例：Text-to-SQL 数据分析助手设计详解](#/ai/case-text2sql)：结构化数据问答案例
+- [案例：代码助手与自动 Code Review 设计详解](#/ai/case-codeagent)：工具、沙箱与验证闭环案例
 
 ## 面试追问
 

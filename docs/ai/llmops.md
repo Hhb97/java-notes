@@ -269,6 +269,13 @@ assertThat(r.p95LatencyMs()).isLessThan(8000);
 - 弹性伸缩与冷启动（模型加载慢），Kubernetes 上的 GPU 调度与资源隔离，见 [Kubernetes 核心概念](#/infra/k8s)；
 - 与云端模型**混合路由**，并保持相同的接口与评测基线。
 
+## 相关阅读
+
+- [提示词工程进阶与结构化输出](#/ai/prompt-eng)：提示词分层、版本与注入防御
+- [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval)：评测集、LLM 评审与线上评测
+- [微调实战：数据、LoRA/QLoRA、偏好对齐与评估](#/ai/finetune)：何时微调与如何上线
+- [MCP 深入：协议、服务端开发与安全](#/ai/mcp-deep)：工具接入的治理与审计
+
 ## 面试追问
 
 > [!QUESTION] 大模型应用上线需要哪些工程能力？

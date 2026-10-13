@@ -236,6 +236,11 @@ if (resp.statusCode() == 429 || resp.statusCode() >= 500) { /* 指数退避 + �
 
 实际项目不必手写 HTTP，使用 **Spring AI / LangChain4j** 等框架，见 [Java 实战：Spring AI 与 LangChain4j](#/ai/spring-ai)。
 
+## 相关阅读
+
+- [AI 应用全景与学习路线（工程师视角）](#/ai/overview)：手段升级阶梯与选型
+- [提示词工程进阶与结构化输出](#/ai/prompt-eng)：提示词分层、结构化输出与版本管理
+
 ## 面试追问
 
 > [!QUESTION] 大模型的上下文窗口是什么？多轮对话为什么越来越贵？

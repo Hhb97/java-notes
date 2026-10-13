@@ -268,6 +268,12 @@ List<String> candidates = fused.entrySet().stream()
 - **监控**：召回为空率、拒答率、平均相关分、用户点赞/点踩、各阶段耗时、Token 成本；
 - **容量**：HNSW 内存估算 ≈ `N × (d × 4 字节 + M × 2 × 4 字节左右)`，千万 × 1024 维约数十 GB，注意量化与分片。
 
+## 相关阅读
+
+- [文档解析与多模态 RAG（PDF、表格、OCR、图片）](#/ai/rag-parsing)：解析与结构感知切分
+- [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval)：评测集构建与回归门禁
+- [案例：Text-to-SQL 数据分析助手设计详解](#/ai/case-text2sql)：结构化数据问答的另一条路线
+
 ## 面试追问
 
 > [!QUESTION] HNSW 的原理是什么？有什么优缺点？
