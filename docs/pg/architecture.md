@@ -205,6 +205,11 @@ cfg.addDataSourceProperty("prepareThreshold", "5");   // 同一语句执行 5 �
 - 事务中某条语句出错，**整个事务进入 aborted 状态**，后续语句都报错直到回滚（与 MySQL 不同）；需要用 `SAVEPOINT` 局部回滚；
 - 排查入口：`pg_stat_activity`（会话与等待事件）、`pg_stat_statements`（慢 SQL 汇总）、`pg_locks`，见 [复制、高可用与实战](#/pg/ops)。
 
+## 相关阅读
+
+- [PostgreSQL WAL 与复制深入：检查点、流复制、逻辑复制与 PITR](#/pg/wal-replication)：检查点、FPW、崩溃恢复与复制深入
+- [PostgreSQL 优化器原理：成本模型、统计信息与计划选择](#/pg/optimizer)：规划器与成本模型
+
 ## 面试追问
 
 > [!QUESTION] PostgreSQL 与 MySQL 的主要架构差异？

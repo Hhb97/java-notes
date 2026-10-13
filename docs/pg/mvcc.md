@@ -254,6 +254,8 @@ FROM pg_stat_activity a WHERE cardinality(pg_blocking_pids(a.pid)) > 0;
 
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 的 MVCC 与 GC 对比
 - [事务隔离与 MVCC](#/mysql/transaction)：MySQL 的 MVCC 实现
+- [PostgreSQL MVCC 内部机制：可见性、剪枝、VACUUM 与膨胀治理](#/pg/vacuum-internals)：元组头、快照、剪枝、VACUUM 阶段与冻结
+- [PostgreSQL 锁、隔离级别与连接池：并发控制深入](#/pg/concurrency)：表锁矩阵、SSI、死锁与连接池
 
 ## 面试追问
 

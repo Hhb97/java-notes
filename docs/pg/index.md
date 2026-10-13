@@ -270,6 +270,11 @@ FROM pg_stat_statements ORDER BY total_exec_time DESC LIMIT 10;
 
 另配 `log_min_duration_statement = 500`（记录超过 500ms 的 SQL）、`auto_explain`（自动记录慢查询计划）。对比 MySQL 的流程见 [EXPLAIN 与 SQL 调优](#/mysql/optimize)。
 
+## 相关阅读
+
+- [PostgreSQL 优化器原理：成本模型、统计信息与计划选择](#/pg/optimizer)：统计信息、连接算法与 EXPLAIN 解读
+- [PostgreSQL 分区与扩展生态：分区治理、向量检索与时序](#/pg/partition-ext)：分区、pgvector 与扩展生态
+
 ## 面试追问
 
 > [!QUESTION] PostgreSQL 有哪些索引类型？分别什么时候用？

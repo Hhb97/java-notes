@@ -262,6 +262,12 @@ SELECT pg_terminate_backend(pid);    -- 终止连接
 SELECT datname, round(100.0*blks_hit/nullif(blks_hit+blks_read,0),2) AS cache_hit FROM pg_stat_database;
 ```
 
+## 相关阅读
+
+- [PostgreSQL WAL 与复制深入：检查点、流复制、逻辑复制与 PITR](#/pg/wal-replication)：复制槽风险、同步级别、逻辑复制与 PITR
+- [PostgreSQL 分区与扩展生态：分区治理、向量检索与时序](#/pg/partition-ext)：分区治理与扩展
+- [PostgreSQL 锁、隔离级别与连接池：并发控制深入](#/pg/concurrency)：连接池与锁超时
+
 ## 面试追问
 
 > [!QUESTION] PostgreSQL 的流复制原理？同步和异步怎么选？

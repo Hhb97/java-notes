@@ -242,6 +242,11 @@ ROW + `binlog_row_image=FULL` 下，binlog 中保存了删除前的完整行，�
 
 全量备份（XtraBackup 或 mysqldump，记录 binlog 位点/GTID）+ 增量 binlog：先还原全量，再用 `mysqlbinlog --start-position/--stop-datetime` 重放到误操作之前。定期演练，确认 binlog 完整可用。
 
+## 相关阅读
+
+- [MySQL 备份恢复与日常运维](#/mysql/backup-ops)：binlog 归档与时间点恢复
+- [MySQL 高可用：半同步、MGR 与切换实战](#/mysql/ha-mgr)：半同步 AFTER_SYNC 与 MGR 提交路径
+
 ## 面试追问
 
 > [!QUESTION] redo log 和 binlog 有什么区别？为什么要两份日志？

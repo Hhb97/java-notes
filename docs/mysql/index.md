@@ -343,6 +343,7 @@ ALTER TABLE t ALTER INDEX idx_old INVISIBLE;   -- 优化器不再使用，但索
 - [复杂度与核心数据结构](#/cs/algo-ds)：红黑树、B+ 树与跳表对比
 - [MongoDB 数据模型、索引与聚合](#/db/mongo-model)：MongoDB 复合索引的 ESR 规则对照
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 如何把索引映射成 KV
+- [MySQL 优化器原理：成本模型、统计信息与 Optimizer Trace](#/mysql/optimizer)：索引选择背后的成本模型与统计信息
 
 ## 面试追问
 

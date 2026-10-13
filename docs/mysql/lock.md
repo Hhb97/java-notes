@@ -355,6 +355,7 @@ FROM sys.innodb_lock_waits;
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 快照隔离与无间隙锁的差异
 - [进程、线程与 CPU 调度](#/cs/os-process)：死锁条件与预防
 - [案例：高并发写入与热点治理](#/design/case-highwrite)：热点行与持锁时间、分段库存
+- [MySQL 在线 DDL 与大表治理](#/mysql/online-ddl)：MDL 排队雪崩与 DDL 锁
 
 ## 面试追问
 

@@ -122,7 +122,8 @@ window.NAV = [
       {
         title: '索引与优化', children: [
           { title: 'B+ 树索引原理', path: 'mysql/index' },
-          { title: 'EXPLAIN 与 SQL 调优', path: 'mysql/optimize' }
+          { title: 'EXPLAIN 与 SQL 调优', path: 'mysql/optimize' },
+          { title: 'MySQL 优化器原理：成本模型、统计信息与 Optimizer Trace', path: 'mysql/optimizer' }
         ]
       },
       {
@@ -136,6 +137,13 @@ window.NAV = [
         title: '高可用与扩展', children: [
           { title: '主从复制与高可用', path: 'mysql/replication' },
           { title: '分库分表实践', path: 'mysql/sharding' }
+        ]
+      },
+      {
+        title: '运维与治理', children: [
+          { title: 'MySQL 高可用：半同步、MGR 与切换实战', path: 'mysql/ha-mgr' },
+          { title: 'MySQL 在线 DDL 与大表治理', path: 'mysql/online-ddl' },
+          { title: 'MySQL 备份恢复与日常运维', path: 'mysql/backup-ops' }
         ]
       }
     ]
@@ -153,6 +161,15 @@ window.NAV = [
         title: '索引与运维', children: [
           { title: '索引类型与查询优化', path: 'pg/index' },
           { title: '复制、高可用与实战', path: 'pg/ops' }
+        ]
+      },
+      {
+        title: '深入专题', children: [
+          { title: 'PostgreSQL 优化器原理：成本模型、统计信息与计划选择', path: 'pg/optimizer' },
+          { title: 'PostgreSQL MVCC 内部机制：可见性、剪枝、VACUUM 与膨胀治理', path: 'pg/vacuum-internals' },
+          { title: 'PostgreSQL WAL 与复制深入：检查点、流复制、逻辑复制与 PITR', path: 'pg/wal-replication' },
+          { title: 'PostgreSQL 锁、隔离级别与连接池：并发控制深入', path: 'pg/concurrency' },
+          { title: 'PostgreSQL 分区与扩展生态：分区治理、向量检索与时序', path: 'pg/partition-ext' }
         ]
       }
     ]

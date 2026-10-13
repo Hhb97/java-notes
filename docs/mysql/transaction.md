@@ -286,6 +286,10 @@ RR 下事务第一次读就固定了快照。如果业务在一个长事务中�
 
 `@Transactional(readOnly = true)` 包着大量查询和远程调用，同样会持有 ReadView 阻止 purge。只读事务也应尽量短。
 
+## 相关阅读
+
+- [MySQL 在线 DDL 与大表治理](#/mysql/online-ddl)：长事务与 MDL、undo 膨胀的关系
+
 ## 面试追问
 
 > [!QUESTION] MVCC 是怎么实现的？

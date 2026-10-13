@@ -388,6 +388,7 @@ WHERE create_time >= '2024-01-01' GROUP BY d;
 - [B+ 树索引原理](#/mysql/index)：B+ 树索引原理
 - [TiDB 实战：热点、迁移、选型与调优](#/db/tidb-practice)：TiDB 的执行计划与统计信息
 - [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：慢查询监控
+- [MySQL 优化器原理：成本模型、统计信息与 Optimizer Trace](#/mysql/optimizer)：为什么选这个计划、optimizer_trace、直方图与 Hint
 
 ## 面试追问
 

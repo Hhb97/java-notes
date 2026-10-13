@@ -340,6 +340,7 @@ Buffer Pool 冷启动。确认 `innodb_buffer_pool_load_at_startup=ON`，并可�
 - [redo / undo / binlog](#/mysql/log)：redo、undo 与 binlog
 - [文件系统、页缓存与零拷贝](#/cs/os-io)：页缓存、Direct IO 与 fsync
 - [复杂度与核心数据结构](#/cs/algo-ds)：B+ 树与其他有序结构的对比
+- [MySQL 备份恢复与日常运维](#/mysql/backup-ops)：XtraBackup 如何利用 redo/LSN 做热备
 
 ## 面试追问
 

@@ -209,6 +209,8 @@ summary: 从 binlog 复制线程模型出发，讲清异步/半同步/MGR 的一
 
 - [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集对照
 - [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 的 Raft 多副本
+- [MySQL 高可用：半同步、MGR 与切换实战](#/mysql/ha-mgr)：MGR 认证与流控、Orchestrator、Router/ProxySQL 与切换步骤
+- [MySQL 备份恢复与日常运维](#/mysql/backup-ops)：备份、PITR 与延迟从库
 
 ## 面试追问
 

@@ -84,6 +84,10 @@ summary: 面向 3~5 年以上 Java 后端岗位的跨领域速查表（含安全
 | redo / undo / binlog | redo 保持久性（WAL）；undo 保原子性与 MVCC；binlog 复制与恢复；两阶段提交 | [redo / undo / binlog](#/mysql/log) |
 | 主从延迟与高可用 | 并行复制 + WRITESET；半同步；GTID；故障切换防脑裂 | [主从复制与高可用](#/mysql/replication) |
 | 分库分表怎么做 | 分片键、路由、跨库问题、不停机扩容流程 | [分库分表实践](#/mysql/sharding) |
+| 为什么优化器选错了索引、怎么排查 | 成本比较+统计采样/倾斜；EXPLAIN ANALYZE 找偏差、optimizer_trace 看成本；ANALYZE→直方图→索引→改写→Hint | [MySQL 优化器原理](#/mysql/optimizer) |
+| 线上 ALTER 为什么会卡死业务、大表怎么改 | MDL 排队雪崩；INSTANT/INPLACE/COPY；大表用 gh-ost 影子表限速可中止 | [MySQL 在线 DDL 与大表治理](#/mysql/online-ddl) |
+| MGR 怎么保证一致、半同步 AFTER_SYNC 为什么无损 | write set 认证+多数派；先等从库 ACK 再引擎提交；防脑裂靠多数派/fencing | [MySQL 高可用](#/mysql/ha-mgr) |
+| 误删数据怎么恢复、备份怎么保证可用 | 全量+binlog PITR（位点/GTID 排除误操作）；闪回/延迟从库；定期恢复演练测 RTO | [MySQL 备份恢复与日常运维](#/mysql/backup-ops) |
 
 ## Redis
 

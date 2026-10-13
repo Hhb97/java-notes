@@ -220,6 +220,7 @@ rules:
 - [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：一致性哈希与虚拟节点
 - [分片、一致性哈希与再平衡](#/distributed/partitioning)：分片策略、再平衡与热点
 - [数据一致性实战：双写、对账与修复](#/distributed/consistency-practice)：迁移期双写与校验
+- [MySQL 在线 DDL 与大表治理](#/mysql/online-ddl)：大表变更与归档、影子表方案
 
 ## 面试追问
 
