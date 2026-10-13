@@ -322,3 +322,9 @@ print(KMeans(n_clusters=3, n_init=10).fit(pts).cluster_centers_.round(1))
 
 > [!QUESTION] 为什么表格数据常常用 XGBoost 而不是深度学习？
 > 表格数据特征异质、样本量常不大，梯度提升树对这类数据拟合好、训练快、需要的调参和预处理少、可解释性较好，往往效果不输甚至优于深度学习；深度学习的优势在图像、文本、语音等非结构化数据。
+
+## 相关阅读
+
+- [注意力与 Transformer：大模型的骨架](#/aimodel/transformer)：Transformer
+- [CNN：卷积神经网络如何“看图”](#/aimodel/cnn)：CNN
+- [大模型应用基础与 API 调用](#/ai/llm)：LLM 应用开发基础

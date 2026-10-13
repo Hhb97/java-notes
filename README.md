@@ -43,5 +43,11 @@ python -m http.server 8000
 
 1. 按 [WRITING_GUIDE.md](WRITING_GUIDE.md) 的规范在 `docs/<分类>/` 下新建 `.md`（front matter、提示块、SVG 图解）；
 2. 在 `assets/nav.js` 对应分类下添加 `{ title: '标题', path: '分类/文件名' }`；
-3. 修改了 `assets/` 下的文件时，把 `index.html` 里的 `?v=` 版本号加一，避免浏览器缓存旧版本；
+3. 运行 `python tools/build_index.py` 刷新搜索索引，并用 `python tools/check.py` 自检；修改了 `assets/` 下的文件时，把 `index.html` 里的 `?v=` 版本号加一，避免浏览器缓存旧版本；
 4. 提交并推送，GitHub Pages 自动更新。
+
+## 校验与索引
+
+- `python tools/check.py`：校验页面登记、H1 与导航标题一致、SVG 图解规范、站内链接、孤儿页面、搜索索引是否最新（GitHub Actions 在每次推送时自动运行）；
+- `python tools/build_index.py`：重新生成 `assets/search-index.json`（新增或修改笔记后必须运行并一并提交，浏览器搜索只下载这一个文件）；
+- `python tools/gen_home.py`：重新生成首页「技术全景」图（修改脚本顶部的行与方块列表）。

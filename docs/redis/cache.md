@@ -379,6 +379,12 @@ Product p = local.get(key, k -> loadFromRedisOrDb(k));
 - **批量失效**：一次活动结束清理缓存时用 `KEYS pattern` + `DEL`，把 Redis 卡死。应 `SCAN` + 分批 `UNLINK`，或在设计时把同批 key 放进一个 Set 便于管理。
 - **缓存命中率监控**：`INFO stats` 的 `keyspace_hits`/`keyspace_misses`，以及业务层面按 key 前缀统计。命中率突降往往是雪崩的前兆。
 
+## 相关阅读
+
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：布隆过滤器防穿透、限流算法
+- [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：CDN 与多级缓存
+- [MongoDB 数据模型、索引与聚合](#/db/mongo-model)：文档数据库作为二级存储的取舍
+
 ## 面试追问
 
 > [!QUESTION] 为什么是删除缓存，而不是更新缓存？

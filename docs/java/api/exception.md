@@ -360,6 +360,11 @@ Spring 6 / Boot 3 内置了 RFC 7807（已被 RFC 9457 取代）的 `ProblemDeta
 9. **静态初始化失败**：第一次 `ExceptionInInitializerError`，之后同一个类的所有使用都是 `NoClassDefFoundError: Could not initialize class`。排查时一定要找**第一次**的报错。
 10. **线程池任务异常「消失」**：`submit()` 的异常存在 Future 里；`execute()` 的异常会打印到 stderr 并导致工作线程被替换。统一在任务内部 try/catch 记录日志，或包装 Runnable。见 [线程池原理与调优](#/java/concurrency/pool)。
 
+## 相关阅读
+
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：日志规范与异常的链路关联
+- [Web 安全：OWASP 常见漏洞与防护](#/security/web)：错误信息泄露与统一异常处理
+
 ## 面试追问
 
 > [!QUESTION] finally 在字节码层面是怎么实现的？try 里 return 了，finally 里修改返回变量会生效吗？

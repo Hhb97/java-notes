@@ -240,6 +240,12 @@ public class Chain {
 > [!TIP] 与 Spring 的关系
 > 现代 Java 工程里，策略/工厂靠 Bean 注入的 `Map/List` 实现，模板方法常被“模板类 + 回调”替代，代理由 AOP 提供，观察者由事件机制提供。理解模式的价值在于读懂框架源码和做出更好的抽象，而不是手写它们。
 
+## 相关阅读
+
+- [创建型模式](#/java/patterns/creational)：创建型模式
+- [DDD 战术设计：聚合、实体与领域事件（Java 落地）](#/design/ddd-tactical)：领域模型中的策略、状态与事件
+- [AOP 与代理机制](#/spring/aop)：代理模式在 Spring AOP 中的实现
+
 ## 面试追问
 
 > [!QUESTION] 代理模式和装饰器模式的区别？

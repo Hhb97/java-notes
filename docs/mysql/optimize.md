@@ -383,6 +383,12 @@ WHERE create_time >= '2024-01-01' GROUP BY d;
 - **`SELECT *`**：无法使用覆盖索引，多读大字段溢出页，并且表结构变化可能影响应用。
 - **分页查总数**：`COUNT(*)` 和分页列表各一条 SQL，总数在大表上可能比列表还慢，可缓存总数或只显示“下一页”。
 
+## 相关阅读
+
+- [B+ 树索引原理](#/mysql/index)：B+ 树索引原理
+- [TiDB 实战：热点、迁移、选型与调优](#/db/tidb-practice)：TiDB 的执行计划与统计信息
+- [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：慢查询监控
+
 ## 面试追问
 
 > [!QUESTION] 拿到一条慢 SQL，你的排查步骤是什么？

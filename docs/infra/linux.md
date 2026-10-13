@@ -364,6 +364,13 @@ tail -F app.log | grep --line-buffered -E 'ERROR|Exception'
 - 容器内的 `top`、`free` 看到的通常是宿主机资源，应查看 cgroup 文件或使用容器感知的工具，详见 [Docker 容器化](#/infra/docker)。
 - 把常用排查命令固化为脚本（一键采集现场打包），故障时比手敲可靠得多。
 
+## 相关阅读
+
+- [进程、线程与 CPU 调度](#/cs/os-process)：进程、调度与上下文切换
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：内存与 OOM
+- [容器网络与网络排障：CNI、iptables/IPVS、tcpdump](#/cs/net-debug)：网络排障：tcpdump 与 ss
+- [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：把排查经验沉淀为监控
+
 ## 面试追问
 
 > [!QUESTION] load average 很高但 CPU 使用率很低，可能是什么原因？怎么查？

@@ -374,6 +374,11 @@ try {
 - `Thread.sleep` 做轮询会白白占线程；能用 `ScheduledExecutorService`、阻塞队列或 `CompletableFuture` 就别轮询。
 - 生产上不要依赖线程优先级（`setPriority`），Linux 下 HotSpot 默认基本忽略它。
 
+## 相关阅读
+
+- [进程、线程与 CPU 调度](#/cs/os-process)：进程、线程、协程与调度的操作系统基础
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：线程池/异步场景下的链路上下文传播
+
 ## 面试追问
 
 > [!QUESTION] 线程调用 `ReentrantLock.lock()` 阻塞和 `synchronized` 阻塞，jstack 中的状态一样吗？

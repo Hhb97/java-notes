@@ -304,6 +304,11 @@ for (int i = 0; i < 100; i++) {
 - `wait/notify` 用于新代码时优先考虑 `Condition` 或更高层的 `BlockingQueue`、`CountDownLatch`。
 - 观测锁竞争：JFR 的 `jdk.JavaMonitorEnter`（等待进入 monitor 超过阈值的事件）、`jdk.JavaMonitorWait`；async-profiler 的 `-e lock` 模式可以给出锁竞争火焰图。
 
+## 相关阅读
+
+- [进程、线程与 CPU 调度](#/cs/os-process)：futex 与死锁的四个必要条件
+- [Java 内存模型与 volatile](#/java/concurrency/jmm)：可见性与有序性
+
 ## 面试追问
 
 > [!QUESTION] synchronized 是怎么保证可见性和有序性的？

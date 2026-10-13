@@ -390,6 +390,11 @@ m.size();                         // 1：内存泄漏——这个 entry 永远�
 5. **`HashMap` 当缓存无上限增长**：没有淘汰策略的静态 Map 是最常见的内存泄漏源头之一，用 Caffeine 或 `LinkedHashMap` LRU。
 6. **null 值的歧义**：`get(k) == null` 可能是不存在，也可能是存的 null；需要区分时用 `containsKey` 或 `getOrDefault`。
 
+## 相关阅读
+
+- [复杂度与核心数据结构](#/cs/algo-ds)：哈希表、红黑树与负载因子的通用原理
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：一致性哈希与布隆过滤器
+
 ## 面试追问
 
 > [!QUESTION] 为什么 HashMap 的容量是 2 的幂？如果传入 17 会怎样？

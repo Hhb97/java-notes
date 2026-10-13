@@ -559,6 +559,13 @@ TTL 24h；摘要在超出窗口 70% 或每 6 轮触发，由小模型生成（�
 
 **如果规模扩大 10 倍**：向量库迁 Milvus 或分片；自建推理为主（利用率高）；检索与重排独立扩缩容；入库管道引入流式（[CDC 与实时数仓架构](#/bigdata/cdc)）与更细的权限模型；会话数据冷热分层。
 
+## 相关阅读
+
+- [高并发系统设计方法论](#/design/method)：通用系统设计方法论
+- [案例：即时通讯（IM）系统设计详解](#/design/case-im)：另一个系统设计案例：IM
+- [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：权限与数据隔离
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：LLM 应用的可观测
+
 ## 面试追问
 
 > [!QUESTION] 这个客服系统里为什么不把商品信息都放进向量库？

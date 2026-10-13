@@ -329,6 +329,11 @@ public void onOrderPaid(OrderPaidEvent e) {
 - **消费者组共用**：两个不同业务用了同一个 group，结果消息被瓜分，各自只收到一部分。
 - **监控三件套**：发送失败率、消费延迟（lag / 堆积量）、死信数量；再加上消费耗时 P99。
 
+## 相关阅读
+
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动与 Outbox
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：时间轮与延迟任务
+
 ## 面试追问
 
 > [!QUESTION] 如何保证消息不丢失？请按链路回答。

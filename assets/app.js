@@ -379,11 +379,7 @@
     set('…', '…');
     ensureIndex().then(function () {
       var figs = 0, qas = 0;
-      pages.forEach(function (p) {
-        var md = cache[p.path] || '';
-        figs += (md.match(/<figure class="fig"/g) || []).length;
-        qas += (md.match(/^>\s*\[!QUESTION\]/gm) || []).length;
-      });
+      docs.forEach(function (d) { figs += d.f; qas += d.q; });
       if ($('home-stats') === stats) set(figs, qas);
     });
   }
@@ -479,13 +475,25 @@
   }
   function ensureIndex() {
     if (!indexReady) {
-      indexReady = Promise.all(pages.map(function (p) {
-        return fetchDoc(p.path).catch(function () { return ''; });
-      })).then(function () {
-        docs = pages.map(function (p) {
-          var fm = parseFront(cache[p.path] || '');
-          var tags = Array.isArray(fm.meta.tags) ? fm.meta.tags.join(' ') : (fm.meta.tags || '');
-          return { p: p, text: plain(fm.body), tags: tags.toLowerCase() };
+      // 优先使用构建好的单文件索引（tools/build_index.py）；索引里缺的页面再单独拉取，失败则回退为逐页加载
+      indexReady = fetch('assets/search-index.json').then(function (r) {
+        if (!r.ok) throw new Error('no index');
+        return r.json();
+      }).catch(function () { return null; }).then(function (idx) {
+        var pre = (idx && idx.docs) || {};
+        return Promise.all(pages.map(function (p) {
+          if (pre[p.path]) return pre[p.path];
+          return fetchDoc(p.path).then(function (md) {
+            var fm = parseFront(md || '');
+            var tags = Array.isArray(fm.meta.tags) ? fm.meta.tags.join(' ') : (fm.meta.tags || '');
+            return {
+              t: tags.toLowerCase(), x: plain(fm.body),
+              f: (fm.body.match(/<figure class="fig"/g) || []).length,
+              q: (fm.body.match(/^>\s*\[!QUESTION\]/gm) || []).length
+            };
+          }).catch(function () { return { t: '', x: '' }; });
+        })).then(function (list) {
+          docs = pages.map(function (p, i) { return { p: p, text: list[i].x, tags: list[i].t, f: list[i].f || 0, q: list[i].q || 0 }; });
         });
       });
     }

@@ -333,6 +333,13 @@ JDK 内部使用 `@Contended` 的地方：`Striped64.Cell`、`ConcurrentHashMap.
 - 伪共享的识别：Linux `perf c2c` 可以直接找出被多核争抢的缓存行；JMH 对比填充前后吞吐。
 - 不要为了「保险」把所有字段都加 volatile：每次 volatile 写都有 StoreLoad 成本，还会阻止 JIT 优化。
 
+## 相关阅读
+
+- [synchronized 与锁升级](#/java/concurrency/sync)：锁与 happens-before 的落地
+- [AQS 与显式锁](#/java/concurrency/aqs)：volatile/CAS 在 AQS 中的应用
+- [进程、线程与 CPU 调度](#/cs/os-process)：内存屏障、上下文切换与线程调度的系统视角
+- [运行时数据区与对象模型](#/java/jvm/memory)：对象内存布局与 Mark Word
+
 ## 面试追问
 
 > [!QUESTION] MESI 已经保证缓存一致性了，为什么还需要 volatile？

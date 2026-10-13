@@ -357,6 +357,11 @@ B+ 树的优势是**多路、矮胖、减少磁盘 IO 次数**，Redis 是纯内
 - **查看真实内存**：`MEMORY USAGE key` 估算单 key 占用，`DEBUG OBJECT key` 能看到 `serializedlength`（是序列化长度，不是内存占用，别被误导）。
 - **升级跨大版本**：7.0 生成的 RDB 无法被 6.x 加载，降级回滚要用 `redis-shake` 之类的工具做逻辑迁移。
 
+## 相关阅读
+
+- [复杂度与核心数据结构](#/cs/algo-ds)：跳表、哈希表与渐进式 rehash
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：HyperLogLog、Bitmap 的原理
+
 ## 面试追问
 
 > [!QUESTION] embstr 和 raw 有什么区别，为什么阈值是 44？

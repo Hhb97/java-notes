@@ -250,6 +250,11 @@ SELECT a.pid AS waiting, pg_blocking_pids(a.pid) AS blockers, a.wait_event_type,
 FROM pg_stat_activity a WHERE cardinality(pg_blocking_pids(a.pid)) > 0;
 ```
 
+## 相关阅读
+
+- [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 的 MVCC 与 GC 对比
+- [事务隔离与 MVCC](#/mysql/transaction)：MySQL 的 MVCC 实现
+
 ## 面试追问
 
 > [!QUESTION] PostgreSQL 的 MVCC 是如何实现的？与 InnoDB 有什么不同？

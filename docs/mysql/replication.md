@@ -205,6 +205,11 @@ summary: 从 binlog 复制线程模型出发，讲清异步/半同步/MGR 的一
 > [!WARNING] 脑裂
 > 旧主只是网络分区而非真的宕机，恢复后可能同时接受写入。切换前必须**确保旧主被隔离**（`super_read_only=ON`、摘除 VIP、必要时 STONITH），否则两个“主库”各自写入后数据无法合并。
 
+## 相关阅读
+
+- [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集对照
+- [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 的 Raft 多副本
+
 ## 面试追问
 
 > [!QUESTION] 主从复制的数据流是怎样的？

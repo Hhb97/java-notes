@@ -349,6 +349,11 @@ consumer.registerMessageListener((MessageListenerOrderly) (msgs, ctx) -> {
 - **消息 Key**：务必为每条消息设置业务唯一 Key（`msg.setKeys(orderId)`），方便通过 IndexFile 查询消息轨迹，也可直接作为幂等键。
 - **消息堆积监控**：关注消费组的 Diff Total（堆积量）和消费 TPS，结合死信 Topic 数量告警。
 
+## 相关阅读
+
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事务消息与 Outbox 的对比
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：CommitLog 顺序写与 mmap
+
 ## 面试追问
 
 > [!QUESTION] RocketMQ 为什么所有 Topic 共用一个 CommitLog？有什么代价？

@@ -288,6 +288,13 @@ kubectl get events --sort-by=.lastTimestamp
 
 Java 进程诊断见 [线上调优与故障排查](#/java/jvm/tuning)，镜像构建见 [Docker 容器化](#/infra/docker)。
 
+## 相关阅读
+
+- [容器网络与网络排障：CNI、iptables/IPVS、tcpdump](#/cs/net-debug)：Service 的 iptables/IPVS 与 CNI
+- [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：滚动、金丝雀与优雅停机
+- [CI/CD 流水线与 GitOps](#/infra/cicd)：GitOps 与 Helm
+- [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：CoreDNS 与 ndots
+
 ## 面试追问
 
 > [!QUESTION] Pod 的创建流程？

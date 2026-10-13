@@ -234,6 +234,11 @@ mvn dependency:analyze
 | 学习成本 | 低，一致性好 | 较高，脚本可写逻辑 |
 | 生态 | 企业项目主流 | Android 默认、大型项目增多 |
 
+## 相关阅读
+
+- [CI/CD 流水线与 GitOps](#/infra/cicd)：流水线中的构建、缓存与制品管理
+- [Web 安全：OWASP 常见漏洞与防护](#/security/web)：依赖漏洞扫描与供应链安全
+
 ## 面试追问
 
 > [!QUESTION] Maven 的依赖冲突是如何解决的？

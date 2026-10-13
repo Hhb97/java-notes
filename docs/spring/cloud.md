@@ -248,6 +248,13 @@ spring:
 5. 团队规模与服务数量匹配（康威定律），不要“为了微服务而微服务”；
 6. 基础设施先行：CI/CD、监控、日志、链路追踪、灰度能力不到位时，不宜大规模拆分。
 
+## 相关阅读
+
+- [gRPC 与 Protobuf：协议、流式调用与治理](#/mw/grpc)：服务间调用：gRPC
+- [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：微服务统一认证
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动与 Saga
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：全链路追踪
+
 ## 面试追问
 
 > [!QUESTION] Nacos 注册中心的 AP 与 CP 模式有什么区别？

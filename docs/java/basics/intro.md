@@ -185,6 +185,12 @@ class file version 61.0, this version of the Java Runtime only recognizes class 
 
 翻译：用 17 编译的类跑在 11 上。常见于升级了某个依赖（新版本只发布 17 字节码，如 Spring 6 / Spring Boot 3 要求 17+）。解决：升级运行时，或锁定依赖的旧版本。
 
+## 相关阅读
+
+- [数据类型与变量](#/java/basics/types)：数据类型与变量
+- [运行时数据区与对象模型](#/java/jvm/memory)：运行时数据区
+- [Maven 构建与依赖管理](#/java/eng/maven)：项目构建与依赖管理
+
 ## 面试追问
 
 > [!QUESTION] Java 是编译型还是解释型语言？

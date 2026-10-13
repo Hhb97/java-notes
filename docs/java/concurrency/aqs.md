@@ -393,6 +393,13 @@ class BooleanLatch {
 - `ReentrantLock` 可通过 `getQueueLength()`、`getHoldCount()`、`isLocked()` 暴露到监控；自定义同步器也建议提供类似方法。
 - 不要在 `Condition.await` 外用 `if` 判断条件：同样存在虚假唤醒，必须 `while`。
 
+## 相关阅读
+
+- [Java 内存模型与 volatile](#/java/concurrency/jmm)：volatile、CAS 的内存语义
+- [并发工具与 CompletableFuture](#/java/concurrency/juc)：基于 AQS 的并发工具类
+- [进程、线程与 CPU 调度](#/cs/os-process)：futex、park/unpark 与阻塞唤醒的底层
+- [分布式锁](#/redis/lock)：分布式锁：单机锁语义的延伸与局限
+
 ## 面试追问
 
 > [!QUESTION] AQS 为什么要用双向链表？只用单链表行不行？

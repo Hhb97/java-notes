@@ -312,6 +312,11 @@ WebFlux 基于 Reactor（`Mono`/`Flux`）与 Reactor Netty 事件循环，少量
 - **大文件上传**：`spring.servlet.multipart.max-file-size`/`max-request-size` 默认 1MB/10MB，超限异常在进入 Controller 前抛出，需在 Advice 中处理 `MaxUploadSizeExceededException`。
 - **`@RequestBody` 用在 GET 上**：部分代理/网关会丢弃 GET 请求体，规范上也不推荐。
 
+## 相关阅读
+
+- [Web 安全：OWASP 常见漏洞与防护](#/security/web)：Web 漏洞：XSS、CSRF、越权
+- [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：过滤器链与认证授权
+
 ## 面试追问
 
 > [!QUESTION] 描述一个请求在 Spring MVC 中的完整处理流程。

@@ -197,6 +197,12 @@ JDK `Proxy` 会把 default 方法调用也转给 `InvocationHandler`。在 handl
 
 lambda 默认不可序列化；把 lambda 存进需要序列化的对象（分布式缓存、Spark/Flink 算子）时要让目标类型同时实现 `Serializable`（如 `(Runnable & Serializable) () -> ...`），并注意捕获的变量也必须可序列化。
 
+## 相关阅读
+
+- [继承与多态](#/java/oop/inherit)：继承与多态
+- [创建型模式](#/java/patterns/creational)：设计模式
+- [DDD 战术设计：聚合、实体与领域事件（Java 落地）](#/design/ddd-tactical)：仓储接口与依赖倒置
+
 ## 面试追问
 
 > [!QUESTION] JDK 8 为什么要给接口加 default 方法？

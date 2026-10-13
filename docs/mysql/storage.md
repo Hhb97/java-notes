@@ -334,6 +334,13 @@ Buffer Pool 冷启动。确认 `innodb_buffer_pool_load_at_startup=ON`，并可�
 
 删除只是打删除标记，purge 后页内空间可复用，但不会归还给文件系统。需要 `ALTER TABLE t ENGINE=InnoDB`（或 `OPTIMIZE TABLE`）重建表，该操作 Online DDL 下允许并发 DML，但大表会消耗大量 I/O 并需要额外的磁盘空间，应在低峰执行或用 gh-ost / pt-online-schema-change。
 
+## 相关阅读
+
+- [B+ 树索引原理](#/mysql/index)：B+ 树索引
+- [redo / undo / binlog](#/mysql/log)：redo、undo 与 binlog
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：页缓存、Direct IO 与 fsync
+- [复杂度与核心数据结构](#/cs/algo-ds)：B+ 树与其他有序结构的对比
+
 ## 面试追问
 
 > [!QUESTION] InnoDB 的页为什么是 16KB？一个页里怎么快速找到一条记录？

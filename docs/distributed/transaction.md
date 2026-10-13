@@ -356,6 +356,12 @@ public void createOrder(OrderDTO dto) {
 - **undo_log 膨胀 / 未清理**：TC 宕机或二阶段异步删除积压，undo_log 表变大。定期监控其行数和 `log_created` 最早时间。
 - **XA 悬挂事务**：应用宕机留下 PREPARED 状态的 XA 事务，一直持锁。用 `XA RECOVER` 找出后根据 TM 日志手动 `XA COMMIT/ROLLBACK`。
 
+## 相关阅读
+
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：Saga 与 Outbox 的工程化
+- [案例：订单、支付与对账系统设计详解](#/design/case-payment)：支付场景的最终一致
+- [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：Percolator 分布式事务
+
 ## 面试追问
 
 > [!QUESTION] 2PC 有什么问题？3PC 解决了吗？

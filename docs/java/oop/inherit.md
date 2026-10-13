@@ -185,6 +185,11 @@ Kotlin 类默认 final，需要 `kotlin-spring`（all-open）插件。详见 [AO
 
 压测发现某个通用处理器 CPU 占比很高、火焰图里有大量 `itable stub` / `vtable stub`。原因是一个调用点有多种实现轮流出现。优化手段：按类型拆分调用点（让每个调用点保持单态）、减少中间抽象层、对最常见的类型做 `instanceof` 快速路径。用 `-XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining` 可以看到 `virtual call` / `megamorphic` 的内联失败原因。
 
+## 相关阅读
+
+- [接口与抽象类](#/java/oop/interface)：接口与抽象类
+- [结构型与行为型模式](#/java/patterns/behavioral)：多态在设计模式中的应用
+
 ## 面试追问
 
 > [!QUESTION] 重载和重写分别在什么时候确定调用哪个方法？

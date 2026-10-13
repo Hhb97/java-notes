@@ -323,6 +323,13 @@ class MqttIT {
 | 收不到下行指令 | 设备端未订阅/ACL 拒绝/会话过期；服务端用了 QoS 0 |
 | 异常断开后状态不一致 | 遗嘱触发时机与重连竞争；用连接序号/时间戳判断最新状态 |
 
+## 相关阅读
+
+- [MQTT 协议详解](#/iot/mqtt)：MQTT 协议
+- [Broker 架构与集群（EMQX）](#/iot/broker)：Broker 集群
+- [InfluxDB 实战：基数、降采样、Java 写入与选型](#/db/influx-practice)：遥测数据写入时序库
+- [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：长连接保活与重连
+
 ## 面试追问
 
 > [!QUESTION] Java 中使用 Paho 要注意哪些坑？

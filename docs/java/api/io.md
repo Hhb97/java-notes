@@ -306,6 +306,11 @@ try (FileChannel ch = FileChannel.open(path, READ, WRITE)) {
 6. **容器内存被 OOM Killer 杀掉**：堆外（Direct、mmap、Netty 池、线程栈）没有计入规划，`-Xmx` 只能约束堆。
 7. **跨平台换行与编码**：日志、CSV 导出在 Windows 与 Linux 间乱码，显式指定 UTF-8 并统一换行符。
 
+## 相关阅读
+
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：页缓存、零拷贝与 fsync 的内核视角
+- [IO 模型与 Netty](#/infra/netty)：IO 模型与 Netty
+
 ## 面试追问
 
 > [!QUESTION] 什么是零拷贝？Java 中如何实现？

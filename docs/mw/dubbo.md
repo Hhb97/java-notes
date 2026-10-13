@@ -292,6 +292,11 @@ Triple 的意义：用标准 HTTP/2 取代私有二进制协议，**可以被 En
 | 重复提交/重复执行 | 超时重试导致非幂等操作被多次执行（`retries` 默认 2，写操作要设 0） |
 | 注册中心抖动导致服务不可用 | 3.x 对空列表有**保护**（`registry.protocol-parameters`），仍需监控；本地缓存文件 `~/.dubbo` |
 
+## 相关阅读
+
+- [gRPC 与 Protobuf：协议、流式调用与治理](#/mw/grpc)：gRPC 与 Triple 协议对比
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：链路追踪集成
+
 ## 面试追问
 
 > [!QUESTION] 描述一次 Dubbo 调用的完整过程。

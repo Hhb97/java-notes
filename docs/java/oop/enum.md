@@ -214,6 +214,11 @@ JPA `@Enumerated` 默认是 `EnumType.ORDINAL`。某次在枚举中间插入一�
 
 枚举是全局单例，给枚举加非 final 的可变字段（如缓存、计数器）等于引入全局可变状态，多线程下需要同步，单元测试之间也会互相污染。
 
+## 相关阅读
+
+- [创建型模式](#/java/patterns/creational)：单例等模式中的枚举用法
+- [DDD 战术设计：聚合、实体与领域事件（Java 落地）](#/design/ddd-tactical)：枚举与状态机在聚合中的使用
+
 ## 面试追问
 
 > [!QUESTION] 枚举的本质是什么？`values()` 方法是哪里来的？

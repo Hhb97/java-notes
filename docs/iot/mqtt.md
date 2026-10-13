@@ -313,6 +313,12 @@ $share/ingest/devices/+/telemetry
 | 弱网下掉线频繁 | Keep Alive 过长被 NAT 回收；过短耗电；断线后快速重连并保持会话 |
 | 后端消费重复 | 多实例订阅同一主题未使用共享订阅；使用 `$share` 或 Broker 侧规则转发到 MQ |
 
+## 相关阅读
+
+- [Java 接入：Paho、Spring 与 Netty](#/iot/java)：Java 客户端接入
+- [Broker 架构与集群（EMQX）](#/iot/broker)：Broker 与集群
+- [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：TCP 保活、RST 与 QUIC
+
 ## 面试追问
 
 > [!QUESTION] MQTT 的 QoS 三个等级有什么区别？实际怎么选？

@@ -337,6 +337,11 @@ public class OrderAppService {
 - **事务中调用 `@Async` 方法**：异步线程不在事务中，且可能在事务提交前执行查询读不到数据，应改为提交后再触发。
 - **测试中的 `@Transactional`**：`@SpringBootTest` 测试方法上的事务默认回滚，看起来"写进去了又没了"属于正常现象。
 
+## 相关阅读
+
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：跨服务一致性：Outbox 与 Saga
+- [分布式事务](#/distributed/transaction)：分布式事务方案
+
 ## 面试追问
 
 > [!QUESTION] Spring 是如何保证 Service 和 Mapper 用的是同一个数据库连接的？

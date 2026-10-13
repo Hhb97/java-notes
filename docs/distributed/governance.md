@@ -501,6 +501,12 @@ public <T> T callWithRetry(Supplier<T> call, int maxAttempts) {
 - **线程池隔离丢失上下文**：调用转到隔离线程池后 TraceId、用户信息、事务都丢了。使用 TransmittableThreadLocal 或框架提供的上下文传播装饰器。
 - **一致性哈希热点 key**：哈希只能保证 key 均匀，不能保证流量均匀，单个热点 key 仍会打爆一个节点，需要本地缓存或热点 key 拆分（见 [缓存设计与一致性](#/redis/cache)）。
 
+## 相关阅读
+
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：限流算法：令牌桶与滑动窗口
+- [gRPC 与 Protobuf：协议、流式调用与治理](#/mw/grpc)：Deadline 与重试预算
+- [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：灰度、降级与回滚
+
 ## 面试追问
 
 > [!QUESTION] 令牌桶和漏桶的区别？各适合什么场景？

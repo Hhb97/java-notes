@@ -246,6 +246,11 @@ JDK 17 及以前，`"中文".getBytes()` 使用平台默认编码：Linux 通常
 
 JDK 7u6 之前 `substring` 与原串共享 `char[]`，从一个大字符串里截取一小段并长期持有会导致整个大数组无法回收（经典内存泄漏）。之后改为复制，泄漏消失但 substring 变成 O(n)。阅读老代码中的 `new String(s.substring(...))` 就是当年的规避写法。
 
+## 相关阅读
+
+- [运行时数据区与对象模型](#/java/jvm/memory)：字符串常量池所在的内存区域
+- [Web 安全：OWASP 常见漏洞与防护](#/security/web)：字符串拼接与注入类漏洞
+
 ## 面试追问
 
 > [!QUESTION] `String s = new String("abc")` 创建了几个对象？

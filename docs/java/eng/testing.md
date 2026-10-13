@@ -274,6 +274,11 @@ class OrderRepositoryIT {
 5. 慢测试（集成）与快测试（单元）分离到不同阶段（surefire / failsafe），见 [Maven 构建与依赖管理](#/java/eng/maven)；
 6. 修 bug 先写**复现测试**，再修复，防止回归。
 
+## 相关阅读
+
+- [CI/CD 流水线与 GitOps](#/infra/cicd)：测试金字塔与质量门禁
+- [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：发布前后的验证与回滚
+
 ## 面试追问
 
 > [!QUESTION] JUnit 5 的架构是怎样的？和 JUnit 4 有什么区别？

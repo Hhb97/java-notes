@@ -232,6 +232,12 @@ Martin Kleppmann 的批评：
 - 强一致场景：数据库行锁 / 唯一约束、ZooKeeper/etcd、或业务层 fencing；
 - 监控：锁等待时间、获取失败率、持有时长，发现热点锁。
 
+## 相关阅读
+
+- [AQS 与显式锁](#/java/concurrency/aqs)：单机锁的实现
+- [Raft 与共识算法](#/distributed/consensus)：共识与 fencing 的理论基础
+- [分布式事务](#/distributed/transaction)：分布式事务中的锁与幂等
+
 ## 面试追问
 
 > [!QUESTION] 如何正确实现 Redis 分布式锁？

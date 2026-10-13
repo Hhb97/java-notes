@@ -428,6 +428,12 @@ HotSpot 中一个类要被卸载，必须**同时**满足：
 4. **Agent 与类加载器**：Java Agent 的类由应用类加载器加载，而被增强的业务类可能在 `LaunchedURLClassLoader` 或 WebApp 加载器中，增强代码直接引用业务类会 `NoClassDefFoundError`，需通过反射或把桥接类注入到 Bootstrap 搜索路径。
 5. **`-verbose:class` 快速定位来源**：输出每个类的加载来源 jar，排查「到底加载了哪个版本」最直接；JDK 9+ 等价于 `-Xlog:class+load=info`。
 
+## 相关阅读
+
+- [字节码与执行引擎](#/java/jvm/bytecode)：字节码与执行引擎
+- [Spring Boot 自动配置与启动](#/spring/boot)：Spring Boot 的类加载与启动
+- [反射、注解与动态代理](#/java/api/reflect)：反射与动态代理
+
 ## 面试追问
 
 > [!QUESTION] 如果我自己写一个 java.lang.String 类，能被加载吗？

@@ -330,6 +330,11 @@ String[] a = list.toArray(String[]::new);           // JDK 11 Collection#toArray
 4. **反射调用拿到桥方法**：基于 `getDeclaredMethods()` 的注解扫描、AOP 切点匹配可能重复匹配或漏掉注解，记得过滤 `isBridge()`。
 5. **泛型 DAO 基类通过 `getGenericSuperclass()` 推断实体类型**：被 CGLIB 代理后 `getClass()` 是代理子类，父类签名里没有类型实参，需要先用 `ClassUtils.getUserClass` 拿原始类，或改用 `ResolvableType`。
 
+## 相关阅读
+
+- [集合体系总览](#/java/api/collections)：泛型在集合框架中的应用
+- [反射、注解与动态代理](#/java/api/reflect)：运行期擦除与反射获取泛型信息
+
 ## 面试追问
 
 > [!QUESTION] 既然类型被擦除了，为什么 Jackson 还能通过 TypeReference 拿到 List&lt;User&gt;？

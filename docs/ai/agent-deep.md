@@ -319,6 +319,12 @@ Agent 的失败往往发生在中间步骤。评测维度：
 | 提示注入 | 外部内容劫持 Agent | 最小权限、隔离、确认，见 [LLM 应用工程化、安全与评测](#/ai/llmops) |
 | 成本失控 | 单任务消耗大量 Token | 预算硬限制、早停、小模型处理简单步骤 |
 
+## 相关阅读
+
+- [Agent、工具调用与 MCP](#/ai/agent)：Agent 基础
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：长任务的状态机、Saga 与检查点
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：Agent 轨迹与可观测
+
 ## 面试追问
 
 > [!QUESTION] 为什么生产级 Agent 要建模成状态机或图，而不是一个循环？

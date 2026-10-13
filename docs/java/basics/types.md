@@ -282,6 +282,11 @@ builder.serializerByType(Long.class, ToStringSerializer.instance);
 
 MySQL `DECIMAL(10,2)` 读出来的 `BigDecimal` scale 是 2；同一个值从前端 JSON `2` 反序列化后 scale 是 0，两者 `equals` 为 false。另外，MyBatis/JDBC 对 `BIGINT UNSIGNED` 可能映射成 `BigInteger`，对 `TINYINT(1)` 默认映射成 `Boolean`，DTO 类型不匹配会在反射赋值时报错。
 
+## 相关阅读
+
+- [数组与字符串](#/java/basics/string)：字符串
+- [案例：订单、支付与对账系统设计详解](#/design/case-payment)：金额为什么用整数分或 BigDecimal
+
 ## 面试追问
 
 > [!QUESTION] `Integer a = 128, b = 128; a == b` 为什么是 false？如何让它变成 true？

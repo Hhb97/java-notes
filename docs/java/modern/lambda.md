@@ -290,6 +290,12 @@ lambda 中抛出的异常栈里是 `lambda$process$3` 和大量 `ReferencePipeli
 - `Optional` 设计用于返回值，不要用作字段、方法参数或集合元素（不可序列化，增加分配）。
 - `Optional.of(null)` 直接 NPE，可能为 null 时用 `ofNullable`。
 
+## 相关阅读
+
+- [Java 8–21 新特性](#/java/modern/features)：Java 8–21 新特性
+- [集合体系总览](#/java/api/collections)：集合与 Stream
+- [并发工具与 CompletableFuture](#/java/concurrency/juc)：CompletableFuture 与并行流
+
 ## 面试追问
 
 > [!QUESTION] Lambda 和匿名内部类在实现上有什么区别？

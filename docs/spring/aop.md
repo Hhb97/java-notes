@@ -286,6 +286,12 @@ public class OrderService {
 - **获取目标类**：日志、注解解析时用 `AopUtils.getTargetClass(bean)` / `AopProxyUtils.ultimateTargetClass`，不要直接 `bean.getClass()`（拿到的是代理类，类上的注解可能读不到）。
 - **ThreadLocal 型上下文**：切面里依赖 `RequestContextHolder` 或 MDC，遇到 `@Async`/线程池时上下文丢失，需要 `TaskDecorator` 传递。
 
+## 相关阅读
+
+- [反射、注解与动态代理](#/java/api/reflect)：动态代理与反射
+- [声明式事务原理](#/spring/tx)：事务是如何基于 AOP 实现的
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：用 AOP/Agent 做无侵入埋点
+
 ## 面试追问
 
 > [!QUESTION] Spring AOP 和 AspectJ 有什么区别？

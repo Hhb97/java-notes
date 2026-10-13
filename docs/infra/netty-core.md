@@ -292,6 +292,11 @@ pipeline.addLast(bizGroup, "biz", new MyBizHandler());      // 该 Handler 的�
 | 写入大量数据后 OOM | 对端消费慢，`ChannelOutboundBuffer` 积压；必须按 `isWritable()` 做**写背压** |
 | 客户端连接大量 `CLOSE_WAIT` | 收到对端 FIN 后没有 `ctx.close()`（检查 `channelInactive`/异常处理） |
 
+## 相关阅读
+
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：epoll、零拷贝与页缓存
+- [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：TCP 重传、Nagle 与保活
+
 ## 面试追问
 
 > [!QUESTION] Netty 的线程模型是怎样的？

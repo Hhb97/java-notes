@@ -370,6 +370,12 @@ trivy image --severity HIGH,CRITICAL --exit-code 1 registry.example.com/order-se
 6. **随机数阻塞导致启动慢**：老环境熵不足时 `SecureRandom` 读 `/dev/random` 阻塞，可设置 `-Djava.security.egd=file:/dev/./urandom`（新版 JDK 默认已基本不受影响）。
 7. **Docker 磁盘被占满**：悬空镜像、停止的容器、无限增长的日志。定期 `docker system prune`（注意不要加 `--volumes` 误删数据卷），并配置日志轮转。
 
+## 相关阅读
+
+- [容器网络与网络排障：CNI、iptables/IPVS、tcpdump](#/cs/net-debug)：容器网络原理
+- [进程、线程与 CPU 调度](#/cs/os-process)：cgroups、CPU limit 与调度
+- [CI/CD 流水线与 GitOps](#/infra/cicd)：镜像构建、扫描与签名
+
 ## 面试追问
 
 > [!QUESTION] Docker 的隔离和限制分别是用什么实现的？容器和虚拟机的本质区别？

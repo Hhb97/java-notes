@@ -109,6 +109,11 @@
 | 数据层 | 设计索引与表结构，解决一致性与性能 | [B+ 树索引](#/mysql/index)、[MVCC](#/mysql/transaction)、[锁](#/mysql/lock)、[缓存一致性](#/redis/cache) |
 | 分布式 | 拆分服务并保证可用与一致 | [消息队列](#/mw/mq)、[分布式事务](#/distributed/transaction)、[限流熔断](#/distributed/governance) |
 | 架构设计 | 独立设计高并发系统 | [设计方法论](#/design/method)、[秒杀系统](#/design/seckill)、[面试速查](#/design/interview) |
+| 领域建模与事件驱动 | 划分边界、保证跨服务最终一致 | [DDD 战略设计](#/design/ddd-strategic)、[聚合与领域事件](#/design/ddd-tactical)、[Outbox 与 Saga](#/design/event-driven)、[CQRS 与事件溯源](#/design/cqrs-es) |
+| 安全与可观测 | 认证授权、漏洞防护，线上能看见、能定位 | [认证授权](#/security/auth)、[Web 安全](#/security/web)、[指标监控](#/infra/obs-metrics)、[链路追踪与 SLO](#/infra/obs-trace) |
+| 交付与发布 | 安全、可回滚地把变更送上线 | [CI/CD 与 GitOps](#/infra/cicd)、[发布策略](#/infra/release)、[gRPC](#/mw/grpc) |
+| 多种数据库 | 按场景选型 MongoDB、TiDB、时序与分析库 | [MongoDB](#/db/mongo-model)、[TiDB](#/db/tidb-arch)、[InfluxDB](#/db/influx-model)、[ClickHouse](#/bigdata/ck-engine) |
+| 计算机基础 | 把线上现象还原到操作系统与网络层 | [进程与调度](#/cs/os-process)、[虚拟内存](#/cs/os-memory)、[网络层](#/cs/net-ip)、[TCP 深入](#/cs/net-tcp)、[网络排障](#/cs/net-debug) |
 
 ## 阅读约定
 

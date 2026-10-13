@@ -338,6 +338,12 @@ ALTER TABLE t ALTER INDEX idx_old INVISIBLE;   -- 优化器不再使用，但索
 
 某个月度报表或定时任务依赖该索引，删除后跑出慢 SQL 拖垮数据库。8.0 先 `INVISIBLE` 观察一个完整业务周期；也可以查 `performance_schema.table_io_waits_summary_by_index_usage` 确认使用情况。
 
+## 相关阅读
+
+- [复杂度与核心数据结构](#/cs/algo-ds)：红黑树、B+ 树与跳表对比
+- [MongoDB 数据模型、索引与聚合](#/db/mongo-model)：MongoDB 复合索引的 ESR 规则对照
+- [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiDB 如何把索引映射成 KV
+
 ## 面试追问
 
 > [!QUESTION] 为什么 InnoDB 用 B+ 树而不是 B 树或红黑树？

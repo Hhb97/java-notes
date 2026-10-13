@@ -379,6 +379,11 @@ try {
 - **日志打印完整 SQL**：MyBatis 日志打印的是带 `?` 的 SQL 与参数，排查时可用 p6spy 或插件拼接，但**生产勿开**全量 SQL 日志。
 - **超时**：`defaultStatementTimeout` 或语句级 `timeout`，防止慢 SQL 长期占用连接；Spring 事务的 `timeout` 也会传递给 MyBatis。
 
+## 相关阅读
+
+- [Web 安全：OWASP 常见漏洞与防护](#/security/web)：SQL 注入与 #{} / ${}
+- [EXPLAIN 与 SQL 调优](#/mysql/optimize)：SQL 调优
+
 ## 面试追问
 
 > [!QUESTION] Mapper 接口没有实现类，为什么能调用？

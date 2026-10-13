@@ -70,7 +70,7 @@ window.NAV = [
       {
         title: '设计模式', children: [
           { title: '创建型模式', path: 'java/patterns/creational' },
-          { title: '结构型与行为型', path: 'java/patterns/behavioral' }
+          { title: '结构型与行为型模式', path: 'java/patterns/behavioral' }
         ]
       }
     ]

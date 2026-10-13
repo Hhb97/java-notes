@@ -374,6 +374,12 @@ Compaction 由后台 Log Cleaner 线程执行，把日志分为已清理的 head
 - **滞后消费者污染 PageCache**：某个消费者从很早的位点回溯读取，把冷数据读进 PageCache，挤掉了实时消费者需要的热数据，所有消费者延迟上升。回溯任务应错峰执行或使用单独集群。
 - **SSL 开启后 CPU 飙升**：零拷贝失效 + 加解密开销，需要预留 CPU 或评估使用更高效的加密套件。
 
+## 相关阅读
+
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：零拷贝与页缓存
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动架构
+- [ClickHouse 集群、写入与表设计实战](#/bigdata/ck-cluster)：Kafka 引擎与 ClickHouse 写入
+
 ## 面试追问
 
 > [!QUESTION] Kafka 为什么不用 B+ 树之类的索引？稀疏索引是怎么查找的？

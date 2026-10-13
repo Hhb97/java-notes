@@ -472,6 +472,12 @@ PROPERTIES ("replication_num" = "3", "enable_unique_key_merge_on_write" = "true"
 | Doris 主键 Upsert 做结果存储 | 幂等、易修正；高基数主键产生行数膨胀，要做粒度分层与保留策略 |
 | Kafka 只留 3 天 | 成本低；更久回溯依赖 Paimon，要保证 ODS 完整可信 |
 
+## 相关阅读
+
+- [ClickHouse 集群、写入与表设计实战](#/bigdata/ck-cluster)：ClickHouse 写入与物化视图
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：事件驱动与 Outbox
+- [CQRS 与事件溯源](#/design/cqrs-es)：CQRS 与读模型投影
+
 ## 面试追问
 
 > [!QUESTION] 为什么不把所有逻辑放在一个 Flink 作业里？

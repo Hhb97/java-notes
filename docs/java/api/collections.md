@@ -404,6 +404,12 @@ HashMap 与 ConcurrentHashMap 的源码细节见 [HashMap 源码剖析](#/java/a
 7. **`Set.of` 顺序导致的偶发单测失败**：断言集合内容时用 `containsExactlyInAnyOrder` 之类的无序断言。
 8. **`TreeMap`/`TreeSet` 比较器返回 0 丢元素**：比较器追加唯一字段做 tie-breaker。
 
+## 相关阅读
+
+- [复杂度与核心数据结构](#/cs/algo-ds)：背后的数据结构与复杂度分析
+- [HashMap 源码剖析](#/java/api/hashmap)：HashMap 源码
+- [并发工具与 CompletableFuture](#/java/concurrency/juc)：并发集合如何选
+
 ## 面试追问
 
 > [!QUESTION] ArrayList 的扩容机制是怎样的？为什么是 1.5 倍？

@@ -286,6 +286,11 @@ public void onMessage(PaymentEvent evt) {
 - **超时当失败处理**：转账接口超时后直接给用户报失败并允许重新发起，结果扣了两次。超时状态必须为「未知」，通过查询接口或对账确定结果，重新发起时复用同一业务流水号。
 - **重试 + 非幂等接口**：网关、RPC 框架、MQ 都可能自动重试，Feign/Dubbo 默认重试策略要逐个确认；写接口默认关闭框架层重试，由业务层带幂等键重试。
 
+## 相关阅读
+
+- [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 一致性旋钮
+- [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：NewSQL 如何在 CAP 中取舍
+
 ## 面试追问
 
 > [!QUESTION] 为什么说 CAP 中 P 是必选的？「CA 系统」存在吗？

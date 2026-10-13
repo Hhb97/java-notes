@@ -405,6 +405,12 @@ void shutdownGracefully(ExecutorService pool) {
 - 超时控制：`Future.get(timeout)` 超时后记得 `cancel(true)`，否则任务继续占着线程。
 - 任务中尽量不要再同步等待同池的其他任务结果；需要编排时用 `CompletableFuture` 并指定不同的池。
 
+## 相关阅读
+
+- [进程、线程与 CPU 调度](#/cs/os-process)：线程数、上下文切换与容器 CPU 限制
+- [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：线程池与连接池饱和度监控
+- [限流、熔断与降级](#/distributed/governance)：舱壁隔离与线程池的拒绝策略
+
 ## 面试追问
 
 > [!QUESTION] 为什么用一个 int 同时存状态和线程数？

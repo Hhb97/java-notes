@@ -411,6 +411,12 @@ int distance(int x, int y) {
 5. **Metaspace 持续上涨**：动态生成类（CGLIB、Javassist、Groovy 脚本、`Proxy`、Lambda 表单）每次都用新 ClassLoader 加载且被缓存持有。`jcmd <pid> VM.classloader_stats`、Arthas `classloader` 可以按加载器统计类数量。
 6. **Netty 直接内存泄漏**：`ByteBuf` 未 `release()`。开启 `-Dio.netty.leakDetection.level=advanced` 在测试环境定位泄漏点。
 
+## 相关阅读
+
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：虚拟内存、RSS 与 OOMKilled 的系统视角
+- [线上调优与故障排查](#/java/jvm/tuning)：内存问题的线上排查
+- [Docker 容器化](#/infra/docker)：容器里的 JVM 内存参数
+
 ## 面试追问
 
 > [!QUESTION] TLAB 是什么？有了 TLAB，对象分配还需要 CAS 吗？

@@ -383,6 +383,12 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 - `CopyOnWriteArrayList` 存放频繁变化的大集合，会造成 Young GC 频繁甚至大对象直接进老年代。
 - 用 `Semaphore` 做限流时 `tryAcquire(timeout)` 失败要快速失败返回，不要无限 `acquire`。
 
+## 相关阅读
+
+- [AQS 与显式锁](#/java/concurrency/aqs)：AQS 原理
+- [复杂度与核心数据结构](#/cs/algo-ds)：并发容器背后的数据结构
+- [线程池原理与调优](#/java/concurrency/pool)：线程池
+
 ## 面试追问
 
 > [!QUESTION] CountDownLatch 和 CyclicBarrier 的区别？

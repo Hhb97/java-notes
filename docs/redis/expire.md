@@ -263,6 +263,11 @@ redis-cli MEMORY DOCTOR                       # 给出诊断建议
 - **过期 key 堆积**：`INFO keyspace` 里的 `expires` 很大且内存居高不下，可以临时调高 `hz`（如 20～50）或 `active-expire-effort`，或者用 `SCAN` 主动触发惰性删除。
 - **noeviction 当缓存用**：内存满后所有写入报错，业务大面积失败。缓存实例一定要显式改策略。
 
+## 相关阅读
+
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：页面置换与 LRU/LFU 的同源思想
+- [复杂度与核心数据结构](#/cs/algo-ds)：手写 LRU
+
 ## 面试追问
 
 > [!QUESTION] 一个 key 过期后，Redis 一定会立即删除它吗？

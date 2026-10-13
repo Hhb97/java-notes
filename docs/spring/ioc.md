@@ -492,6 +492,11 @@ public class PointsListener {
 - **单例中的可变状态**：Controller/Service 默认单例，成员变量保存请求数据会串数据，需要线程隔离的用局部变量或 `ThreadLocal`（注意清理）。
 - **启动慢排查**：Boot 提供 `BufferingApplicationStartup` + `/actuator/startup` 输出每个 Bean 的创建耗时，比肉眼看日志准确。
 
+## 相关阅读
+
+- [创建型模式](#/java/patterns/creational)：工厂、单例等模式
+- [DDD 战术设计：聚合、实体与领域事件（Java 落地）](#/design/ddd-tactical)：依赖倒置与领域层的无框架化
+
 ## 面试追问
 
 > [!QUESTION] Spring 为什么需要三级缓存，两级行不行？

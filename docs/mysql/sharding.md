@@ -213,6 +213,12 @@ rules:
 - 订单等业务有明显时间属性：近 3 个月热表保留在线库，历史数据归档到低成本库或 ClickHouse，比无限拆分更划算；
 - 如果团队不想承担分库分表的复杂度：评估 **TiDB / OceanBase** 等分布式数据库，代价是运维成本、MySQL 兼容性差异和延迟特性。
 
+## 相关阅读
+
+- [TiDB 实战：热点、迁移、选型与调优](#/db/tidb-practice)：TiDB：免分片的替代方案与选型
+- [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 分片键与热点
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：一致性哈希与虚拟节点
+
 ## 面试追问
 
 > [!QUESTION] 什么时候该分库分表？怎么判断？

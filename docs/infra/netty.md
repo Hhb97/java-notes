@@ -421,6 +421,11 @@ public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exc
 5. **容器中 EventLoop 线程过多**：老版本 JDK 在容器里拿到宿主机核数，`CPU*2` 个线程远超配额，造成上下文切换与 CPU throttling。用新版 JDK 或显式设置 `-XX:ActiveProcessorCount`、`io.netty.eventLoopThreads`（见 [Docker 容器化](#/infra/docker)）。
 6. **`ctx.write` 与 `ctx.channel().write` 混用**：前者从当前 Handler 往 Head 走，跳过了位于其后的出站 Handler（如 Encoder 在业务 Handler 之后添加时就会漏编码）。
 
+## 相关阅读
+
+- [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：TCP_NODELAY 与保活
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：零拷贝与页缓存
+
 ## 面试追问
 
 > [!QUESTION] epoll 为什么比 select 高效？ET 模式下要注意什么？

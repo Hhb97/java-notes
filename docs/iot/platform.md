@@ -339,6 +339,12 @@ Java 侧读 Modbus 可用 **j2mod / Eclipse Milo（OPC UA）/ Apache PLC4X**；�
 
 据此决定：Broker 集群节点数、Kafka 分区数、消费组并发、时序库分片与压缩、保留周期；**用压测验证**，并为重连风暴预留余量（见 [Broker 架构与集群（EMQX）](#/iot/broker)）。
 
+## 相关阅读
+
+- [InfluxDB 数据模型与存储引擎](#/db/influx-model)：InfluxDB 数据模型
+- [ClickHouse 行为分析：漏斗、留存与近似计算](#/bigdata/ck-analytics)：用 ClickHouse 做设备数据分析
+- [加密、签名、HTTPS 与密钥管理](#/security/crypto)：设备认证与 mTLS
+
 ## 面试追问
 
 > [!QUESTION] 如何设计一个支持百万设备的 IoT 平台？

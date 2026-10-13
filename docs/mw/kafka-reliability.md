@@ -378,6 +378,13 @@ while (running) {
 - 现象：监控 `IsrShrinksPerSec` / `IsrExpandsPerSec` 持续非零，`acks=all` 的生产延迟抖动，`min.insync=2` 时出现 `NotEnoughReplicas`。
 - 原因：Follower 所在 Broker 负载高、磁盘慢、网络带宽打满、副本同步线程不足。
 
+## 相关阅读
+
+- [Kafka 架构与存储](#/mw/kafka)：Kafka 架构与存储
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：Outbox、幂等消费与死信
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：页缓存、顺序写与刷盘
+- [消息队列核心问题](#/mw/mq)：消息队列通用问题
+
 ## 面试追问
 
 > [!QUESTION] acks=all 一定不会丢消息吗？

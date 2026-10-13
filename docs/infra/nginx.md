@@ -523,6 +523,12 @@ http {
 6. **reload 后旧 worker 不退出**：存在 WebSocket / 长连接，设置 `worker_shutdown_timeout`。
 7. **获取真实 IP 错误**：多层代理时用 `real_ip_header X-Forwarded-For` + `set_real_ip_from` 指定可信代理网段，不要直接信任客户端传来的 XFF 做风控。
 
+## 相关阅读
+
+- [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：WebSocket、长连接与 TCP 调优
+- [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：DNS 与 CDN
+- [加密、签名、HTTPS 与密钥管理](#/security/crypto)：TLS 终止与证书
+
 ## 面试追问
 
 > [!QUESTION] Nginx 为什么能扛高并发？和 Tomcat 的线程模型有什么不同？

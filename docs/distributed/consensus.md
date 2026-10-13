@@ -345,6 +345,12 @@ etcd 是 Kubernetes 的元数据存储，核心是 **Raft + MVCC + Lease + Watch
 - **ZK 大量 Watch 导致惊群**：几千个客户端 Watch 同一节点（如配置节点），一次修改引发几千个回调和读请求。配置中心场景用推拉结合 + 本地缓存。
 - **自研 Raft 的坑**：持久化 `currentTerm` / `votedFor` 未 fsync 就回复，重启后同 term 再投一票，导致同一任期两个 Leader。优先使用成熟库：etcd/raft、SOFAJRaft、Apache Ratis。
 
+## 相关阅读
+
+- [TiDB 架构：TiKV、PD、Raft 与分布式事务](#/db/tidb-arch)：TiKV 中的 Raft 多副本
+- [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集选举
+- [分布式锁](#/redis/lock)：分布式锁与 fencing
+
 ## 面试追问
 
 > [!QUESTION] Raft 如何保证新选出的 Leader 包含所有已提交的日志？

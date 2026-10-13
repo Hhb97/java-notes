@@ -418,6 +418,12 @@ Shenandoah 由 Red Hat 开发，JDK 12 实验引入、JDK 15 正式（JEP 379）
 4. **ZGC 分配停滞**：日志中 `Allocation Stall (thread) 120ms`，接口出现超时。加大堆、调大 `ConcGCThreads`，或升级到分代 ZGC。
 5. **G1 停顿目标设得太低**：设为 20ms 后 Young GC 每秒数十次，CPU 被 GC 吃掉，吞吐下降，晋升加快反而触发 Full GC。
 
+## 相关阅读
+
+- [线上调优与故障排查](#/java/jvm/tuning)：GC 日志分析与调优实战
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：大页、NUMA 与 swap 对 GC 停顿的影响
+- [Kubernetes 核心概念](#/infra/k8s)：容器内存与 JVM 堆的配比
+
 ## 面试追问
 
 > [!QUESTION] G1 如何做到「可预测停顿」？

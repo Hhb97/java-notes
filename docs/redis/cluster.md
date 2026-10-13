@@ -344,6 +344,12 @@ LettuceClientConfiguration config = LettuceClientConfiguration.builder()
 - **Pub/Sub 在 Cluster 中**：普通 `PUBLISH` 会广播到所有节点，占用集群总线带宽；7.0 的 Sharded Pub/Sub（`SPUBLISH`/`SSUBSCRIBE`）按频道的槽路由，只在对应分片内传播。
 - **跨机房**：Cluster 节点间心跳对延迟敏感，跨地域部署容易误判；通常每个机房独立集群，上层做双写或同步。
 
+## 相关阅读
+
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：一致性哈希与哈希槽
+- [Raft 与共识算法](#/distributed/consensus)：共识与选主
+- [MongoDB 复制集、分片与事务](#/db/mongo-cluster)：MongoDB 复制集与分片
+
 ## 面试追问
 
 > [!QUESTION] 全量同步和增量同步分别在什么时候发生？

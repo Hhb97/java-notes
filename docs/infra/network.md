@@ -388,6 +388,13 @@ try (CloseableHttpResponse resp = client.execute(new HttpGet(url))) {
 6. **K8s 中 gRPC 负载不均**：HTTP/2 长连接被 kube-proxy 在建连时一次性分配。见 [Kubernetes 核心概念](#/infra/k8s)。
 7. **抓包定位**：`tcpdump -i any -nn port 8080 -w a.pcap` 后用 Wireshark 看重传、零窗口、RST 的发起方；谁先发 RST / FIN 往往就是答案。更多命令见 [Linux 线上排查](#/infra/linux)。
 
+## 相关阅读
+
+- [网络层：以太网、IP、路由、NAT 与 MTU](#/cs/net-ip)：网络层：IP、路由、NAT 与 MTU
+- [TCP 深入与 UDP/QUIC：重传、保活、RST 与内核调优](#/cs/net-tcp)：TCP 深入：重传、保活、RST
+- [DNS 与 CDN：解析流程、缓存与线上坑](#/cs/net-dns)：DNS 与 CDN
+- [容器网络与网络排障：CNI、iptables/IPVS、tcpdump](#/cs/net-debug)：网络排障与抓包
+
 ## 面试追问
 
 > [!QUESTION] 服务端出现大量 TIME_WAIT 和大量 CLOSE_WAIT，分别说明什么，怎么处理？

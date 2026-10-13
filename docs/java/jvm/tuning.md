@@ -217,6 +217,13 @@ Found one Java-level deadlock:
 - [ ] 先止血：扩容、限流、降级、回滚、摘除异常实例（保留现场）；
 - [ ] 复盘：根因、检测手段为什么没提前发现、补监控与告警、写入故障库。
 
+## 相关阅读
+
+- [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：JVM 指标监控与告警
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：从指标到链路再到日志的排障漏斗
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：内存、swap 与 OOM Killer
+- [Linux 线上排查](#/infra/linux)：主机侧排查命令
+
 ## 面试追问
 
 > [!QUESTION] CPU 100% 怎么排查？

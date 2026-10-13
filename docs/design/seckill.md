@@ -235,6 +235,12 @@ ALTER TABLE seckill_order ADD UNIQUE KEY uk_user_sku (user_id, sku_id);
 | 用 Redis 分布式锁串行化每个请求 | 吞吐受限于锁，而且 Lua 原子扣减更简单 |
 | 扣库存与下单同步完成 | 链路长、RT 高，应异步 |
 
+## 相关阅读
+
+- [案例：订单、支付与对账系统设计详解](#/design/case-payment)：下单之后的支付与对账
+- [事件驱动架构：事件设计、Outbox 与 Saga](#/design/event-driven)：异步下单与幂等消费
+- [工程中的算法：布隆、一致性哈希、限流与 Top K](#/cs/algo-engineering)：限流算法
+
 ## 面试追问
 
 > [!QUESTION] 秒杀系统的核心设计思路？

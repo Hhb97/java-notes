@@ -226,6 +226,13 @@ POST /_aliases
 | 磁盘打满进入只读 | 触发 flood-stage 水位，索引被设为只读：清理数据后 `index.blocks.read_only_allow_delete: null` |
 | 脑裂 | 7.x+ 使用新的选举与 `cluster.initial_master_nodes`，确保 **≥3 个主节点候选**且多数派存在 |
 
+## 相关阅读
+
+- [Elasticsearch 原理](#/mw/es)：Elasticsearch 原理
+- [链路追踪、日志与告警：OpenTelemetry、ELK 与 SLO](#/infra/obs-trace)：日志平台：ELK 与 Loki 的取舍
+- [CDC 与实时数仓架构](#/bigdata/cdc)：CDC 同步到 ES
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：堆与页缓存的内存分配
+
 ## 面试追问
 
 > [!QUESTION] ES 的深分页问题是什么？怎么解决？

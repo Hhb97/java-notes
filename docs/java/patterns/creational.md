@@ -252,6 +252,11 @@ public Order(Order other) {
 | 复杂对象构造、参数多可选 | 建造者 |
 | 复制已有对象 | 拷贝构造器 / 原型 |
 
+## 相关阅读
+
+- [结构型与行为型模式](#/java/patterns/behavioral)：结构型与行为型模式
+- [IoC 容器与 Bean 生命周期](#/spring/ioc)：容器如何管理对象创建
+
 ## 面试追问
 
 > [!QUESTION] 单例有哪些写法？推荐哪种？为什么？

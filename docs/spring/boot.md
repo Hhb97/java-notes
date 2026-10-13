@@ -393,6 +393,12 @@ spring:
 - **多数据源后自动配置失效**：定义多个 `DataSource` 后，`DataSourceAutoConfiguration`、事务管理器自动配置因 `@ConditionalOnMissingBean`/`OnSingleCandidate` 退出，需要自己补齐并加 `@Primary`。
 - **profile 混用**：`spring.profiles.active` 写在 profile 专属文件里无效（2.4+ 会报错），应通过命令行或环境变量指定。
 
+## 相关阅读
+
+- [指标监控：Prometheus、Micrometer 与 Grafana](#/infra/obs-metrics)：Actuator + Micrometer 指标
+- [认证授权：Session、JWT、OAuth2 与 Spring Security](#/security/auth)：Spring Security 6 认证授权
+- [发布策略：灰度、蓝绿、特性开关与数据库变更](#/infra/release)：优雅停机、探针与发布
+
 ## 面试追问
 
 > [!QUESTION] Spring Boot 自动配置的原理？

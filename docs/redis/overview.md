@@ -354,6 +354,11 @@ redis-cli FCALL deduct 1 stock:sku:1001 2
 - 连接数：每个连接都有输入/输出缓冲，几万连接也会占用可观内存，`maxclients` 默认 10000。
 - 客户端误用 `MONITOR` 排查问题：高 QPS 下 `MONITOR` 会让输出缓冲暴涨并显著拉低性能，只能短时使用。
 
+## 相关阅读
+
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：IO 多路复用与 fork 写时复制的内核基础
+- [虚拟内存、分页与内存管理](#/cs/os-memory)：内存碎片、swap 与 THP
+
 ## 面试追问
 
 > [!QUESTION] Redis 是单线程的吗？6.0 之后呢？

@@ -252,6 +252,11 @@ tableswitch { 0: ...; 1: ...; 2: ...; default: ... }
 - **for-each 中修改集合**：CME 只是 fail-fast 的「尽力检测」，多线程下更可能表现为数据错乱而不是异常，并发场景直接换并发容器。
 - **取模分片出现负数**：`hash % n` 在 hash 为负时结果为负，用 `Math.floorMod`；`Math.abs(Integer.MIN_VALUE)` 仍为负，也不能靠 abs 兜底。
 
+## 相关阅读
+
+- [Java 8–21 新特性](#/java/modern/features)：switch 模式匹配等新语法
+- [解题套路：双指针、二分、DP、回溯与图](#/cs/algo-patterns)：用这些语法解算法题
+
 ## 面试追问
 
 > [!QUESTION] `int i = 0; i = i++;` 结果是多少？从字节码解释。

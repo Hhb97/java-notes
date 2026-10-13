@@ -243,6 +243,11 @@ sysctl -w net.netfilter.nf_conntrack_max=2000000     # 若启用 conntrack，需
 | 设备“幽灵在线” | 保活设置太长/NAT 超时；缩短 keepalive；依赖 Broker 事件而非设备自述 |
 | 数据库认证压力大 | 每次连接查库；改 JWT/证书/本地缓存（认证结果缓存），连接风暴时尤其要注意 |
 
+## 相关阅读
+
+- [Java 接入：Paho、Spring 与 Netty](#/iot/java)：Java 接入实践
+- [文件系统、页缓存与零拷贝](#/cs/os-io)：连接数、文件描述符与内核调优
+
 ## 面试追问
 
 > [!QUESTION] 为什么 EMQX 能支撑百万级连接？
