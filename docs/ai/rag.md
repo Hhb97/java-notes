@@ -235,6 +235,7 @@ for (Document doc : sources.pull(sinceLastSync)) {
 
 ## 相关阅读
 
+- [RAG 向量检索逻辑：从文本到 Top-K（嵌入、相似度、ANN、过滤与调优）](#/ai/rag-vector)：一次向量检索的完整逻辑：嵌入、相似度、ANN 搜索、过滤与调优
 - [文档解析与多模态 RAG（PDF、表格、OCR、图片）](#/ai/rag-parsing)：入库的第一环：解析、表格与图片
 - [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval)：检索与生成的评测方法
 

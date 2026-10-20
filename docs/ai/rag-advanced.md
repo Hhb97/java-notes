@@ -270,6 +270,7 @@ List<String> candidates = fused.entrySet().stream()
 
 ## 相关阅读
 
+- [RAG 向量检索逻辑：从文本到 Top-K（嵌入、相似度、ANN、过滤与调优）](#/ai/rag-vector)：嵌入怎么来、ef_search 如何影响召回、过滤为何漏召回、如何度量 ANN 召回
 - [文档解析与多模态 RAG（PDF、表格、OCR、图片）](#/ai/rag-parsing)：解析与结构感知切分
 - [评测体系实战：数据集、LLM 评审与回归门禁](#/ai/eval)：评测集构建与回归门禁
 - [案例：Text-to-SQL 数据分析助手设计详解](#/ai/case-text2sql)：结构化数据问答的另一条路线

@@ -312,6 +312,7 @@ window.NAV = [
       {
         title: 'RAG', children: [
           { title: 'RAG 原理与完整流水线', path: 'ai/rag' },
+          { title: 'RAG 向量检索逻辑：从文本到 Top-K（嵌入、相似度、ANN、过滤与调优）', path: 'ai/rag-vector' },
           { title: '文档解析与多模态 RAG（PDF、表格、OCR、图片）', path: 'ai/rag-parsing' },
           { title: 'RAG 检索优化、向量库与评估', path: 'ai/rag-advanced' }
         ]
