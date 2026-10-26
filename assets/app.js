@@ -52,7 +52,7 @@
     { title: '中间件与物联网', ids: ['mw', 'iot'] },
     { title: '分布式与架构', ids: ['distributed', 'design'] },
     { title: '运维与安全', ids: ['infra', 'security'] },
-    { title: 'AI', ids: ['ai', 'aimodel'] }
+    { title: 'AI 与数学', ids: ['ai', 'aimodel', 'math'] }
   ];
   (function buildTabs() {
     var byId = {}, used = {};

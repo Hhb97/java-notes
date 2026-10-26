@@ -123,6 +123,7 @@
 | 计算机基础 | 把线上现象还原到操作系统与网络层 | [进程与调度](#/cs/os-process)、[虚拟内存](#/cs/os-memory)、[网络层](#/cs/net-ip)、[TCP 深入](#/cs/net-tcp)、[网络排障](#/cs/net-debug) |
 | 物联网与 MQTT | 协议、Broker、平台与可靠性 | [MQTT 协议](#/iot/mqtt)、[报文详解](#/iot/mqtt-wire)、[QoS 与会话](#/iot/mqtt-qos-session)、[MQTT 5.0](#/iot/mqtt-v5)、[弱网与安全](#/iot/mqtt-practice)、[协议生态](#/iot/mqtt-ecosystem)、[IoT 平台](#/iot/platform) |
 | AI 应用落地 | 从提示词到 RAG、Agent，再到评测与微调 | [全景与路线](#/ai/overview)、[提示词](#/ai/prompt-eng)、[文档解析](#/ai/rag-parsing)、[MCP](#/ai/mcp-deep)、[工作流与 Agent](#/ai/agent-workflow)、[评测](#/ai/eval)、[微调](#/ai/finetune)、[Text-to-SQL](#/ai/case-text2sql)、[代码助手](#/ai/case-codeagent) |
+| AI 数学基础 | 零基础补齐 AI 用到的高数与线性代数 | [学习地图](#/math/start)、[导数](#/math/derivative)、[梯度](#/math/gradient)、[反向传播](#/math/chain-backprop)、[矩阵](#/math/matrices)、[特征值](#/math/eigen)、[SVD](#/math/svd) |
 
 ## 阅读约定
 

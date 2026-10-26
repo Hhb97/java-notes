@@ -382,6 +382,43 @@ window.NAV = [
     ]
   },
   {
+    id: 'math', title: 'AI 数学基础', desc: '给初学者：高数（函数、导数、梯度、积分）与线性代数（向量、矩阵、特征值、SVD），配图与手算，处处对应 AI',
+    children: [
+      {
+        title: '入门', children: [
+          { title: 'AI 数学学习地图：符号、函数与怎么学', path: 'math/start' }
+        ]
+      },
+      {
+        title: '高等数学（微积分）', children: [
+          { title: '函数、极限与连续：用“逼近”理解变化', path: 'math/limit' },
+          { title: '导数：变化率、切线与求导法则', path: 'math/derivative' },
+          { title: '偏导数与梯度：多个旋钮的世界', path: 'math/gradient' },
+          { title: '链式法则与反向传播：从复合函数到计算图', path: 'math/chain-backprop' },
+          { title: '极值与优化：从梯度下降到 Adam，再到约束优化', path: 'math/optimization' },
+          { title: '泰勒展开与二阶信息：为什么这样走有效', path: 'math/taylor' },
+          { title: '积分与期望：累加、面积与概率密度', path: 'math/integral' }
+        ]
+      },
+      {
+        title: '线性代数', children: [
+          { title: '向量：长度、点积、夹角与相似度', path: 'math/vectors' },
+          { title: '矩阵：线性变换与矩阵乘法', path: 'math/matrices' },
+          { title: '线性方程组、逆矩阵与秩', path: 'math/linear-systems' },
+          { title: '正交与投影：最小二乘与线性回归', path: 'math/projection' },
+          { title: '特征值与特征向量：PCA 与谱的直觉', path: 'math/eigen' },
+          { title: '奇异值分解（SVD）与低秩：压缩、推荐与 LoRA', path: 'math/svd' },
+          { title: '张量、广播与 einsum：把数学写成代码', path: 'math/tensors' }
+        ]
+      },
+      {
+        title: '综合', children: [
+          { title: '数学到 AI 的对照地图与综合练习', path: 'math/ai-map' }
+        ]
+      }
+    ]
+  },
+  {
     id: 'bigdata', title: '大数据', desc: 'Flink 流处理、CDC 与实时数仓、OLAP（ClickHouse 专题见数据库分类）、Spark 与数据湖',
     children: [
       {
