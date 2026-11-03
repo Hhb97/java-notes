@@ -138,6 +138,8 @@ http_requests,service=order,code_class=2xx count=152i,latency_ms=12.3 1760250001
 
 **TSM（Time-Structured Merge Tree）** 是 InfluxDB 为时序数据定制的 LSM 类引擎：写入先进内存与 WAL，再批量刷成不可变的列式文件，后台合并。
 
+> [!TIP] 想看 1.x 的文件格式、压缩编码、Compaction 层级、读写链路、inmem/tsi1 索引与删除机制的细节，见 [InfluxDB 1.x 原理详解](#/db/influx-v1)。
+
 <figure class="fig">
 <svg viewBox="0 0 800 340" class="dg" role="img" aria-label="TSM 写入与读取路径：写请求同时追加到 WAL 预写日志并写入内存 Cache；Cache 达到阈值后快照刷成不可变的 TSM 文件，按 series 与时间块列式存储并压缩；后台 compaction 合并小文件并优化压缩；TSI 索引记录 measurement、tag 到 series 的映射，用于快速定位 series；查询先用索引找到 series，再读取对应时间范围的 TSM 块，并合并内存 Cache 中的最新数据">
 <rect class="b1" x="20" y="30" width="110" height="50" rx="8"/>

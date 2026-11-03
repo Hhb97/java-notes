@@ -14,7 +14,7 @@ summary: InfluxDB 落地实战：整体链路（Telegraf/Kafka → Influx → Gr
 > - 选型不要神话专用 TSDB：**监控指标用 Prometheus 体系、需要 SQL+关系联查用 TimescaleDB、超大规模 IoT 用 TDengine/IoTDB、重分析用 ClickHouse**；InfluxDB 的优势是**生态成熟（Telegraf 采集 + Grafana）、写入与时间窗口聚合便利**。
 
 > [!NOTE] 版本说明
-> 示例以 v2（`bucket/org/token`）与 Java 客户端为主，v1/v3 的差异处会指出。请以所用版本的官方文档为准。数据模型与存储原理见 [InfluxDB 数据模型](#/db/influx-model)。
+> 示例以 v2（`bucket/org/token`）与 Java 客户端为主，v1/v3 的差异处会指出。请以所用版本的官方文档为准。数据模型与存储原理见 [InfluxDB 数据模型](#/db/influx-model)，1.x 的 TSM、索引、Shard 与删除机制细节见 [InfluxDB 1.x 原理详解](#/db/influx-v1)。
 
 ## 一、整体架构与采集
 
@@ -274,7 +274,7 @@ influxdb.cardinality(bucket: "raw", start: -30d)               // v2：series �
 ### 2. 删除
 
 - 时序库擅长**按保留期整体过期**，不擅长**精确删除单点**；
-- `DELETE` 按时间范围 + 谓词（tag）删除是**墓碑 + compaction 回收**，大范围删除开销大；
+- `DELETE` 按时间范围 + 谓词（tag）删除是**墓碑 + compaction 回收**，大范围删除开销大；（为什么 DELETE 重、DROP SHARD 轻，见 [原理详解：删除机制](#/db/influx-v1)）
 - 合规删除（如用户数据）需要提前设计：把可删除维度做成可识别的 tag，或单独 bucket，便于整体删除/过期。
 
 ### 3. 历史回填

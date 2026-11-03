@@ -226,6 +226,7 @@ window.NAV = [
       {
         title: '时序数据库 InfluxDB', children: [
           { title: 'InfluxDB 数据模型与存储引擎', path: 'db/influx-model' },
+          { title: 'InfluxDB 1.x 原理详解：TSM、读写链路、索引、Shard 与删除机制', path: 'db/influx-v1' },
           { title: 'InfluxDB 实战：基数、降采样、Java 写入与选型', path: 'db/influx-practice' }
         ]
       },
